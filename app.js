@@ -24,6 +24,71 @@ const focusGroups = [
 const questionById = new Map(questions.map(question => [question.id, question]));
 const focusById = new Map(focusGroups.flatMap(([title, advice, ids]) => ids.map(id => [id, { title, advice }])));
 const storageKey = 'energetics-v1';
+const soundToggle = document.querySelector('#sound-toggle');
+const soundNotes = {
+  correct: [523, 659],
+  missed: [349, 294],
+  complete: [523, 659, 784],
+  reply: [659],
+};
+let muted = false;
+let audio;
+let soundOutput;
+
+try {
+  muted = localStorage.getItem('energetics-muted') === 'true';
+} catch {
+  // Sound can still be toggled in this tab.
+}
+
+function updateSoundToggle() {
+  soundToggle.textContent = muted ? 'Sound off' : 'Sound on';
+  soundToggle.setAttribute('aria-pressed', String(!muted));
+  if (soundOutput) soundOutput.gain.value = muted ? 0 : 0.18;
+}
+
+function prepareSound() {
+  if (muted || !window.AudioContext) return;
+  if (!audio) {
+    audio = new AudioContext();
+    soundOutput = audio.createGain();
+    soundOutput.gain.value = 0.18;
+    soundOutput.connect(audio.destination);
+  }
+  if (audio.state === 'suspended') audio.resume().catch(() => {});
+}
+
+function playSound(cue) {
+  if (muted) return;
+  prepareSound();
+  if (!soundOutput) return;
+  const start = audio.currentTime;
+  for (const [index, frequency] of soundNotes[cue].entries()) {
+    const noteStart = start + index * 0.085;
+    const tone = audio.createOscillator();
+    const level = audio.createGain();
+    tone.frequency.value = frequency;
+    level.gain.setValueAtTime(0.001, noteStart);
+    level.gain.exponentialRampToValueAtTime(0.32, noteStart + 0.012);
+    level.gain.exponentialRampToValueAtTime(0.001, noteStart + 0.15);
+    tone.connect(level).connect(soundOutput);
+    tone.start(noteStart);
+    tone.stop(noteStart + 0.16);
+  }
+}
+
+soundToggle.addEventListener('click', () => {
+  muted = !muted;
+  try {
+    localStorage.setItem('energetics-muted', String(muted));
+  } catch {
+    // Keep the preference for this tab.
+  }
+  updateSoundToggle();
+  if (!muted) playSound('reply');
+});
+updateSoundToggle();
+
 const app = document.querySelector('#app');
 const coach = document.querySelector('#coach');
 const coachMessage = document.querySelector('#coach-message');
@@ -286,6 +351,7 @@ function check() {
   if (!choice || session.answers[session.index]) return;
   const id = session.ids[session.index];
   const correct = choice === questionById.get(id).answer;
+  playSound(correct ? 'correct' : 'missed');
   session.answers.push({ id, choice, correct });
   const queue = new Set(saved.missed);
   if (correct && session.mode === 'redemption') queue.delete(id);
@@ -319,6 +385,7 @@ function advance() {
   saved.session = null;
   persist();
   results();
+  playSound('complete');
   const perfect = saved.latest.answers.every(answer => answer.correct);
   encourage(perfect ? 'A perfect set! That was paw-some.' : 'Set complete! Take a look at what to focus on next.', 'celebrate');
 }
@@ -531,6 +598,7 @@ buddyForm.addEventListener('submit', async event => {
   const currentAvatar = avatar;
   const question = buddyInput.value.trim();
   if (!question || pendingAvatars.has(currentAvatar)) return;
+  prepareSound();
 
   const conversation = conversations[currentAvatar];
   const controller = new AbortController();
@@ -558,6 +626,7 @@ buddyForm.addEventListener('submit', async event => {
     if (!response.ok) throw new Error(result.error);
     if (controller.signal.aborted) return;
     conversation.push({ role: 'assistant', content: result.answer });
+    if (buddy.open && avatar === currentAvatar) playSound('reply');
     chatStatus[currentAvatar] = '';
   } catch (error) {
     if (controller.signal.aborted) return;
