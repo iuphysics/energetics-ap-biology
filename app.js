@@ -92,12 +92,18 @@ const studio = document.querySelector('.study-scene');
 const studioToggle = document.querySelector('#studio-toggle');
 const studioLabel = document.querySelector('#studio-label');
 const studioStatus = document.querySelector('#studio-status');
-const focusTrack = new Audio('./focus-music-loop.m4a');
+const focusTrack = document.querySelector('#focus-track');
+const localAudioFallback = location.origin === 'http://127.0.0.1:8736'
+  ? 'http://127.0.0.1:8740/focus-music-loop.m4a'
+  : '';
+let triedAudioFallback = false;
+let playbackAttempt = 0;
 focusTrack.loop = true;
 focusTrack.volume = 0.28;
 let playing = false;
 
 function syncStudio() {
+  const attempt = ++playbackAttempt;
   studio.dataset.playing = playing;
   studioToggle.setAttribute('aria-pressed', String(playing));
   studioLabel.textContent = playing ? 'Read instead' : 'Play focus music';
@@ -108,7 +114,13 @@ function syncStudio() {
     return;
   }
   focusTrack.play().catch(() => {
-    if (!playing || muted || !focusTrack.paused) return;
+    if (attempt !== playbackAttempt || !playing || muted || !focusTrack.paused) return;
+    if (localAudioFallback && !triedAudioFallback) {
+      triedAudioFallback = true;
+      focusTrack.src = localAudioFallback;
+      syncStudio();
+      return;
+    }
     playing = false;
     syncStudio();
     studioStatus.textContent = 'Focus music could not load.';

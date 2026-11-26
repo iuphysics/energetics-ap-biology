@@ -26,6 +26,7 @@ PUBLIC_FILES = {"/", "/index.html", "/app.js", "/bank.js", "/style.css", "/chad.
 
 
 class Handler(SimpleHTTPRequestHandler):
+    extensions_map = {**SimpleHTTPRequestHandler.extensions_map, ".m4a": "audio/mp4"}
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=ROOT, **kwargs)
 
