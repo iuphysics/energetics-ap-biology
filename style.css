@@ -305,12 +305,12 @@ body{background:radial-gradient(ellipse at 82% 0%,#232c22 0%,transparent 42%),va
 @keyframes combo-glow{0%,100%{box-shadow:0 0 22px #c4dc9e40}45%{box-shadow:0 0 37px #c4dc9e80}}
 @media(prefers-reduced-motion:reduce){.coach[data-mood="combo"],.coach[data-mood="combo"] .chad,.radar .recovered-axis{animation:none!important}}
 
-.question-page{display:block;width:100%;height:auto;background:#171717;border-radius:5px;margin-bottom:6px;overflow:hidden}
+.question-page{display:block;width:100%;height:auto;background:transparent;border-radius:5px;margin-bottom:6px;overflow:hidden}
 .question-page text{fill:#eeeee8;font-family:system-ui,sans-serif;user-select:text}
-.question-figure{filter:invert(.92) hue-rotate(180deg)}
+.question-figure{filter:invert(1) hue-rotate(180deg);mix-blend-mode:screen}
 .prompt.light .question-page{background:white}
 .prompt.light .question-page text{fill:#222}
-.prompt.light .question-figure{filter:none}
+.prompt.light .question-figure{filter:none;mix-blend-mode:normal}
 .prompt{overscroll-behavior-inline:contain}
 #buddy{height:min(480px,calc(var(--buddy-viewport-height,100dvh) - 70px))}
 @media(max-width:580px){.question-page{min-width:510px}}
