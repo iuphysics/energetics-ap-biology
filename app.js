@@ -841,17 +841,6 @@ const frqDrafts = frqs.map(blankFrqDraft);
 const plot = { left: 54, right: 389, top: 18, bottom: 208 };
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
-function chooseMode() {
-  show(`<div class="narrow"><div class="hero dashboard-heading"><p class="kicker">AP Biology / Unit 3</p>
-    <h1>Cellular energetics</h1></div>
-    <div class="grid mode-choices">
-      <section class="panel"><h2>Multiple choice</h2><p class="quiet">Practice with 102 questions, check topic accuracy, and retry misses.</p>
-      <button class="primary" data-action="enter-mcq">Open MCQ</button></section>
-      <section class="panel"><h2>Free response</h2><p class="quiet">${frqs.length} questions with written responses, graphing, and GPT rubric feedback.</p>
-      <button class="primary" data-action="enter-frq">Open FRQ</button></section>
-    </div></div>`);
-}
-
 function selectMode(mode) {
   grading?.abort();
   grading = undefined;
@@ -862,8 +851,7 @@ function selectMode(mode) {
     document.querySelector(`#mode-${name}`).setAttribute('aria-pressed', String(name === mode));
   }
   if (mode === 'mcq') dashboard();
-  else if (mode === 'frq') frqDashboard();
-  else chooseMode();
+  else frqDashboard();
 }
 
 function currentFrqScores() {
@@ -1065,8 +1053,6 @@ app.addEventListener('click', event => {
     case 'start-frq': startFrqSet(); break;
     case 'resume-frq': clearBuddyChat(); renderFrq(); break;
     case 'exit-frq': exitFrqSet(); break;
-    case 'enter-mcq': selectMode('mcq'); break;
-    case 'enter-frq': selectMode('frq'); break;
     case 'frq-prev': changeFrq(frqSet[frqSet.indexOf(frqIndex) - 1]); break;
     case 'frq-next': changeFrq(frqSet[frqSet.indexOf(frqIndex) + 1]); break;
     case 'grade-frq': gradeFrq(button); break;
@@ -1136,5 +1122,5 @@ document.querySelector('#mode-mcq').addEventListener('click', () => {
 document.querySelector('#mode-frq').addEventListener('click', () => {
   if (practiceMode !== 'frq') selectMode('frq');
 });
-document.querySelector('#home').addEventListener('click', () => selectMode());
-chooseMode();
+document.querySelector('#home').addEventListener('click', () => selectMode('mcq'));
+selectMode('mcq');

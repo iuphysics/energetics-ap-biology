@@ -263,7 +263,6 @@ body{background:radial-gradient(ellipse at 82% 0%,#232c22 0%,transparent 42%),va
 
 .mode-tabs{display:flex;gap:4px}
 .mode-tabs [aria-pressed=true]{border-color:var(--green);color:var(--green);background:#303b28}
-.mode-choices .primary{margin-top:14px}
 .frq-nav{margin-bottom:18px}
 .frq-nav label{display:flex;align-items:center;gap:8px;font-weight:650}
 .frq-nav select{min-width:0}
