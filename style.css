@@ -73,23 +73,14 @@ footer{border-top:1px solid var(--line);font-size:10px}
 .coach[hidden]{display:none}
 .coach p{font-size:14px;font-weight:600}
 .coach button{width:28px;height:28px;border:0;border-radius:6px;background:transparent;color:var(--quiet);font-size:22px;line-height:1}
-.cat{position:relative;height:54px;width:58px;animation:cat-hop .6s .18s ease both}
-.cat-face{position:absolute;inset:15px 4px 2px;background:var(--green);border-radius:44% 44% 46% 46%}
-.cat .ear{position:absolute;top:7px;width:20px;height:23px;background:var(--green);border-radius:5px 12px 3px 3px;transform:rotate(-17deg)}
-.cat .ear.left{left:5px}
-.cat .ear.right{right:5px;transform:scaleX(-1) rotate(-17deg)}
-.cat .ear::after{content:'';position:absolute;inset:4px 6px 9px;background:#9bb85c;border-radius:3px 8px 2px 2px}
-.cat .eyes{position:absolute;top:13px;left:12px;width:5px;height:7px;border-radius:50%;background:#26341a;box-shadow:21px 0 #26341a;animation:cat-blink 3s infinite}
-.cat .nose{position:absolute;top:21px;left:22px;width:6px;height:5px;background:#344524;border-radius:50% 50% 65% 65%}
-.cat .cheeks{position:absolute;top:24px;left:7px;width:7px;height:3px;border-radius:50%;background:#a7c76a;box-shadow:29px 0 #a7c76a}
+.cat{display:block;height:54px;width:58px;object-fit:cover;border-radius:10px;animation:cat-hop .6s .18s ease both}
 .coach[data-mood="calm"] .cat{animation:cat-nod .55s .18s ease both}
 @keyframes coach-arrive{from{opacity:0;transform:translateY(20px) scale(.94)}to{opacity:1;transform:none}}
 @keyframes cat-hop{0%,100%{transform:none}45%{transform:translateY(-8px) rotate(-7deg)}}
 @keyframes cat-nod{0%,100%{transform:none}45%{transform:translateY(3px) rotate(7deg)}}
-@keyframes cat-blink{0%,88%,96%,100%{transform:scaleY(1)}92%{transform:scaleY(.15)}}
-@media(prefers-reduced-motion:reduce){.coach,.coach .cat,.cat .eyes{animation:none}}
+@media(prefers-reduced-motion:reduce){.coach,.coach .cat{animation:none}}
 @media(max-width:580px){.coach{top:12px;bottom:auto}}
 .coach-toggle{position:fixed;z-index:2;right:clamp(12px,4vw,44px);bottom:clamp(12px,3vw,28px);display:flex;align-items:center;gap:5px;padding:2px 13px 2px 5px;border:1px solid #687751;border-radius:999px;background:#242a1e;color:var(--green);font-weight:700;font-size:13px;box-shadow:0 8px 24px #0007}
 .coach-toggle[hidden]{display:none}
-.coach-toggle .cat{display:block;flex:none;zoom:.68}
+.coach-toggle .cat{flex:none;width:36px;height:36px;border-radius:50%}
 footer{padding-bottom:64px}
