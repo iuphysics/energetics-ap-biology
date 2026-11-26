@@ -943,6 +943,8 @@ const frqDrafts = frqs.map(blankFrqDraft);
 const plot = { left: 54, right: 389, top: 18, bottom: 208 };
 const localGrading = ['127.0.0.1', 'localhost'].includes(location.hostname);
 const publicGrading = location.origin === 'https://iuphysics.github.io';
+const sharedGrader = publicGrading ? document.querySelector('meta[name="energetics-grader"]')?.content : '';
+let sharedGraderCode = '';
 let publicGraderLoad;
 
 function loadPublicGrader() {
@@ -965,6 +967,26 @@ function loadPublicGrader() {
 
 async function requestFrqGrade(context, answer, signal) {
   const content = `My submitted FRQ response:\n${answer}`;
+  if (sharedGrader) {
+    const result = await fetch(sharedGrader, {
+      method: 'POST',
+      signal,
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${sharedGraderCode}` },
+      body: JSON.stringify({ context, answer: content }),
+    });
+    const payload = await result.json();
+    if (result.status === 401) {
+      sharedGraderCode = '';
+      const input = app.querySelector('#grading-code');
+      if (input) {
+        input.value = '';
+        input.focus();
+      }
+    }
+    if (!result.ok) throw new Error(payload.error);
+    return payload.answer;
+  }
+
   if (publicGrading) {
     if (!window.puter?.ai) {
       await loadPublicGrader();
@@ -1011,7 +1033,7 @@ function selectMode(mode) {
   }
   if (mode === 'mcq') dashboard();
   else {
-    if (publicGrading) loadPublicGrader().catch(() => {});
+    if (publicGrading && !sharedGrader) loadPublicGrader().catch(() => {});
     frqDashboard();
   }
 }
@@ -1198,7 +1220,9 @@ function renderFrq() {
         ${localGrading ? '<button class="secondary" data-action="hint">Ask for a hint</button>' : ''}
         <span class="quiet">Practice feedback · ${question.rubric.length} points</span>
       </div>
-      ${localGrading ? '' : `<div class="frq-grading-note"><p>Online grading sends this response to GPT‑5.6 Sol through Puter. You may be asked to sign in. Usage counts toward your Puter account.</p></div>`}
+      ${sharedGrader ? `<label class="grading-code-label" for="grading-code">Shared grading access code
+        <input id="grading-code" type="password" autocomplete="off" maxlength="128" placeholder="${sharedGraderCode ? 'Code entered for this tab' : 'Enter the code from the app owner'}"></label>`
+        : localGrading ? '' : `<div class="frq-grading-note"><p>Online grading sends this response to GPT‑5.6 Sol through Puter. You may be asked to sign in. Usage counts toward your Puter account.</p></div>`}
       <div class="frq-feedback" id="frq-feedback" role="status">${escape(draft.feedback)}</div>
       <div id="frq-grade-report" aria-live="polite">${gradeReportMarkup(draft.gradeReport, question.rubric.length)}</div>
       <details id="frq-comparison" ${draft.submitted ? 'open' : 'hidden'}><summary>Compare with rubric</summary>
@@ -1249,6 +1273,17 @@ async function gradeFrq(button) {
   const question = frqs[frqIndex];
   const draft = frqDrafts[frqIndex];
   const feedback = app.querySelector('#frq-feedback');
+  if (sharedGrader) {
+    const input = app.querySelector('#grading-code');
+    sharedGraderCode = input.value.trim() || sharedGraderCode;
+    if (!sharedGraderCode) {
+      feedback.textContent = 'Enter the shared grading access code.';
+      input.focus();
+      return;
+    }
+    input.value = '';
+    input.placeholder = 'Code entered for this tab';
+  }
   if (!draft.responses.some(response => response.trim()) && !draft.strokes.length && !draft.xLabel.trim() && !draft.yLabel.trim()) {
     feedback.textContent = 'Write a response or mark the graph first.';
     return;

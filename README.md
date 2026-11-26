@@ -45,3 +45,7 @@ Click the chibi avatar to start the bundled focus loop, or click again to switch
 Choose **FRQ** in the header for sets of 5, 10, or all 20 original Unit 3 questions. Graph questions accept drawing, tapping, and typed coordinates. **Grade response** sends only the current question, the rubric, and your response, including sampled graph coordinates, to the configured GPT model. Separate submissions carry no chat history. Moving to another FRQ also clears the Ask Neko conversation. Drafts and feedback stay available while the page is open. Scores are practice feedback.
 
 On GitHub Pages, **Grade response** uses [GPT-5.6 Sol via Puter](https://developer.puter.com/ai/openai/gpt-5.6-sol/). The browser may ask the learner to sign in to Puter. Grading uses their Puter usage allowance or balance, and no API key or local server is needed. Only the current submission, prompt, and rubric are sent for each grade. The **Self-score with rubric** checklist is also available.
+
+### Share your own API allowance
+
+The optional Cloudflare Worker in `worker/` can grade public FRQ submissions on the owner's OpenAI account. From that folder, authenticate with `npx wrangler login`, deploy with `npx wrangler deploy`, and enter credentials at the hidden prompts for `npx wrangler secret put OPENAI_API_KEY` and `npx wrangler secret put ENERGETICS_ACCESS_CODE`. Use a strong shared code. Finally, set the `energetics-grader` meta tag in `index.html` to the Worker's HTTPS URL with `/grade` appended and redeploy Pages. Only the Worker URL belongs in the repo.
