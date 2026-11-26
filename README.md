@@ -34,7 +34,7 @@ Open the **Ask Neko** tab and choose Neko or Chad. Each avatar has a separate co
 
 ## Question bank
 
-The bank uses 102 items with explicit answer keys in the supplied *AP Biology Unit 3 MCQ Scoring Guide*. Question images retain the source numbering, shared stimuli, and figures. Answer markings were removed from the quiz images. The question excerpts and explanations are derived from the supplied guide. The [College Board course framework](https://apcentral.collegeboard.org/media/pdf/ap-biology-course-and-exam-description.pdf) supplies the five topic categories.
+The bank uses 102 items with explicit answer keys in the supplied *AP Biology Unit 3 MCQ Scoring Guide*. Question text is typeset in the app font at source positions, retaining numbering, formatting, and answer order. Shared stimuli and figures are preserved. Original colors can be toggled in the quiz. The question excerpts and explanations are derived from the supplied guide. The [College Board course framework](https://apcentral.collegeboard.org/media/pdf/ap-biology-course-and-exam-description.pdf) supplies the five topic categories.
 
 ## Study music
 

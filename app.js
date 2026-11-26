@@ -365,6 +365,19 @@ function begin(ids, mode) {
   encourage(mode === 'redemption' ? 'Round two! Show these questions what you learned.' : 'You’ve got this. One question at a time.');
 }
 
+function questionPages(question) {
+  return question.images.map((image, index) => {
+    const label = image.startsWith('context') ? 'Shared stimulus' : `Question excerpt ${index + 1}`;
+    const layout = question.layout?.[index];
+    if (!layout) return `<img src="bank/${image}.png" alt="${label}">`;
+    const [width, height, art, spans] = layout;
+    return `<svg class="question-page" viewBox="0 0 ${width} ${height}" aria-label="${label}" xml:space="preserve">
+      ${art ? `<image class="question-figure" href="bank/${art}.png" width="${width}" height="${height}"/>` : ''}
+      ${spans.map(([x,y,size,length,flags,text]) => `<text x="${x}" y="${y}" font-size="${size}" ${length > 0 ? `textLength="${length}" lengthAdjust="spacingAndGlyphs"` : ''} ${flags & 16 ? 'font-weight="700"' : ''} ${flags & 2 ? 'font-style="italic"' : ''}>${escape(text)}</text>`).join('')}
+    </svg>`;
+  }).join('');
+}
+
 function quiz(moveFocus = true) {
   const session = saved.session;
   if (!session) return dashboard();
@@ -382,7 +395,7 @@ function quiz(moveFocus = true) {
     ${session.mode === 'redemption' ? `<div class="comeback-counter ${redeemed >= 3 ? 'combo-earned' : ''}" aria-label="${redeemed} redeemed in this set"><strong>${redeemed >= 3 ? 'Comeback Combo earned' : 'Comeback Combo'}</strong><span>${redeemed} redeemed${redeemed < 3 && session.ids.length >= 3 ? ' / 3' : ''}</span></div>` : ''}
     <section class="panel quiz-card">
       <div class="between"><span class="metric quiet">GUIDE ITEM ${id}</span><button class="secondary" data-action="paper" aria-pressed="false">Original colors</button></div>
-      <div class="prompt">${question.images.map((image, index) => `<img src="bank/${image}.png" alt="Guide item ${id}, ${image.startsWith('context') ? 'shared stimulus' : `question excerpt ${index + 1}`}">`).join('')}</div>
+      <div class="prompt">${questionPages(question)}</div>
       <details><summary>Question transcript</summary><p class="transcript quiet">${escape(question.transcript.replace(/[^\S\n]+/g, " ").replace(/ *\n */g, "\n").replace(/\n{3,}/g, "\n\n"))}</p><p class="quiet">Figures and tables appear in the guide images above.</p></details>
       <div class="answer-heading">Select an answer</div>
       <div class="answers" style="--choices:${question.choices.length}" aria-label="Answer choices">
@@ -593,8 +606,9 @@ let drag;
 
 function positionBuddy(left, top) {
   const margin = 10;
-  const maxLeft = Math.max(margin, window.innerWidth - buddy.offsetWidth - margin);
-  const maxTop = Math.max(margin, window.innerHeight - buddy.offsetHeight - margin);
+  const viewport = window.visualViewport;
+  const maxLeft = Math.max(margin, (viewport?.width ?? window.innerWidth) - buddy.offsetWidth - margin);
+  const maxTop = Math.max(margin, (viewport?.height ?? window.innerHeight) - buddy.offsetHeight - margin);
   buddyPosition = {
     left: Math.max(margin, Math.min(left, maxLeft)),
     top: Math.max(margin, Math.min(top, maxTop)),
@@ -649,9 +663,13 @@ buddy.addEventListener('keydown', event => {
   if (event.key === 'Escape') buddy.close();
 });
 
-window.addEventListener('resize', () => {
-  if (buddy.open) positionBuddy(buddyPosition.left, buddyPosition.top);
-});
+function fitBuddyWindow() {
+  const viewport = window.visualViewport;
+  if (viewport) buddy.style.setProperty('--buddy-viewport-height', `${viewport.height}px`);
+  if (buddy.open && buddyPosition) positionBuddy(buddyPosition.left, buddyPosition.top);
+}
+window.addEventListener('resize', fitBuddyWindow);
+window.visualViewport?.addEventListener('resize', fitBuddyWindow);
 
 buddy.addEventListener('close', () => {
   buddyTab.setAttribute('aria-expanded', 'false');

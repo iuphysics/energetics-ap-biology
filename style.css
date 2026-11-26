@@ -304,3 +304,31 @@ body{background:radial-gradient(ellipse at 82% 0%,#232c22 0%,transparent 42%),va
 @keyframes recovered-axis{0%{stroke-width:5}100%{stroke-width:2}}
 @keyframes combo-glow{0%,100%{box-shadow:0 0 22px #c4dc9e40}45%{box-shadow:0 0 37px #c4dc9e80}}
 @media(prefers-reduced-motion:reduce){.coach[data-mood="combo"],.coach[data-mood="combo"] .chad,.radar .recovered-axis{animation:none!important}}
+
+.question-page{display:block;width:100%;height:auto;background:#171717;border-radius:5px;margin-bottom:6px;overflow:hidden}
+.question-page text{fill:#eeeee8;font-family:system-ui,sans-serif;user-select:text}
+.question-figure{filter:invert(.92) hue-rotate(180deg)}
+.prompt.light .question-page{background:white}
+.prompt.light .question-page text{fill:#222}
+.prompt.light .question-figure{filter:none}
+.prompt{overscroll-behavior-inline:contain}
+#buddy{height:min(480px,calc(var(--buddy-viewport-height,100dvh) - 70px))}
+@media(max-width:580px){.question-page{min-width:510px}}
+@media(pointer:coarse){
+  .top{padding-top:max(12px,env(safe-area-inset-top))}
+  .primary,.secondary,.buddy-tab,.avatar-picker button,select,summary{min-height:44px}
+  summary{align-content:center}
+  .answer,.set{min-height:48px}
+  .axis-labels input,.frq-response,.buddy-form textarea,select{font-size:16px}
+  .axis-labels label{min-width:135px}
+  .avatar-picker{visibility:visible}
+  .study-scene{position:relative;right:auto;bottom:auto;margin:0 18px 105px auto}
+  .buddy-grip{height:28px;line-height:28px}
+  .frq-nav select{max-width:min(100%,58vw)}
+}
+@media(min-width:700px) and (max-width:1100px){
+  main{padding-inline:26px}
+  .quiz-screen,.frq-screen{max-width:790px}
+  .quiz-card{padding-inline:17px}
+  .question-page{min-width:0}
+}
