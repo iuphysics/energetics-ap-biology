@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101110">
 <title>Energetics · AP Biology Unit 3</title>
-<link rel="stylesheet" href="style.css?v=sound11">
+<link rel="stylesheet" href="style.css?v=studio12">
 </head>
 <body>
 <header class="top">
@@ -14,6 +14,51 @@
 </header>
 <main id="app" tabindex="-1"></main>
 <footer><span>Progress saved on this device</span></footer>
+<aside class="study-scene" aria-label="Study music">
+  <button id="studio-toggle" class="studio-figure" type="button" aria-pressed="false">
+    <svg viewBox="0 0 120 104" aria-hidden="true">
+      <ellipse cx="62" cy="94" rx="39" ry="6" fill="#0a0c0a" opacity=".6"/>
+      <g class="studio-body" stroke="#28221e" stroke-width="2" stroke-linejoin="round">
+        <path d="M40 63Q34 79 44 91H76Q85 81 76 63Z" fill="#76866c"/>
+        <path d="M46 89q-8 1-8 6h16l3-7m15 1q8 1 8 6H64l-2-7" fill="#ccc3ac"/>
+        <g class="studio-head neko-head">
+          <path d="M38 43Q32 26 36 13Q49 16 54 25H66Q75 15 86 13Q90 29 84 43Q94 60 79 67Q60 75 41 67Q26 60 38 43Z" fill="#efdfc1"/>
+          <path d="m38 17 11 11-10 7zm45 0-11 11 10 7z" fill="#ce8a7c" stroke="none"/>
+          <path d="M50 29q10-5 19-1l-8 11-5-5-5 3Z" fill="#c9986d" stroke="none"/>
+          <path d="M43 49q5 4 10 0m14 0q5 4 10 0m-21 9 4 3 4-3" fill="none" stroke-linecap="round"/>
+        </g>
+        <g class="studio-head chad-head">
+          <path d="M37 44q-4-24 13-26 13-13 31 0 8 6 3 24l-5 15H41Z" fill="#514744"/>
+          <path d="M40 35q7-7 20-7 12 0 20 7l2 15-8 16H46L38 51Z" fill="#c7b4a8"/>
+          <path d="m40 50 11 5 17-1 13-5-4 13-10 8H51L42 62Z" fill="#5a4c47"/>
+          <path d="m45 44 8 1m14 0 8-1m-20 15q7 3 13-1" fill="none" stroke-linecap="round"/>
+        </g>
+        <g class="studio-violin">
+          <path d="M67 68q-9-6-12 1-2 4 1 8-4 4-2 9 4 7 12 1l19-26-3-3Z" fill="#c48752"/>
+          <path d="m61 83 18-23m-19 19 6-2" stroke="#553928" stroke-width="1.4"/>
+          <g class="studio-bow"><path d="m41 87 49-13" stroke="#d9c4a1" stroke-width="2.3" stroke-linecap="round"/><circle cx="49" cy="85" r="5" fill="#efdfc1"/></g>
+        </g>
+        <g class="studio-book">
+          <path d="M42 72q10-3 18 4 8-7 18-4l-3 17q-9-2-15 3-6-5-15-3Z" fill="#a8bf8d"/>
+          <path class="studio-page" d="M60 76q7-10 15-9l3 5q-11-1-18 5Z" fill="#eee4c8"/>
+          <path d="M60 77v14" stroke="#546349"/>
+        </g>
+      </g>
+      <text class="studio-note" x="94" y="30" fill="#b9dd85" font-size="16">♪</text>
+    </svg>
+    <span id="studio-label">Play violin</span>
+  </button>
+  <details class="studio-options">
+    <summary>Music</summary>
+    <div class="studio-menu">
+      <label for="studio-file">Use an audio file</label>
+      <input id="studio-file" type="file" accept="audio/*">
+      <button id="studio-default" class="secondary" type="button">Use built-in violin</button>
+      <a href="https://www.youtube.com/watch?v=74cOUSKXMz0&t=967s" target="_blank" rel="noopener">YouTube reference ↗</a>
+    </div>
+  </details>
+  <span id="studio-status" class="studio-status" role="status"></span>
+</aside>
 <div class="avatar-dock">
 <button id="coach-toggle" class="coach-toggle" aria-label="Get encouragement from Neko" aria-controls="coach" aria-expanded="false">
   <span class="cat" data-mascot aria-hidden="true"></span>
@@ -94,6 +139,6 @@
     <image href="chad.png" width="640" height="640" clip-path="url(#chad-cutout)"/>
   </svg>
 </template>
-<script type="module" src="app.js?v=sound11"></script>
+<script type="module" src="app.js?v=studio12"></script>
 </body>
 </html>

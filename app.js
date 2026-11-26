@@ -45,6 +45,7 @@ function updateSoundToggle() {
   soundToggle.textContent = muted ? 'Sound off' : 'Sound on';
   soundToggle.setAttribute('aria-pressed', String(!muted));
   if (soundOutput) soundOutput.gain.value = muted ? 0 : 0.18;
+  syncStudio();
 }
 
 function prepareSound() {
@@ -87,6 +88,118 @@ soundToggle.addEventListener('click', () => {
   updateSoundToggle();
   if (!muted) playSound('reply');
 });
+const studio = document.querySelector('.study-scene');
+const studioToggle = document.querySelector('#studio-toggle');
+const studioLabel = document.querySelector('#studio-label');
+const studioStatus = document.querySelector('#studio-status');
+const studioFile = document.querySelector('#studio-file');
+const customTrack = new Audio();
+customTrack.loop = true;
+customTrack.volume = 0.28;
+let trackUrl;
+let playing = false;
+let musicTimer;
+let musicGain;
+let phraseIndex = 0;
+let nextNote;
+const melody = [
+  [69,2],[72,1],[76,3],[74,2],[72,2],[69,4],[67,2],[71,1],[74,3],[72,2],[71,2],[67,4],
+  [65,2],[69,1],[72,3],[76,2],[74,2],[72,4],[71,2],[74,1],[77,3],[76,2],[71,2],[69,5],
+];
+
+function scheduleViolin() {
+  if (nextNote < audio.currentTime) nextNote = audio.currentTime + .03;
+  while (nextNote < audio.currentTime + .32) {
+    const [pitch, beats] = melody[phraseIndex];
+    const time = nextNote;
+    const duration = beats * .34;
+    const frequency = 440 * 2 ** ((pitch - 69) / 12);
+    const note = audio.createOscillator();
+    const envelope = audio.createGain();
+    const vibrato = audio.createOscillator();
+    const depth = audio.createGain();
+    note.setPeriodicWave(audio.createPeriodicWave(
+      new Float32Array(8), new Float32Array([0,1,.36,.45,.19,.09,.10,.045]),
+    ));
+    note.frequency.value = frequency;
+    vibrato.frequency.value = 5.2;
+    depth.gain.setValueAtTime(0, time);
+    depth.gain.linearRampToValueAtTime(frequency * .009, time + .2);
+    vibrato.connect(depth).connect(note.frequency);
+    envelope.gain.setValueAtTime(0, time);
+    envelope.gain.linearRampToValueAtTime(.22, time + .09);
+    envelope.gain.linearRampToValueAtTime(.16, time + duration * .67);
+    envelope.gain.linearRampToValueAtTime(0, time + duration + .09);
+    note.connect(envelope).connect(musicGain);
+    note.start(time);
+    vibrato.start(time);
+    note.stop(time + duration + .1);
+    vibrato.stop(time + duration + .1);
+    nextNote += duration;
+    phraseIndex = (phraseIndex + 1) % melody.length;
+  }
+}
+
+function syncStudio() {
+  studio.dataset.playing = playing;
+  studioToggle.setAttribute('aria-pressed', String(playing));
+  studioLabel.textContent = playing ? 'Read instead' : 'Play violin';
+  customTrack.muted = muted;
+  studioStatus.textContent = playing && muted ? 'Music muted' : '';
+  if (!playing || muted || trackUrl) {
+    clearInterval(musicTimer);
+    musicTimer = undefined;
+    musicGain?.disconnect();
+    musicGain = undefined;
+  }
+  if (!playing || muted) {
+    customTrack.pause();
+    return;
+  }
+  if (trackUrl) {
+    customTrack.play().catch(() => {
+      if (playing && !muted && customTrack.paused) studioStatus.textContent = 'Could not play this audio file.';
+    });
+    return;
+  }
+  if (musicTimer) return;
+  prepareSound();
+  if (!audio) {
+    studioStatus.textContent = 'Audio is unavailable in this browser.';
+    return;
+  }
+  musicGain = audio.createGain();
+  musicGain.gain.value = .58;
+  musicGain.connect(soundOutput);
+  nextNote = audio.currentTime + .06;
+  scheduleViolin();
+  musicTimer = setInterval(scheduleViolin, 120);
+}
+
+studioToggle.addEventListener('click', () => {
+  playing = !playing;
+  syncStudio();
+});
+
+studioFile.addEventListener('change', () => {
+  if (!studioFile.files.length) return;
+  customTrack.pause();
+  if (trackUrl) URL.revokeObjectURL(trackUrl);
+  trackUrl = URL.createObjectURL(studioFile.files[0]);
+  customTrack.src = trackUrl;
+  playing = true;
+  syncStudio();
+});
+
+document.querySelector('#studio-default').addEventListener('click', () => {
+  customTrack.pause();
+  customTrack.removeAttribute('src');
+  if (trackUrl) URL.revokeObjectURL(trackUrl);
+  trackUrl = undefined;
+  studioFile.value = '';
+  syncStudio();
+});
+
 updateSoundToggle();
 
 const app = document.querySelector('#app');
@@ -126,6 +239,7 @@ function renderAvatar() {
     }
     portrait.replaceChildren(drawing);
   }
+  studio.dataset.avatar = avatar;
   document.querySelector('#avatar-name').textContent = name;
   coachToggle.setAttribute('aria-label', `Get encouragement from ${name}`);
   coach.setAttribute('aria-label', name);

@@ -35,3 +35,7 @@ Open the **Ask Neko** tab and choose Neko or Chad. Each avatar has a separate co
 ## Question bank
 
 The bank uses 102 items with explicit answer keys in the supplied *AP Biology Unit 3 MCQ Scoring Guide*. Question images retain the source numbering, shared stimuli, and figures. Answer markings were removed from the quiz images. The question excerpts and explanations are derived from the supplied guide. The [College Board course framework](https://apcentral.collegeboard.org/media/pdf/ap-biology-course-and-exam-description.pdf) supplies the five topic categories.
+
+## Study music
+
+Click the chibi avatar to start the built-in violin loop, or click again to switch it to reading. The selected Neko or Chad avatar plays the same music. The Music menu also accepts a local audio file, which stays in the browser. The header Sound control mutes both music and sound effects.
