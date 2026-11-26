@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101110">
 <title>Energetics · AP Biology Unit 3</title>
-<link rel="stylesheet" href="style.css?v=cat3">
+<link rel="stylesheet" href="style.css?v=cat4">
 </head>
 <body>
 <header class="top">
@@ -15,14 +15,43 @@
 <main id="app" tabindex="-1"></main>
 <footer><span>ENERGETICS / AP BIOLOGY</span><span>Progress saved on this device</span></footer>
 <button id="coach-toggle" class="coach-toggle" aria-label="Show study cat" aria-controls="coach" aria-expanded="false">
-  <img class="cat" src="study-cat.png" alt="">
+  <span class="cat" data-mascot aria-hidden="true"></span>
   <span>Study cat</span>
 </button>
 <aside id="coach" class="coach" hidden aria-label="Study cat">
-  <img class="cat" src="study-cat.png" alt="">
+  <span class="cat" data-mascot aria-hidden="true"></span>
   <p id="coach-message" role="status"></p>
   <button id="coach-dismiss" aria-label="Dismiss study cat">×</button>
 </aside>
-<script type="module" src="app.js?v=cat2"></script>
+<template id="mascot">
+  <svg viewBox="0 0 112 100" aria-hidden="true">
+    <ellipse cx="56" cy="90" rx="40" ry="6" fill="#141810"/>
+    <g class="cat-tail" stroke="#242319" stroke-width="2.5" stroke-linecap="round">
+      <path d="M78 78c17 7 28 1 25-8-1-4-6-5-9-2" fill="none" stroke-width="12"/>
+      <path d="M78 78c17 7 28 1 25-8-1-4-6-5-9-2" fill="none" stroke="#ac784d" stroke-width="7"/>
+    </g>
+    <g class="cat-body" stroke="#242319" stroke-width="2.5" stroke-linejoin="round">
+      <path d="M31 63c-8 11-4 24 7 25h35c13-1 17-15 8-24L64 53 45 54Z" fill="#d6a273"/>
+      <path d="M40 67c-4 6-3 14 3 17 7 3 19 3 26-1 5-3 5-10 0-16" fill="#f8e7c7" stroke="none"/>
+      <g class="cat-paw">
+        <path d="M34 73c-7 2-13 8-13 14 0 5 9 6 15 3 5-2 7-7 7-12" fill="#f8e7c7"/>
+        <path d="m27 87 2-2m4 3 2-2" stroke="#be8673" stroke-width="1.5" stroke-linecap="round"/>
+      </g>
+      <path d="M74 75c9 2 15 6 15 12 0 5-9 7-15 4-5-2-7-7-7-11" fill="#f8e7c7"/>
+      <path d="m76 87 2 2m4-3 2 2" stroke="#be8673" stroke-width="1.5" stroke-linecap="round"/>
+      <g class="cat-head">
+        <path d="M22 46c-3-13-1-28 3-35 8 2 15 7 20 13 7-2 15-2 23 0 5-7 12-12 20-13 4 8 6 23 3 35 4 5 6 11 4 17-4 11-19 15-39 15S21 74 17 63c-2-6 0-12 5-17Z" fill="#f8e7c7"/>
+        <path d="M25 38c-1-9 0-17 2-23 6 2 11 6 15 11-7 3-12 7-17 12Zm45-12c5-5 10-9 16-11 2 6 3 14 2 23-5-6-11-10-18-12Z" fill="#cd856f" stroke="none"/>
+        <path d="M34 35c7-8 16-10 23-10h8l-8 15-6-9-9 8Z" fill="#d6a273" stroke="none"/>
+        <path class="cat-eyes" d="M31 52q8 7 16 0m18 0q8 7 16 0" fill="none" stroke-linecap="round" stroke-width="3.6"/>
+        <path d="M52 58q4-2 8 0l-4 4Z" fill="#734f43" stroke="none"/>
+        <path d="M56 61v4m0 0q-4 4-8 1m8-1q4 4 8 1" fill="none" stroke-linecap="round" stroke-width="1.8"/>
+        <path d="m23 58 9 3m-11 3 10 1m59-7-9 3m11 3-10 1" stroke="#b58b68" stroke-width="1.5" stroke-linecap="round"/>
+      </g>
+      <path d="M46 76q10 5 20 0l-4 8-7-2-5 2Z" fill="#a6be69" stroke-width="1.7"/>
+    </g>
+  </svg>
+</template>
+<script type="module" src="app.js?v=cat4"></script>
 </body>
 </html>

@@ -28,6 +28,10 @@ const app = document.querySelector('#app');
 const coach = document.querySelector('#coach');
 const coachMessage = document.querySelector('#coach-message');
 const coachToggle = document.querySelector('#coach-toggle');
+const mascot = document.querySelector('#mascot');
+for (const portrait of document.querySelectorAll('[data-mascot]')) {
+  portrait.append(mascot.content.cloneNode(true));
+}
 let coachTimeout;
 
 function hideCoach() {
@@ -239,7 +243,7 @@ function check() {
     const messages = ['Take a breath and read the explanation. You can try this one again.', 'That one’s in your redemption queue. Keep going!', 'A tricky one. Use the explanation to spot what you missed.'];
     encourage(messages[session.index % messages.length], 'calm');
   } else if (streak.length === 3 && streak.every(answer => answer.correct) && !session.answers.at(-4)?.correct) {
-    encourage('Three right in a row! Keep it up.');
+    encourage('Three right in a row! Keep it up.', 'celebrate');
   } else if (session.index === 0) {
     encourage('First one down. Nice start!');
   }
@@ -260,7 +264,7 @@ function advance() {
   persist();
   results();
   const perfect = saved.latest.answers.every(answer => answer.correct);
-  encourage(perfect ? 'A perfect set! That was paw-some.' : 'Set complete! Take a look at what to focus on next.');
+  encourage(perfect ? 'A perfect set! That was paw-some.' : 'Set complete! Take a look at what to focus on next.', 'celebrate');
 }
 
 function results() {

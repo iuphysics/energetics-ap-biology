@@ -69,18 +69,30 @@ footer{border-top:1px solid var(--line);font-size:10px}
 .transcript{white-space:pre-wrap;overflow-wrap:anywhere}
 @media(max-width:580px){.prompt{overflow-x:auto}.prompt img{min-width:510px}}
 
-.coach{position:fixed;z-index:2;right:clamp(12px,4vw,44px);bottom:clamp(12px,3vw,28px);display:grid;grid-template-columns:58px minmax(0,1fr) 28px;align-items:center;gap:10px;width:min(345px,calc(100% - 24px));padding:12px;color:var(--ink);background:#242a1e;border:1px solid #687751;border-radius:16px;box-shadow:0 10px 35px #0007;animation:coach-arrive .35s cubic-bezier(.2,.78,.34,1.24) both}
+.coach{position:fixed;z-index:2;right:clamp(12px,4vw,44px);bottom:clamp(12px,3vw,28px);display:grid;grid-template-columns:83px minmax(0,1fr) 28px;align-items:center;gap:10px;width:min(345px,calc(100% - 24px));padding:12px;color:var(--ink);background:#242a1e;border:1px solid #687751;border-radius:16px;box-shadow:0 10px 35px #0007;animation:coach-arrive .35s cubic-bezier(.2,.78,.34,1.24) both}
 .coach[hidden]{display:none}
 .coach p{font-size:14px;font-weight:600}
 .coach button{width:28px;height:28px;border:0;border-radius:6px;background:transparent;color:var(--quiet);font-size:22px;line-height:1}
-.cat{display:block;height:54px;width:58px;object-fit:cover;border-radius:10px;animation:cat-hop .6s .18s ease both}
-.coach[data-mood="calm"] .cat{animation:cat-nod .55s .18s ease both}
+.cat{display:block;width:83px;line-height:0}.cat svg{width:100%;overflow:visible}
+
 @keyframes coach-arrive{from{opacity:0;transform:translateY(20px) scale(.94)}to{opacity:1;transform:none}}
 @keyframes cat-hop{0%,100%{transform:none}45%{transform:translateY(-8px) rotate(-7deg)}}
 @keyframes cat-nod{0%,100%{transform:none}45%{transform:translateY(3px) rotate(7deg)}}
-@media(prefers-reduced-motion:reduce){.coach,.coach .cat{animation:none}}
+
 @media(max-width:580px){.coach{top:12px;bottom:auto}}
 .coach-toggle{position:fixed;z-index:2;right:clamp(12px,4vw,44px);bottom:clamp(12px,3vw,28px);display:flex;align-items:center;gap:5px;padding:2px 13px 2px 5px;border:1px solid #687751;border-radius:999px;background:#242a1e;color:var(--green);font-weight:700;font-size:13px;box-shadow:0 8px 24px #0007}
 .coach-toggle[hidden]{display:none}
-.coach-toggle .cat{flex:none;width:36px;height:36px;border-radius:50%}
+.coach-toggle .cat{flex:none;width:41px}
 footer{padding-bottom:64px}
+
+.cat-body,.cat-head,.cat-tail,.cat-paw,.cat-eyes{transform-box:fill-box;transform-origin:center}
+.cat-body,.cat-head{transform-origin:center bottom}
+.cat-tail{transform-origin:left bottom;animation:cat-tail-flick 4s ease-in-out infinite}
+.cat-eyes{animation:cat-doze 4s ease-in-out infinite}
+.coach[data-mood="happy"] .cat-paw{transform-origin:right top;animation:cat-wave 1s .24s ease both}
+.coach[data-mood="calm"] .cat-head{animation:cat-nod .85s .2s ease both}
+.coach[data-mood="celebrate"] .cat-body{animation:cat-hop .9s .18s ease both}
+@keyframes cat-tail-flick{0%,78%,100%{transform:none}87%{transform:rotate(-16deg)}94%{transform:rotate(7deg)}}
+@keyframes cat-doze{0%,65%,79%,100%{transform:none}71%,74%{transform:scaleY(.12)}}
+@keyframes cat-wave{0%,100%{transform:none}25%,70%{transform:rotate(34deg) translateY(-2px)}45%,85%{transform:rotate(16deg)}}
+@media(prefers-reduced-motion:reduce){.coach,.cat svg g,.cat svg path{animation:none!important}}
