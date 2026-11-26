@@ -27,22 +27,36 @@ const storageKey = 'energetics-v1';
 const app = document.querySelector('#app');
 const coach = document.querySelector('#coach');
 const coachMessage = document.querySelector('#coach-message');
+const coachToggle = document.querySelector('#coach-toggle');
 let coachTimeout;
 
 function hideCoach() {
+  const restoreFocus = coach.contains(document.activeElement);
   clearTimeout(coachTimeout);
   coach.hidden = true;
+  coachToggle.hidden = false;
+  coachToggle.setAttribute('aria-expanded', 'false');
+  if (restoreFocus) coachToggle.focus();
 }
 
 function encourage(message, mood = 'happy') {
   hideCoach();
   coach.dataset.mood = mood;
   coach.hidden = false;
+  coachToggle.hidden = true;
+  coachToggle.setAttribute('aria-expanded', 'true');
   coachMessage.textContent = message;
   coachTimeout = setTimeout(hideCoach, 6500);
 }
 
-document.querySelector('#coach-dismiss').addEventListener('click', hideCoach);
+coachToggle.addEventListener('click', () => {
+  encourage('I’m here to cheer you on. Start with one question, then keep going.');
+  document.querySelector('#coach-dismiss').focus();
+});
+document.querySelector('#coach-dismiss').addEventListener('click', () => {
+  hideCoach();
+  coachToggle.focus();
+});
 let saved = { missed: [], latest: null, session: null };
 
 try {

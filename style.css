@@ -89,3 +89,7 @@ footer{border-top:1px solid var(--line);font-size:10px}
 @keyframes cat-blink{0%,88%,96%,100%{transform:scaleY(1)}92%{transform:scaleY(.15)}}
 @media(prefers-reduced-motion:reduce){.coach,.coach .cat,.cat .eyes{animation:none}}
 @media(max-width:580px){.coach{top:12px;bottom:auto}}
+.coach-toggle{position:fixed;z-index:2;right:clamp(12px,4vw,44px);bottom:clamp(12px,3vw,28px);display:flex;align-items:center;gap:5px;padding:2px 13px 2px 5px;border:1px solid #687751;border-radius:999px;background:#242a1e;color:var(--green);font-weight:700;font-size:13px;box-shadow:0 8px 24px #0007}
+.coach-toggle[hidden]{display:none}
+.coach-toggle .cat{display:block;flex:none;zoom:.68}
+footer{padding-bottom:64px}
