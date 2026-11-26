@@ -607,6 +607,8 @@ app.addEventListener('change', event => {
 
 function renderConversation() {
   const name = avatar === 'chad' ? 'Chad' : 'Neko';
+  document.querySelector('#buddy-tab-label').textContent = `Ask ${name}`;
+  document.querySelector('#buddy-title').textContent = `Ask ${name}`;
   document.querySelector('#buddy-subtitle').textContent = `Studying with ${name}`;
   buddyLog.replaceChildren();
   if (!conversations[avatar].length) {
