@@ -204,25 +204,32 @@ function radar(answers) {
 
 function dashboard(moveFocus = true) {
   show(`
-    <div class="hero"><p class="kicker">Unit 03 / Practice lab</p><h1>Cellular<br>energetics.</h1>
-    <p class="lead">Practice the reactions that power life. See where your understanding is strong and which concepts to revisit.</p></div>
+    <div class="workspace">
+    <aside class="unit-nav" aria-label="Unit topics">
+      <h2>Unit 3 topics</h2>
+      <ol>${Object.values(topics).map(([, , title]) => {
+        const [number, ...name] = title.split(' ');
+        return `<li><span>${number}</span>${name.join(' ')}</li>`;
+      }).join('')}</ol>
+    </aside>
+    <div class="workspace-content">
+    <div class="hero dashboard-heading"><p class="kicker">AP Biology / Unit 3</p><h1>Cellular energetics</h1></div>
     <div class="grid">
       <div class="stack">
-        <section class="panel"><h2>Practice set</h2><p class="quiet">Choose a set length. Each set draws from all five topics.</p>
-          <div class="sets" aria-label="Set length">${[20,50,100,'all'].map(value => `<button class="set" data-size="${value}" aria-pressed="${value === size}">${value === 'all' ? 'All' : value}<small>${value === 'all' ? questions.length + ' TOTAL' : 'QUESTIONS'}</small></button>`).join('')}</div>
-          <div class="actions"><button class="primary" data-action="start">Start practice →</button>
-          ${saved.session ? '<button class="secondary" data-action="resume">Resume set</button>' : ''}</div>
+        <section class="panel"><h2>Practice set</h2><p class="quiet">Choose how many questions to answer.</p>
+          <div class="sets" aria-label="Set length">${[20,50,100,'all'].map(value => `<button class="set" data-size="${value}" aria-pressed="${value === size}">${value === 'all' ? 'All' : value}<small>${value === 'all' ? questions.length + ' questions' : 'questions'}</small></button>`).join('')}</div>
+          <div class="actions">${saved.session ? '<button class="primary" data-action="resume">Resume set</button><button class="secondary" data-action="start">New set</button>' : '<button class="primary" data-action="start">Start practice</button>'}</div>
         </section>
-        <section class="panel"><div class="between"><h2>Redemption Questions</h2><span class="tag">${saved.missed.length} FLAGGED</span></div>
-          <p class="quiet">Build a custom set from questions you missed. Get one right to clear it from the queue.</p>
-          <div class="actions" style="margin-top:16px"><button class="secondary" data-action="review" ${saved.missed.length ? '' : 'disabled'}>Build redemption set →</button></div>
+        <section class="panel"><div class="between"><h2>Redemption Questions</h2><span class="count">${saved.missed.length} flagged</span></div>
+          <p class="quiet">Retry questions you missed.</p>
+          <div class="actions review-actions"><button class="secondary" data-action="review" ${saved.missed.length ? '' : 'disabled'}>Build redemption set</button></div>
         </section>
       </div>
-      <section class="panel"><div class="between"><h2>Topic radar</h2>${saved.latest ? '<button class="secondary" data-action="results">Last results</button>' : ''}</div>
-        <p class="quiet">${saved.latest ? 'Accuracy on your latest completed set.' : 'Complete a set to measure your accuracy.'}</p>
+      <section class="panel"><div class="between"><h2>Topic accuracy</h2>${saved.latest ? '<button class="secondary" data-action="results">Last results</button>' : ''}</div>
+        <p class="quiet">${saved.latest ? 'Latest completed set' : 'Your scores will appear after your first set.'}</p>
         ${radar(saved.latest?.answers ?? [])}
       </section>
-    </div>`, moveFocus);
+    </div></div></div>`, moveFocus);
 }
 
 function begin(ids, mode) {
@@ -243,20 +250,20 @@ function quiz(moveFocus = true) {
   const current = answered?.choice ?? choice;
   const last = session.index + 1 === session.ids.length;
 
-  show(`<div class="narrow">
-    <div class="between"><p class="kicker">${session.mode === 'redemption' ? 'Redemption set' : 'Practice set'}</p><button class="secondary" data-action="home">Save & exit</button></div>
-    <h1>Question ${session.index + 1}</h1>
+  show(`<div class="narrow quiz-screen">
+    <div class="between quiz-toolbar"><p class="kicker">${session.mode === 'redemption' ? 'Redemption set' : 'Practice set'}</p><button class="secondary" data-action="home">Save & exit</button></div>
+    <h1>Question ${session.index + 1} <span>of ${session.ids.length}</span></h1>
     <progress max="${session.ids.length}" value="${session.answers.length}" aria-label="Questions answered"></progress>
-    <div class="between"><span class="quiet">AP Biology Unit 3</span><span class="metric">${session.index + 1} / ${session.ids.length}</span></div>
-    <section class="panel" style="margin-top:14px">
+    <section class="panel quiz-card">
       <div class="between"><span class="metric quiet">GUIDE ITEM ${id}</span><button class="secondary" data-action="paper" aria-pressed="false">Original colors</button></div>
       <div class="prompt">${question.images.map((image, index) => `<img src="bank/${image}.png" alt="Guide item ${id}, ${image.startsWith('context') ? 'shared stimulus' : `question excerpt ${index + 1}`}">`).join('')}</div>
       <details><summary>Question transcript</summary><p class="transcript quiet">${escape(question.transcript.replace(/[^\S\n]+/g, " ").replace(/ *\n */g, "\n").replace(/\n{3,}/g, "\n\n"))}</p><p class="quiet">Figures and tables appear in the guide images above.</p></details>
+      <div class="answer-heading">Select an answer</div>
       <div class="answers" style="--choices:${question.choices.length}" aria-label="Answer choices">
         ${[...question.choices].map(letter => `<button class="answer ${answered && letter === question.answer ? 'correct' : ''} ${answered && letter === current && !answered.correct ? 'wrong' : ''}" data-choice="${letter}" aria-pressed="${letter === current}" ${answered ? 'disabled' : ''}>${letter}</button>`).join('')}
       </div>
       ${answered ? `<div class="feedback ${answered.correct ? '' : 'missed'}" role="status"><strong>${answered.correct ? 'Correct' : `Missed · Answer ${question.answer}`}</strong><p class="tag answer-topic">${topics[question.topic][2]}</p><p class="quiet">${escape(question.explanation)}</p></div>
-        <button class="primary" data-action="next">${last ? 'See results →' : 'Next question →'}</button>`
+        <button class="primary" data-action="next">${last ? 'See results' : 'Next question'}</button>`
         : `<button class="primary" data-action="check" ${choice ? '' : 'disabled'}>Check answer</button>`}
     </section>
   </div>`, moveFocus);
@@ -313,7 +320,7 @@ function results() {
     title, advice, missed: answers.filter(({ id, correct }) => !correct && ids.includes(id)).length,
   })).filter(item => item.missed).sort((a,b) => b.missed - a.missed);
   show(`
-    <div class="hero"><p class="kicker">${mode === 'redemption' ? 'Redemption' : 'Practice'} results</p><h1>${score}% · ${rating}</h1>
+    <div class="hero results-heading"><p class="kicker">${mode === 'redemption' ? 'Redemption' : 'Practice'} results</p><h1>${score}% · ${rating}</h1>
     <p class="lead">${right} of ${answers.length} correct · ${answers.length - right} missed</p></div>
     <div class="grid">
       <section class="panel"><h2>What to focus on</h2>
