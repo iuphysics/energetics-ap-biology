@@ -937,10 +937,11 @@ let frqSet = [];
 let grading;
 let activeStroke;
 function blankFrqDraft(question) {
-  return { responses: question.tasks.map(() => ''), strokes: [], xLabel: '', yLabel: '', feedback: '', score: null };
+  return { responses: question.tasks.map(() => ''), strokes: [], xLabel: '', yLabel: '', feedback: '', score: null, selfMarks: [] };
 }
 const frqDrafts = frqs.map(blankFrqDraft);
 const plot = { left: 54, right: 389, top: 18, bottom: 208 };
+const localGrading = ['127.0.0.1', 'localhost'].includes(location.hostname);
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
 function selectMode(mode) {
@@ -1058,7 +1059,13 @@ function renderFrq() {
       ${question.data ? `<div class="frq-table"><table><tbody>${question.data.map(row => `<tr><th scope="row">${row[0]}</th>${row.slice(1).map(value => `<td>${value}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : ''}
       ${question.tasks.map((task, index) => `<div class="frq-part"><h3>${letters[index]}. ${task}</h3>
       ${question.graph && index === 0 ? graphMarkup(question.graph, draft) : `<textarea class="frq-response" aria-label="Response to part ${letters[index]}" data-part="${index}" maxlength="700" rows="3">${escape(draft.responses[index])}</textarea>`}</div>`).join('')}
-      <div class="actions"><button class="primary" data-action="grade-frq">Grade response</button><button class="secondary" data-action="hint">Ask for a hint</button><span class="quiet">Practice feedback · ${question.rubric.length} points</span></div>
+      ${localGrading
+        ? `<div class="actions"><button class="primary" data-action="grade-frq">Grade response</button><button class="secondary" data-action="hint">Ask for a hint</button><span class="quiet">Practice feedback · ${question.rubric.length} points</span></div>`
+        : `<div class="frq-grading-note"><p>AI grading runs in <a href="http://127.0.0.1:8736/">local Energetics</a> on the computer running the app. You can score this response with the practice rubric here.</p>
+          <details><summary>Open rubric</summary><form id="frq-self-grade">
+            ${question.rubric.map((point, index) => `<label><input type="checkbox" name="point" value="${index}" ${draft.selfMarks.includes(index) ? 'checked' : ''}> <span>${escape(point)}</span></label>`).join('')}
+            <button class="primary">Save rubric score</button>
+          </form></details></div>`}
       <div class="frq-feedback" id="frq-feedback" role="status">${escape(draft.feedback)}</div>
     </section><details class="panel frq-radar"><summary>Topic accuracy</summary>
     <div id="frq-radar-content">${frqRadar(currentFrqScores(), frqSet.length)}</div></details></div>`);
@@ -1087,6 +1094,14 @@ function graphResponse(graph, draft) {
     return Array.from({ length: samples }, (_, i) => toValues(stroke[Math.round(i * (stroke.length - 1) / Math.max(1, samples - 1))]));
   });
   return `X label: ${draft.xLabel || '(blank)'}. Y label: ${draft.yLabel || '(blank)'}. Drawn strokes and points, sampled in axis units: ${JSON.stringify(strokes)}`;
+}
+
+function saveFrqScore(draft, score) {
+  draft.score = score;
+  const scores = currentFrqScores();
+  saved.frqAccuracy = { scores, setLength: frqSet.length };
+  persist();
+  app.querySelector('#frq-radar-content').innerHTML = frqRadar(scores, frqSet.length);
 }
 
 async function gradeFrq(button) {
@@ -1128,11 +1143,7 @@ async function gradeFrq(button) {
     const scoreLine = draft.feedback.split('\n', 1)[0].replace(/[*#`]/g, '');
     const match = scoreLine.match(/^\s*Score\s*:\s*(\d+)\s*\/\s*(\d+)/i);
     if (match && Number(match[2]) === question.rubric.length && Number(match[1]) <= question.rubric.length) {
-      draft.score = Number(match[1]);
-      const scores = currentFrqScores();
-      saved.frqAccuracy = { scores, setLength: frqSet.length };
-      persist();
-      app.querySelector('#frq-radar-content').innerHTML = frqRadar(scores, frqSet.length);
+      saveFrqScore(draft, Number(match[1]));
     }
   } catch (error) {
     if (!controller.signal.aborted) feedback.textContent = error.message || 'Grading could not connect. Try again.';
@@ -1179,6 +1190,16 @@ app.addEventListener('change', event => {
 });
 
 app.addEventListener('submit', event => {
+  if (event.target.id === 'frq-self-grade') {
+    event.preventDefault();
+    const question = frqs[frqIndex];
+    const draft = frqDrafts[frqIndex];
+    draft.selfMarks = new FormData(event.target).getAll('point').map(Number);
+    draft.feedback = `Self-assessed score: ${draft.selfMarks.length}/${question.rubric.length}`;
+    app.querySelector('#frq-feedback').textContent = draft.feedback;
+    saveFrqScore(draft, draft.selfMarks.length);
+    return;
+  }
   if (event.target.id !== 'frq-point') return;
   event.preventDefault();
   const values = new FormData(event.target);
