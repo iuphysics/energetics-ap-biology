@@ -44,8 +44,4 @@ Click the chibi avatar to start the bundled focus loop, or click again to switch
 
 Choose **FRQ** in the header for sets of 5, 10, or all 20 original Unit 3 questions. Graph questions accept drawing, tapping, and typed coordinates. **Grade response** sends only the current question, the rubric, and your response, including sampled graph coordinates, to the configured GPT model. Separate submissions carry no chat history. Moving to another FRQ also clears the Ask Neko conversation. Drafts and feedback stay available while the page is open. Scores are practice feedback.
 
-On GitHub Pages, the FRQ rubric checklist provides self-assessment and updates the topic radar. GPT grading is available when running the local server with an OpenAI API key.
-
-### Grade on the public link from your computer
-
-With the API-key-enabled app running on port 8736, run `python3 server.py --port 8740 --forward-grading` in a second terminal. The public Energetics page can then send FRQ submissions to that localhost connection. Allow the browser's local network prompt if it appears. The key stays in the original server. On devices without the connection, use the self-scoring rubric.
+On GitHub Pages, **Grade response** uses [GPT-5.6 Sol via Puter](https://developer.puter.com/ai/openai/gpt-5.6-sol/). The browser may ask the learner to sign in to Puter. Grading uses their Puter usage allowance or balance, and no API key or local server is needed. Only the current submission, prompt, and rubric are sent for each grade. The **Self-score with rubric** checklist is also available.
