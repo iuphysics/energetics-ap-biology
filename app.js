@@ -284,8 +284,7 @@ function tally(answers) {
   }));
 }
 
-function radar(answers) {
-  const stats = tally(answers);
+function radar(stats, unit = '') {
   const axes = Object.entries(topics);
   const coords = (index, scale) => {
     const angle = index * Math.PI * 2 / axes.length - Math.PI / 2;
@@ -321,7 +320,7 @@ function radar(answers) {
     </svg>
     <ul class="topic-list">${axes.map(([key, [label]]) => {
       const { correct, total, score } = stats[key];
-      return `<li><span>${label}</span><span class="${total ? 'tag' : 'quiet'}">${total ? `${score}% · ${correct}/${total}` : 'Unmeasured'}</span></li>`;
+      return `<li><span>${label}</span><span class="${total ? 'tag' : 'quiet'}">${total ? `${score}% · ${correct}/${total}${unit}` : 'Unmeasured'}</span></li>`;
     }).join('')}</ul>`;
 }
 
@@ -350,7 +349,7 @@ function dashboard(moveFocus = true) {
       </div>
       <section class="panel"><div class="between"><h2>Topic accuracy</h2>${saved.latest ? '<button class="secondary" data-action="results">Last results</button>' : ''}</div>
         <p class="quiet">${saved.latest ? 'Latest completed set' : 'Your scores will appear after your first set.'}</p>
-        ${radar(saved.latest?.answers ?? [])}
+        ${radar(tally(saved.latest?.answers ?? []))}
       </section>
     </div></div></div>`, moveFocus);
 }
@@ -452,7 +451,7 @@ function results() {
         ${gaps.length ? `<ul class="focus-list">${gaps.map(({title,advice,missed}) => `<li><div class="between"><h3>${title}</h3><span class="tag">${missed} MISSED</span></div><p class="quiet">${advice}</p></li>`).join('')}</ul>` : '<p class="quiet">You answered every question in this set correctly.</p>'}
         <div class="actions" style="margin-top:18px"><button class="secondary" data-action="home">Dashboard</button>${saved.missed.length ? '<button class="primary" data-action="review">Review flagged questions →</button>' : ''}</div>
       </section>
-      <section class="panel"><h2>Topic radar</h2>${radar(answers)}</section>
+      <section class="panel"><h2>Topic radar</h2>${radar(tally(answers))}</section>
     </div>`);
 }
 
@@ -836,7 +835,7 @@ let frqSet = [];
 let grading;
 let activeStroke;
 function blankFrqDraft(question) {
-  return { responses: question.tasks.map(() => ''), strokes: [], xLabel: '', yLabel: '', feedback: '' };
+  return { responses: question.tasks.map(() => ''), strokes: [], xLabel: '', yLabel: '', feedback: '', score: null };
 }
 const frqDrafts = frqs.map(blankFrqDraft);
 const plot = { left: 54, right: 389, top: 18, bottom: 208 };
@@ -867,12 +866,34 @@ function selectMode(mode) {
   else chooseMode();
 }
 
+function currentFrqScores() {
+  return frqSet.flatMap(index => {
+    const score = frqDrafts[index].score;
+    return score === null ? [] : [{ index, score }];
+  });
+}
+
+function frqRadar(records, setLength) {
+  const stats = Object.fromEntries(Object.keys(topics).map(topic => {
+    const graded = records.filter(({ index }) => frqs[index].topic === topic);
+    const correct = graded.reduce((sum, entry) => sum + entry.score, 0);
+    const total = graded.reduce((sum, entry) => sum + frqs[entry.index].rubric.length, 0);
+    return [topic, { correct, total, score: total ? Math.round(100 * correct / total) : null }];
+  }));
+  const summary = records.length
+    ? `${records.length} of ${setLength} responses graded`
+    : 'Grade a response to see topic scores.';
+  return `<p class="quiet">${summary}</p>${radar(stats, ' pts')}`;
+}
+
 function frqDashboard() {
   show(`<div class="narrow"><div class="hero dashboard-heading"><p class="kicker">AP Biology / Unit 3</p><h1>Free-response practice</h1></div>
-    <section class="panel"><h2>Practice set</h2><p class="quiet">Choose how many questions to answer.</p>
+    <div class="grid"><section class="panel"><h2>Practice set</h2><p class="quiet">Choose how many questions to answer.</p>
       <div class="sets frq-sets" aria-label="Set length">${[5,10,'all'].map(value => `<button class="set" data-frq-size="${value}" aria-pressed="${value === frqSize}">${value === 'all' ? 'All' : value}<small>${value === 'all' ? frqs.length + ' questions' : 'questions'}</small></button>`).join('')}</div>
       <div class="actions">${frqSet.length ? '<button class="primary" data-action="resume-frq">Resume set</button><button class="secondary" data-action="start-frq">New set</button>' : '<button class="primary" data-action="start-frq">Start practice</button>'}</div>
-    </section></div>`);
+    </section>
+    <section class="panel"><h2>Topic accuracy</h2>${frqRadar(frqSet.length ? currentFrqScores() : saved.frqAccuracy?.scores ?? [], frqSet.length || saved.frqAccuracy?.setLength || 0)}</section>
+    </div></div>`);
 }
 
 function startFrqSet() {
@@ -949,7 +970,8 @@ function renderFrq() {
       ${question.graph && index === 0 ? graphMarkup(question.graph, draft) : `<textarea class="frq-response" aria-label="Response to part ${letters[index]}" data-part="${index}" maxlength="700" rows="3">${escape(draft.responses[index])}</textarea>`}</div>`).join('')}
       <div class="actions"><button class="primary" data-action="grade-frq">Grade response</button><span class="quiet">Practice feedback · ${question.rubric.length} points</span></div>
       <div class="frq-feedback" id="frq-feedback" role="status">${escape(draft.feedback)}</div>
-    </section></div>`);
+    </section><details class="panel frq-radar"><summary>Topic accuracy</summary>
+    <div id="frq-radar-content">${frqRadar(currentFrqScores(), frqSet.length)}</div></details></div>`);
   paintMarks();
 }
 
@@ -1013,6 +1035,15 @@ async function gradeFrq(button) {
     if (controller.signal.aborted) return;
     draft.feedback = payload.answer;
     feedback.textContent = draft.feedback;
+    const scoreLine = draft.feedback.split('\n', 1)[0].replace(/[*#`]/g, '');
+    const match = scoreLine.match(/^\s*Score\s*:\s*(\d+)\s*\/\s*(\d+)/i);
+    if (match && Number(match[2]) === question.rubric.length && Number(match[1]) <= question.rubric.length) {
+      draft.score = Number(match[1]);
+      const scores = currentFrqScores();
+      saved.frqAccuracy = { scores, setLength: frqSet.length };
+      persist();
+      app.querySelector('#frq-radar-content').innerHTML = frqRadar(scores, frqSet.length);
+    }
   } catch (error) {
     if (!controller.signal.aborted) feedback.textContent = error.message || 'Grading could not connect. Try again.';
   } finally {
