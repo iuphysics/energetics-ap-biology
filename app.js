@@ -25,6 +25,24 @@ const questionById = new Map(questions.map(question => [question.id, question]))
 const focusById = new Map(focusGroups.flatMap(([title, advice, ids]) => ids.map(id => [id, { title, advice }])));
 const storageKey = 'energetics-v1';
 const app = document.querySelector('#app');
+const coach = document.querySelector('#coach');
+const coachMessage = document.querySelector('#coach-message');
+let coachTimeout;
+
+function hideCoach() {
+  clearTimeout(coachTimeout);
+  coach.hidden = true;
+}
+
+function encourage(message, mood = 'happy') {
+  hideCoach();
+  coach.dataset.mood = mood;
+  coach.hidden = false;
+  coachMessage.textContent = message;
+  coachTimeout = setTimeout(hideCoach, 6500);
+}
+
+document.querySelector('#coach-dismiss').addEventListener('click', hideCoach);
 let saved = { missed: [], latest: null, session: null };
 
 try {
@@ -51,6 +69,7 @@ function persist() {
 }
 
 function show(html, moveFocus = true) {
+  hideCoach();
   app.innerHTML = html;
   if (moveFocus) {
     window.scrollTo(0, 0);
@@ -157,6 +176,7 @@ function begin(ids, mode) {
   choice = null;
   persist();
   quiz();
+  encourage(mode === 'redemption' ? 'Round two! Show these questions what you learned.' : 'You’ve got this. One question at a time.');
 }
 
 function quiz(moveFocus = true) {
@@ -200,6 +220,15 @@ function check() {
   persist();
   quiz(false);
   app.querySelector('[data-action="next"]').focus();
+  const streak = session.answers.slice(-3);
+  if (!correct) {
+    const messages = ['Take a breath and read the explanation. You can try this one again.', 'That one’s in your redemption queue. Keep going!', 'A tricky one. Use the explanation to spot what you missed.'];
+    encourage(messages[session.index % messages.length], 'calm');
+  } else if (streak.length === 3 && streak.every(answer => answer.correct) && !session.answers.at(-4)?.correct) {
+    encourage('Three right in a row! Keep it up.');
+  } else if (session.index === 0) {
+    encourage('First one down. Nice start!');
+  }
 }
 
 function advance() {
@@ -216,6 +245,8 @@ function advance() {
   saved.session = null;
   persist();
   results();
+  const perfect = saved.latest.answers.every(answer => answer.correct);
+  encourage(perfect ? 'A perfect set! That was paw-some.' : 'Set complete! Take a look at what to focus on next.');
 }
 
 function results() {
