@@ -7,10 +7,22 @@ AP Biology Unit 3 practice with a five-axis radar chart, a performance rating af
 From the repository directory, run:
 
 ```sh
-python3 -m http.server 8736 --bind 127.0.0.1
+python3 server.py
 ```
 
-Open [Energetics](http://127.0.0.1:8736/) in your browser. The app is static and needs no build step or account. Progress and flagged questions are stored in this browser.
+Open [Energetics](http://127.0.0.1:8736/) in your browser. Practice needs no build step or account. Progress and flagged questions are stored in this browser.
+
+## Study Buddy
+
+To enable GPT chat, stop the running server and start it with:
+
+```sh
+python3 server.py --ask-key
+```
+
+Enter an OpenAI API key at the hidden terminal prompt. The server also accepts the `OPENAI_API_KEY` environment variable and supports overriding the default model with `OPENAI_MODEL`. The server listens only on this computer.
+
+Open **Study Buddy** and choose Neko or Chad. Each avatar has a separate conversation for the current browser tab. Questions and recent chat turns are sent to the [OpenAI Responses API](https://developers.openai.com/api/reference/resources/responses/methods/create). When chat is opened from a checked quiz question, the request can also include its text and feedback.
 
 ## Practice and scoring
 

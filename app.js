@@ -31,6 +31,14 @@ const coachToggle = document.querySelector('#coach-toggle');
 const avatarButtons = document.querySelectorAll('[data-avatar]');
 const avatarDock = document.querySelector('.avatar-dock');
 const portraits = document.querySelectorAll('[data-mascot]');
+const buddy = document.querySelector('#buddy');
+const buddyLog = document.querySelector('#buddy-log');
+const buddyStatus = document.querySelector('#buddy-status');
+const buddyForm = document.querySelector('#buddy-form');
+const buddyInput = document.querySelector('#buddy-input');
+const conversations = { neko: [], chad: [] };
+const pendingAvatars = new Set();
+const chatStatus = { neko: '', chad: '' };
 let avatar = 'neko';
 try {
   if (localStorage.getItem('energetics-avatar') === 'chad') avatar = 'chad';
@@ -54,6 +62,7 @@ function renderAvatar() {
   coachToggle.setAttribute('aria-label', `Get encouragement from ${name}`);
   coach.setAttribute('aria-label', name);
   for (const button of avatarButtons) button.setAttribute('aria-pressed', button.dataset.avatar === avatar);
+  renderConversation();
 }
 
 for (const button of avatarButtons) {
@@ -65,7 +74,7 @@ for (const button of avatarButtons) {
       // Keep the in-memory selection.
     }
     renderAvatar();
-    encourage(avatar === 'chad' ? 'Chad here. Let’s get those reps in.' : 'Neko here. Time for a little flex.', 'celebrate');
+    if (!buddy.open) encourage(avatar === 'chad' ? 'Chad here. Let’s get those reps in.' : 'Neko here. Time for a little flex.', 'celebrate');
   });
 }
 renderAvatar();
@@ -400,3 +409,85 @@ app.addEventListener('change', event => {
 
 document.querySelector('#home').addEventListener('click', () => dashboard());
 dashboard(false);
+
+function renderConversation() {
+  const name = avatar === 'chad' ? 'Chad' : 'Neko';
+  document.querySelector('#buddy-subtitle').textContent = `Studying with ${name}`;
+  buddyLog.replaceChildren();
+  if (!conversations[avatar].length) {
+    const empty = document.createElement('p');
+    empty.className = 'quiet';
+    empty.textContent = 'Ask for a hint, a concept explanation, or a quick practice question.';
+    buddyLog.append(empty);
+  }
+  for (const turn of conversations[avatar]) {
+    const message = document.createElement('div');
+    message.className = `buddy-message ${turn.role}`;
+    const speaker = document.createElement('strong');
+    speaker.textContent = turn.role === 'user' ? 'You' : name;
+    const content = document.createElement('p');
+    content.textContent = turn.content;
+    message.append(speaker, content);
+    buddyLog.append(message);
+  }
+  buddyStatus.textContent = chatStatus[avatar];
+  buddyForm.querySelector('button').disabled = pendingAvatars.has(avatar);
+  buddyLog.scrollTop = buddyLog.scrollHeight;
+}
+
+function buddyContext() {
+  const session = saved.session;
+  if (!session || !app.querySelector('.quiz-screen')) return '';
+  const id = session.ids[session.index];
+  const answer = session.answers[session.index];
+  if (!answer) return 'The student is in an active Unit 3 quiz. Provide hints without revealing an answer.';
+  const question = questionById.get(id);
+  return `Checked question, ${topics[question.topic][2]}. ${question.transcript.replace(/\s+/g, ' ').slice(0, 1750)}
+Student chose ${answer.choice}. Correct choice: ${question.answer}. Explanation: ${question.explanation.slice(0, 450)}`;
+}
+
+document.querySelector('#open-buddy').addEventListener('click', () => {
+  hideCoach();
+  buddy.showModal();
+  buddyInput.focus();
+});
+
+buddyForm.addEventListener('submit', async event => {
+  event.preventDefault();
+  const currentAvatar = avatar;
+  const question = buddyInput.value.trim();
+  if (!question || pendingAvatars.has(currentAvatar)) return;
+
+  const conversation = conversations[currentAvatar];
+  pendingAvatars.add(currentAvatar);
+  chatStatus[currentAvatar] = 'Thinking…';
+  conversation.push({ role: 'user', content: question });
+  buddyInput.value = '';
+  renderConversation();
+
+  try {
+    const response = await fetch('/api/study-buddy', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        avatar: currentAvatar,
+        messages: conversation.slice(-13),
+        context: buddyContext(),
+      }),
+    });
+    if (!response.headers.get('Content-Type')?.includes('application/json')) {
+      throw new Error('Start Energetics with server.py to connect Study Buddy.');
+    }
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.error);
+    conversation.push({ role: 'assistant', content: result.answer });
+    chatStatus[currentAvatar] = '';
+  } catch (error) {
+    conversation.pop();
+    chatStatus[currentAvatar] = error.message || 'Could not connect. Try again.';
+    if (avatar === currentAvatar && !buddyInput.value) buddyInput.value = question;
+  } finally {
+    pendingAvatars.delete(currentAvatar);
+    renderConversation();
+  }
+});

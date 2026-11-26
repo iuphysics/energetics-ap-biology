@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101110">
 <title>Energetics · AP Biology Unit 3</title>
-<link rel="stylesheet" href="style.css?v=study7">
+<link rel="stylesheet" href="style.css?v=buddy8">
 </head>
 <body>
 <header class="top">
   <button class="brand" id="home"><span class="mark" aria-hidden="true">✳</span> Energetics</button>
-  <span class="course">AP Biology</span>
+  <div class="actions"><span class="course">AP Biology</span><button id="open-buddy" class="secondary" aria-haspopup="dialog">Study Buddy</button></div>
 </header>
 <main id="app" tabindex="-1"></main>
 <footer><span>Progress saved on this device</span></footer>
@@ -29,6 +29,24 @@
   <p id="coach-message" role="status"></p>
   <button id="coach-dismiss" aria-label="Dismiss encouragement">×</button>
 </aside>
+<dialog id="buddy" aria-labelledby="buddy-title">
+  <div class="buddy-head">
+    <span class="cat" data-mascot aria-hidden="true"></span>
+    <div><h2 id="buddy-title">Study Buddy</h2><p id="buddy-subtitle" class="quiet"></p></div>
+    <form method="dialog"><button class="secondary" aria-label="Close Study Buddy">Close</button></form>
+  </div>
+  <div class="buddy-switch" aria-label="Choose Study Buddy">
+    <button class="secondary" data-avatar="neko" aria-pressed="true">Neko</button>
+    <button class="secondary" data-avatar="chad" aria-pressed="false">Chad</button>
+  </div>
+  <div id="buddy-log" class="buddy-log" role="log" aria-label="Study Buddy conversation"></div>
+  <p id="buddy-status" class="buddy-status" role="status"></p>
+  <form id="buddy-form" class="buddy-form">
+    <label for="buddy-input">Your question</label>
+    <textarea id="buddy-input" placeholder="Why does ATP synthase need a proton gradient?" rows="2" maxlength="2000" required></textarea>
+    <button class="primary" type="submit">Ask</button>
+  </form>
+</dialog>
 <template id="mascot">
   <svg viewBox="0 0 112 100" aria-hidden="true">
     <ellipse cx="56" cy="90" rx="40" ry="6" fill="#141810"/>
@@ -68,6 +86,6 @@
     <image href="chad.png" width="640" height="640" clip-path="url(#chad-cutout)"/>
   </svg>
 </template>
-<script type="module" src="app.js?v=study7"></script>
+<script type="module" src="app.js?v=buddy8"></script>
 </body>
 </html>

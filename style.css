@@ -175,3 +175,19 @@ footer{font-size:12px;margin-top:6px}
 @media(max-width:1040px){.workspace{grid-template-columns:165px minmax(0,1fr);gap:20px}}
 @media(max-width:850px){.workspace{display:block}.unit-nav{display:none}}
 @media(max-width:650px){.grid{grid-template-columns:minmax(0,1fr)}}
+
+#buddy{width:min(620px,calc(100% - 24px));max-height:calc(100dvh - 24px);padding:clamp(14px,4vw,24px);border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--ink);overflow:auto}
+#buddy::backdrop{background:#000a}
+.buddy-head{display:grid;grid-template-columns:60px minmax(0,1fr) auto;align-items:center;gap:12px}
+.buddy-head .cat{width:60px}
+.buddy-switch{display:flex;gap:8px;margin:12px 0}
+.buddy-switch [aria-pressed=true]{color:var(--green);border-color:var(--green)}
+.buddy-log{display:grid;align-content:start;gap:10px;min-height:90px;max-height:38dvh;overflow:auto;border-block:1px solid var(--line);padding:12px 0}
+.buddy-message{max-width:92%;border-radius:8px;padding:9px 12px;background:#222528;overflow-wrap:anywhere}
+.buddy-message.user{justify-self:end;background:#2b3728}
+.buddy-message p{white-space:pre-wrap;margin-top:3px}
+.buddy-status{color:var(--quiet);min-height:24px;padding-top:4px}
+.buddy-form{display:grid;gap:7px}
+.buddy-form label{font-size:13px;font-weight:600}
+.buddy-form textarea{resize:vertical;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:9px;font:inherit}
+.buddy-form button{justify-self:end}
