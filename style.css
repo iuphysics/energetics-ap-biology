@@ -260,3 +260,5 @@ body{background:radial-gradient(ellipse at 82% 0%,#232c22 0%,transparent 42%),va
 @media(min-width:1150px){.quiz-screen{max-width:790px}}
 @media(max-width:900px){.study-scene{position:relative;right:auto;bottom:auto;margin:0 18px 80px auto}.study-scene .studio-menu{z-index:3}}
 @media(prefers-reduced-motion:reduce){.study-scene svg *{animation:none!important}}
+.study-scene:not([data-avatar="chad"]) .chad-body,.study-scene[data-avatar="chad"] .neko-body{display:none}
+.study-scene[data-avatar="chad"] .studio-body{filter:grayscale(1)}
