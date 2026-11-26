@@ -42,4 +42,4 @@ Click the chibi avatar to start the bundled focus loop, or click again to switch
 
 ## Free-response practice
 
-Choose **FRQ** on the home screen for 20 original Unit 3 questions. Graph questions accept drawing, tapping, and typed coordinates. **Grade response** sends only the current question, the rubric, and your response, including sampled graph coordinates, to the configured GPT model. Separate submissions carry no chat history. Moving to another FRQ also clears the Ask Neko conversation. Drafts and feedback stay available while the page is open. Scores are practice feedback.
+Choose **FRQ** on the home screen for sets of 5, 10, or all 20 original Unit 3 questions. Graph questions accept drawing, tapping, and typed coordinates. **Grade response** sends only the current question, the rubric, and your response, including sampled graph coordinates, to the configured GPT model. Separate submissions carry no chat history. Moving to another FRQ also clears the Ask Neko conversation. Drafts and feedback stay available while the page is open. Scores are practice feedback.

@@ -552,7 +552,7 @@ function renderConversation() {
 }
 
 function buddyContext() {
-  if (practiceMode === 'frq') {
+  if (practiceMode === 'frq' && app.querySelector('.frq-screen')) {
     const question = frqs[frqIndex];
     const task = question.tasks.map((part, index) => `${letters[index]}. ${part}`).join(' ');
     const data = question.data?.map(row => row.join(' | ')).join('; ') ?? '';
@@ -831,11 +831,14 @@ const frqs = [
 
 let practiceMode;
 let frqIndex = 0;
+let frqSize = 5;
+let frqSet = [];
 let grading;
 let activeStroke;
-const frqDrafts = frqs.map(question => ({
-  responses: question.tasks.map(() => ''), strokes: [], xLabel: '', yLabel: '', feedback: '',
-}));
+function blankFrqDraft(question) {
+  return { responses: question.tasks.map(() => ''), strokes: [], xLabel: '', yLabel: '', feedback: '' };
+}
+const frqDrafts = frqs.map(blankFrqDraft);
 const plot = { left: 54, right: 389, top: 18, bottom: 208 };
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
@@ -860,8 +863,40 @@ function selectMode(mode) {
     document.querySelector(`#mode-${name}`).setAttribute('aria-pressed', String(name === mode));
   }
   if (mode === 'mcq') dashboard();
-  else if (mode === 'frq') renderFrq();
+  else if (mode === 'frq') frqDashboard();
   else chooseMode();
+}
+
+function frqDashboard() {
+  show(`<div class="narrow"><div class="hero dashboard-heading"><p class="kicker">AP Biology / Unit 3</p><h1>Free-response practice</h1></div>
+    <section class="panel"><h2>Practice set</h2><p class="quiet">Choose how many questions to answer.</p>
+      <div class="sets frq-sets" aria-label="Set length">${[5,10,'all'].map(value => `<button class="set" data-frq-size="${value}" aria-pressed="${value === frqSize}">${value === 'all' ? 'All' : value}<small>${value === 'all' ? frqs.length + ' questions' : 'questions'}</small></button>`).join('')}</div>
+      <div class="actions">${frqSet.length ? '<button class="primary" data-action="resume-frq">Resume set</button><button class="secondary" data-action="start-frq">New set</button>' : '<button class="primary" data-action="start-frq">Start practice</button>'}</div>
+    </section></div>`);
+}
+
+function startFrqSet() {
+  const count = frqSize === 'all' ? frqs.length : frqSize;
+  const groups = Object.keys(topics).map(topic => shuffle(frqs.flatMap((question, index) => question.topic === topic ? [index] : [])));
+  const picked = [];
+  while (picked.length < count) {
+    for (const group of shuffle(groups)) {
+      if (group.length && picked.length < count) picked.push(group.pop());
+    }
+  }
+  frqSet = shuffle(picked);
+  for (const index of frqSet) frqDrafts[index] = blankFrqDraft(frqs[index]);
+  frqIndex = frqSet[0];
+  clearBuddyChat();
+  renderFrq();
+}
+
+function exitFrqSet() {
+  grading?.abort();
+  grading = undefined;
+  activeStroke = undefined;
+  clearBuddyChat();
+  frqDashboard();
 }
 
 function graphMarkup(graph, draft) {
@@ -900,10 +935,11 @@ function paintMarks() {
 function renderFrq() {
   const question = frqs[frqIndex];
   const draft = frqDrafts[frqIndex];
+  const position = frqSet.indexOf(frqIndex);
   show(`<div class="narrow frq-screen">
     <div class="between frq-nav">
-      <label>FRQ <select id="frq-select">${frqs.map((item, index) => `<option value="${index}" ${index === frqIndex ? 'selected' : ''}>${index + 1}. ${item.title}</option>`).join('')}</select></label>
-      <div class="actions"><button class="secondary" data-action="frq-prev" ${frqIndex === 0 ? 'disabled' : ''}>Previous</button><button class="secondary" data-action="frq-next" ${frqIndex === frqs.length - 1 ? 'disabled' : ''}>Next</button></div>
+      <label>FRQ <select id="frq-select">${frqSet.map((index, order) => `<option value="${index}" ${index === frqIndex ? 'selected' : ''}>${order + 1} of ${frqSet.length} · ${frqs[index].title}</option>`).join('')}</select></label>
+      <div class="actions"><button class="secondary" data-action="frq-prev" ${position === 0 ? 'disabled' : ''}>Previous</button><button class="secondary" data-action="frq-next" ${position === frqSet.length - 1 ? 'disabled' : ''}>Next</button><button class="secondary" data-action="exit-frq">Exit set</button></div>
     </div>
     <div class="hero"><p class="kicker">${topics[question.topic][2]}</p><h1>${question.title}</h1></div>
     <section class="panel">
@@ -990,11 +1026,18 @@ async function gradeFrq(button) {
 app.addEventListener('click', event => {
   const button = event.target.closest('button');
   if (!button || button.disabled) return;
+  if (button.dataset.frqSize) {
+    frqSize = button.dataset.frqSize === 'all' ? 'all' : Number(button.dataset.frqSize);
+    for (const option of app.querySelectorAll('[data-frq-size]')) option.setAttribute('aria-pressed', String(option === button));
+  }
   switch (button.dataset.action) {
+    case 'start-frq': startFrqSet(); break;
+    case 'resume-frq': clearBuddyChat(); renderFrq(); break;
+    case 'exit-frq': exitFrqSet(); break;
     case 'enter-mcq': selectMode('mcq'); break;
     case 'enter-frq': selectMode('frq'); break;
-    case 'frq-prev': changeFrq(frqIndex - 1); break;
-    case 'frq-next': changeFrq(frqIndex + 1); break;
+    case 'frq-prev': changeFrq(frqSet[frqSet.indexOf(frqIndex) - 1]); break;
+    case 'frq-next': changeFrq(frqSet[frqSet.indexOf(frqIndex) + 1]); break;
     case 'grade-frq': gradeFrq(button); break;
     case 'clear-graph':
       frqDrafts[frqIndex].strokes = [];

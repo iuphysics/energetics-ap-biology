@@ -287,3 +287,4 @@ body{background:radial-gradient(ellipse at 82% 0%,#232c22 0%,transparent 42%),va
 .axis-labels input{display:block;margin-top:3px}
 .frq-feedback:not(:empty){white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid var(--line);background:#202820;border-radius:7px;padding:13px;margin-top:14px}
 @media(max-width:440px){.top .actions{gap:4px}.top .secondary{padding:7px 7px;font-size:12px}}
+.frq-sets{grid-template-columns:repeat(3,minmax(0,1fr))}
