@@ -96,3 +96,22 @@ footer{padding-bottom:64px}
 @keyframes cat-doze{0%,65%,79%,100%{transform:none}71%,74%{transform:scaleY(.12)}}
 @keyframes cat-wave{0%,100%{transform:none}25%,70%{transform:rotate(34deg) translateY(-2px)}45%,85%{transform:rotate(16deg)}}
 @media(prefers-reduced-motion:reduce){.coach,.cat svg g,.cat svg path{animation:none!important}}
+.avatar-dock{position:fixed;z-index:2;right:clamp(12px,4vw,44px);bottom:clamp(12px,3vw,28px)}
+.avatar-dock[hidden]{display:none}
+.coach-toggle{position:relative;right:auto;bottom:auto;padding-right:16px}
+.coach-toggle .cat{width:64px}
+.coach{grid-template-columns:108px minmax(0,1fr) 28px;width:min(397px,calc(100% - 24px))}
+.coach .cat{width:108px}
+.avatar-picker{position:absolute;bottom:100%;right:0;display:flex;gap:5px;padding:6px 0;visibility:hidden}
+.avatar-dock:hover .avatar-picker,.avatar-dock:focus-within .avatar-picker{visibility:visible}
+.avatar-picker button{border:1px solid #687751;border-radius:8px;background:#242a1e;color:var(--ink);padding:6px 11px}
+.avatar-picker button[aria-pressed=true]{color:var(--green);border-color:var(--green)}
+.cat-flex{opacity:0;transform:scale(.45) rotate(25deg)}
+.coach[data-mood="celebrate"] .cat-flex{animation:neko-flex 1.65s .18s ease both}
+.coach[data-mood="celebrate"] .cat-paw{animation:neko-tuck 1.65s .18s ease both}
+.coach .chad{animation:chad-bounce .78s .12s ease both;transform-origin:center bottom}
+@keyframes neko-flex{0%{opacity:0;transform:scale(.45) rotate(25deg)}25%,78%{opacity:1;transform:scale(1.08) rotate(-10deg)}100%{opacity:0;transform:scale(.45) rotate(25deg)}}
+@keyframes neko-tuck{0%,100%{opacity:1}25%,78%{opacity:0}}
+@keyframes chad-bounce{0%,100%{transform:none}24%{transform:translateY(-13px) scale(.98,1.04)}49%{transform:scale(1.06,.94)}70%{transform:translateY(-5px)}}
+@media(prefers-reduced-motion:reduce){.coach .chad{animation:none}.coach[data-mood="celebrate"] .cat-flex{opacity:1;transform:none}.coach[data-mood="celebrate"] .cat-paw{opacity:0}}
+@media(hover:none){.avatar-picker{visibility:visible}}

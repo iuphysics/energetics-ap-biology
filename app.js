@@ -28,17 +28,54 @@ const app = document.querySelector('#app');
 const coach = document.querySelector('#coach');
 const coachMessage = document.querySelector('#coach-message');
 const coachToggle = document.querySelector('#coach-toggle');
-const mascot = document.querySelector('#mascot');
-for (const portrait of document.querySelectorAll('[data-mascot]')) {
-  portrait.append(mascot.content.cloneNode(true));
+const avatarButtons = document.querySelectorAll('[data-avatar]');
+const avatarDock = document.querySelector('.avatar-dock');
+const portraits = document.querySelectorAll('[data-mascot]');
+let avatar = 'neko';
+try {
+  if (localStorage.getItem('energetics-avatar') === 'chad') avatar = 'chad';
+} catch {
+  // Avatar selection still works in this tab.
 }
+
+function renderAvatar() {
+  const name = avatar === 'chad' ? 'Chad' : 'Neko';
+  const template = document.querySelector(avatar === 'chad' ? '#chad-avatar' : '#mascot');
+  for (const [index, portrait] of portraits.entries()) {
+    const drawing = template.content.cloneNode(true);
+    if (avatar === 'chad') {
+      const clipId = 'chad-cutout-' + index;
+      drawing.querySelector('clipPath').id = clipId;
+      drawing.querySelector('image').setAttribute('clip-path', `url(#${clipId})`);
+    }
+    portrait.replaceChildren(drawing);
+  }
+  document.querySelector('#avatar-name').textContent = name;
+  coachToggle.setAttribute('aria-label', `Get encouragement from ${name}`);
+  coach.setAttribute('aria-label', name);
+  for (const button of avatarButtons) button.setAttribute('aria-pressed', button.dataset.avatar === avatar);
+}
+
+for (const button of avatarButtons) {
+  button.addEventListener('click', () => {
+    avatar = button.dataset.avatar;
+    try {
+      localStorage.setItem('energetics-avatar', avatar);
+    } catch {
+      // Keep the in-memory selection.
+    }
+    renderAvatar();
+    encourage(avatar === 'chad' ? 'Chad here. Let’s get those reps in.' : 'Neko here. Time for a little flex.', 'celebrate');
+  });
+}
+renderAvatar();
 let coachTimeout;
 
 function hideCoach() {
   const restoreFocus = coach.contains(document.activeElement);
   clearTimeout(coachTimeout);
   coach.hidden = true;
-  coachToggle.hidden = false;
+  avatarDock.hidden = false;
   coachToggle.setAttribute('aria-expanded', 'false');
   if (restoreFocus) coachToggle.focus();
 }
@@ -47,14 +84,14 @@ function encourage(message, mood = 'happy') {
   hideCoach();
   coach.dataset.mood = mood;
   coach.hidden = false;
-  coachToggle.hidden = true;
+  avatarDock.hidden = true;
   coachToggle.setAttribute('aria-expanded', 'true');
   coachMessage.textContent = message;
   coachTimeout = setTimeout(hideCoach, 6500);
 }
 
 coachToggle.addEventListener('click', () => {
-  encourage('I’m here to cheer you on. Start with one question, then keep going.');
+  encourage(avatar === 'chad' ? 'One question at a time. Every rep counts.' : 'Neko here. One question at a time. Watch this flex!', 'celebrate');
   document.querySelector('#coach-dismiss').focus();
 });
 document.querySelector('#coach-dismiss').addEventListener('click', () => {
