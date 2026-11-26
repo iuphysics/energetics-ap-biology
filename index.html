@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101110">
 <title>Energetics · AP Biology Unit 3</title>
-<link rel="stylesheet" href="style.css?v=buddy8">
+<link rel="stylesheet" href="style.css?v=buddy10">
 </head>
 <body>
 <header class="top">
   <button class="brand" id="home"><span class="mark" aria-hidden="true">✳</span> Energetics</button>
-  <div class="actions"><span class="course">AP Biology</span><button id="open-buddy" class="secondary" aria-haspopup="dialog">Study Buddy</button></div>
+  <span class="course">AP Biology</span>
 </header>
 <main id="app" tabindex="-1"></main>
 <footer><span>Progress saved on this device</span></footer>
@@ -29,17 +29,25 @@
   <p id="coach-message" role="status"></p>
   <button id="coach-dismiss" aria-label="Dismiss encouragement">×</button>
 </aside>
+<button id="open-buddy" class="buddy-tab" aria-controls="buddy" aria-expanded="false" aria-haspopup="dialog">
+  <span aria-hidden="true">✦</span> <span>Ask Neko</span>
+</button>
 <dialog id="buddy" aria-labelledby="buddy-title">
+  <div class="buddy-grip" tabindex="0" aria-label="Move chat window with arrow keys" title="Drag to move">⠿</div>
   <div class="buddy-head">
     <span class="cat" data-mascot aria-hidden="true"></span>
-    <div><h2 id="buddy-title">Study Buddy</h2><p id="buddy-subtitle" class="quiet"></p></div>
-    <form method="dialog"><button class="secondary" aria-label="Close Study Buddy">Close</button></form>
+    <div><h2 id="buddy-title">Ask Neko</h2><p id="buddy-subtitle" class="quiet"></p></div>
+    <form method="dialog"><button class="secondary" aria-label="Close chat">×</button></form>
   </div>
   <div class="buddy-switch" aria-label="Choose Study Buddy">
     <button class="secondary" data-avatar="neko" aria-pressed="true">Neko</button>
     <button class="secondary" data-avatar="chad" aria-pressed="false">Chad</button>
   </div>
   <div id="buddy-log" class="buddy-log" role="log" aria-label="Study Buddy conversation"></div>
+  <div id="buddy-thinking" class="buddy-thinking" hidden role="status">
+    <span class="cat" data-mascot aria-hidden="true"></span>
+    <span class="thinking-bubble" aria-label="Thinking"><i></i><i></i><i></i></span>
+  </div>
   <p id="buddy-status" class="buddy-status" role="status"></p>
   <form id="buddy-form" class="buddy-form">
     <label for="buddy-input">Your question</label>
@@ -86,6 +94,6 @@
     <image href="chad.png" width="640" height="640" clip-path="url(#chad-cutout)"/>
   </svg>
 </template>
-<script type="module" src="app.js?v=buddy9"></script>
+<script type="module" src="app.js?v=buddy10"></script>
 </body>
 </html>

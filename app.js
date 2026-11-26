@@ -32,6 +32,9 @@ const avatarButtons = document.querySelectorAll('[data-avatar]');
 const avatarDock = document.querySelector('.avatar-dock');
 const portraits = document.querySelectorAll('[data-mascot]');
 const buddy = document.querySelector('#buddy');
+const buddyTab = document.querySelector('#open-buddy');
+const buddyGrip = buddy.querySelector('.buddy-grip');
+const buddyThinking = document.querySelector('#buddy-thinking');
 const buddyLog = document.querySelector('#buddy-log');
 const buddyStatus = document.querySelector('#buddy-status');
 const buddyForm = document.querySelector('#buddy-form');
@@ -431,6 +434,7 @@ function renderConversation() {
     buddyLog.append(message);
   }
   buddyStatus.textContent = chatStatus[avatar];
+  buddyThinking.hidden = !pendingAvatars.has(avatar);
   buddyForm.querySelector('button').disabled = pendingAvatars.has(avatar);
   buddyLog.scrollTop = buddyLog.scrollHeight;
 }
@@ -446,13 +450,72 @@ function buddyContext() {
 Student chose ${answer.choice}. Correct choice: ${question.answer}. Explanation: ${question.explanation.slice(0, 450)}`;
 }
 
-document.querySelector('#open-buddy').addEventListener('click', () => {
+let buddyPosition;
+let drag;
+
+function positionBuddy(left, top) {
+  const margin = 10;
+  const maxLeft = Math.max(margin, window.innerWidth - buddy.offsetWidth - margin);
+  const maxTop = Math.max(margin, window.innerHeight - buddy.offsetHeight - margin);
+  buddyPosition = {
+    left: Math.max(margin, Math.min(left, maxLeft)),
+    top: Math.max(margin, Math.min(top, maxTop)),
+  };
+  buddy.style.left = `${buddyPosition.left}px`;
+  buddy.style.top = `${buddyPosition.top}px`;
+}
+
+buddyTab.addEventListener('click', () => {
+  if (buddy.open) {
+    buddy.close();
+    return;
+  }
   hideCoach();
-  buddy.showModal();
-  buddyInput.focus();
+  buddy.show();
+  const tab = buddyTab.getBoundingClientRect();
+  const position = buddyPosition ?? { left: tab.left, top: tab.top - buddy.offsetHeight - 8 };
+  positionBuddy(position.left, position.top);
+  buddyTab.setAttribute('aria-expanded', 'true');
+  buddyInput.focus({ preventScroll: true });
+});
+
+buddyGrip.addEventListener('pointerdown', event => {
+  if (event.button !== 0 || drag) return;
+  drag = { id: event.pointerId, x: event.clientX - buddyPosition.left, y: event.clientY - buddyPosition.top };
+  buddyGrip.setPointerCapture(event.pointerId);
+  buddyGrip.classList.add('dragging');
+});
+
+buddyGrip.addEventListener('pointermove', event => {
+  if (drag?.id !== event.pointerId) return;
+  positionBuddy(event.clientX - drag.x, event.clientY - drag.y);
+});
+
+buddyGrip.addEventListener('lostpointercapture', event => {
+  if (drag?.id !== event.pointerId) return;
+  drag = undefined;
+  buddyGrip.classList.remove('dragging');
+});
+
+buddyGrip.addEventListener('keydown', event => {
+  const offsets = { ArrowLeft: [-20, 0], ArrowRight: [20, 0], ArrowUp: [0, -20], ArrowDown: [0, 20] };
+  const offset = offsets[event.key];
+  if (!offset) return;
+  event.preventDefault();
+  positionBuddy(buddyPosition.left + offset[0], buddyPosition.top + offset[1]);
+});
+
+buddy.addEventListener('keydown', event => {
+  if (event.key === 'Escape') buddy.close();
+});
+
+window.addEventListener('resize', () => {
+  if (buddy.open) positionBuddy(buddyPosition.left, buddyPosition.top);
 });
 
 buddy.addEventListener('close', () => {
+  buddyTab.setAttribute('aria-expanded', 'false');
+  buddyTab.focus({ preventScroll: true });
   for (const name of Object.keys(conversations)) {
     pendingAvatars.get(name)?.abort();
     pendingAvatars.delete(name);
@@ -472,7 +535,7 @@ buddyForm.addEventListener('submit', async event => {
   const conversation = conversations[currentAvatar];
   const controller = new AbortController();
   pendingAvatars.set(currentAvatar, controller);
-  chatStatus[currentAvatar] = 'Thinking…';
+  chatStatus[currentAvatar] = '';
   conversation.push({ role: 'user', content: question });
   buddyInput.value = '';
   renderConversation();
