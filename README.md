@@ -20,9 +20,9 @@ To enable GPT chat, stop the running server and start it with:
 python3 server.py --ask-key
 ```
 
-Enter an OpenAI API key at the hidden terminal prompt. The server also accepts the `OPENAI_API_KEY` environment variable and supports overriding the default model with `OPENAI_MODEL`. The server listens only on this computer.
+Enter an OpenAI API key at the hidden terminal prompt. The server also accepts the `OPENAI_API_KEY` environment variable and supports overriding the default model, GPT-5.6 Sol, with `OPENAI_MODEL`. The server listens only on this computer.
 
-Open **Study Buddy** and choose Neko or Chad. Each avatar has a separate conversation for the current browser tab. Questions and recent chat turns are sent to the [OpenAI Responses API](https://developers.openai.com/api/reference/resources/responses/methods/create). When chat is opened from a checked quiz question, the request can also include its text and feedback.
+Open **Study Buddy** and choose Neko or Chad. Each avatar has a separate conversation while the panel is open. Closing the panel clears both conversations. Questions and recent chat turns are sent to the [OpenAI Responses API](https://developers.openai.com/api/reference/resources/responses/methods/create). When chat is opened from a checked quiz question, the request can also include its text and feedback.
 
 ## Practice and scoring
 

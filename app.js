@@ -37,7 +37,7 @@ const buddyStatus = document.querySelector('#buddy-status');
 const buddyForm = document.querySelector('#buddy-form');
 const buddyInput = document.querySelector('#buddy-input');
 const conversations = { neko: [], chad: [] };
-const pendingAvatars = new Set();
+const pendingAvatars = new Map();
 const chatStatus = { neko: '', chad: '' };
 let avatar = 'neko';
 try {
@@ -452,6 +452,17 @@ document.querySelector('#open-buddy').addEventListener('click', () => {
   buddyInput.focus();
 });
 
+buddy.addEventListener('close', () => {
+  for (const name of Object.keys(conversations)) {
+    pendingAvatars.get(name)?.abort();
+    pendingAvatars.delete(name);
+    conversations[name] = [];
+    chatStatus[name] = '';
+  }
+  buddyInput.value = '';
+  renderConversation();
+});
+
 buddyForm.addEventListener('submit', async event => {
   event.preventDefault();
   const currentAvatar = avatar;
@@ -459,7 +470,8 @@ buddyForm.addEventListener('submit', async event => {
   if (!question || pendingAvatars.has(currentAvatar)) return;
 
   const conversation = conversations[currentAvatar];
-  pendingAvatars.add(currentAvatar);
+  const controller = new AbortController();
+  pendingAvatars.set(currentAvatar, controller);
   chatStatus[currentAvatar] = 'Thinking…';
   conversation.push({ role: 'user', content: question });
   buddyInput.value = '';
@@ -468,6 +480,7 @@ buddyForm.addEventListener('submit', async event => {
   try {
     const response = await fetch('/api/study-buddy', {
       method: 'POST',
+      signal: controller.signal,
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         avatar: currentAvatar,
@@ -480,14 +493,18 @@ buddyForm.addEventListener('submit', async event => {
     }
     const result = await response.json();
     if (!response.ok) throw new Error(result.error);
+    if (controller.signal.aborted) return;
     conversation.push({ role: 'assistant', content: result.answer });
     chatStatus[currentAvatar] = '';
   } catch (error) {
+    if (controller.signal.aborted) return;
     conversation.pop();
     chatStatus[currentAvatar] = error.message || 'Could not connect. Try again.';
     if (avatar === currentAvatar && !buddyInput.value) buddyInput.value = question;
   } finally {
-    pendingAvatars.delete(currentAvatar);
-    renderConversation();
+    if (pendingAvatars.get(currentAvatar) === controller) {
+      pendingAvatars.delete(currentAvatar);
+      renderConversation();
+    }
   }
 });

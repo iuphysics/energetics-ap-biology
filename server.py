@@ -58,7 +58,10 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         self.send_header("Content-Length", str(len(data)))
         self.end_headers()
-        self.wfile.write(data)
+        try:
+            self.wfile.write(data)
+        except (BrokenPipeError, ConnectionResetError):
+            pass
 
     def do_POST(self):
         if self.path != "/api/study-buddy":
@@ -102,6 +105,7 @@ class Handler(SimpleHTTPRequestHandler):
                 "model": self.server.model,
                 "instructions": f"{persona} {INSTRUCTIONS}",
                 "input": messages,
+                **({"reasoning": {"effort": "low"}} if self.server.model == "gpt-5.6-sol" else {}),
                 "max_output_tokens": 800,
                 "store": False,
             }).encode(),
@@ -144,6 +148,6 @@ if __name__ == "__main__":
         else:
             server.tls_context = ssl.create_default_context()
         server.api_key = key
-        server.model = os.environ.get("OPENAI_MODEL", "gpt-4.1-mini")
+        server.model = os.environ.get("OPENAI_MODEL", "gpt-5.6-sol")
         print(f"Energetics is running at http://127.0.0.1:{args.port}/", flush=True)
         server.serve_forever()
