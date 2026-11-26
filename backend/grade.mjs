@@ -1,3 +1,5 @@
+import { timingSafeEqual } from 'node:crypto';
+
 const route = '/grade';
 const endpoint = 'https://api.openai.com/v1/responses';
 const encoder = new TextEncoder();
@@ -5,9 +7,7 @@ const encoder = new TextEncoder();
 async function matchesCode(provided, expected) {
   const digest = async value => new Uint8Array(await crypto.subtle.digest('SHA-256', encoder.encode(value)));
   const [left, right] = await Promise.all([digest(provided), digest(expected)]);
-  return crypto.subtle.timingSafeEqual
-    ? crypto.subtle.timingSafeEqual(left, right)
-    : left.reduce((mismatch, byte, index) => mismatch | (byte ^ right[index]), 0) === 0;
+  return timingSafeEqual(left, right);
 }
 
 export default {
@@ -36,8 +36,7 @@ export default {
     if (!provided || provided.length > 128 || !await matchesCode(provided, env.ENERGETICS_ACCESS_CODE)) {
       return reply({ error: 'Enter the shared grading access code.' }, 401);
     }
-    const { success } = await env.GRADE_LIMIT.limit({ key: request.headers.get('CF-Connecting-IP') ?? 'local' });
-    if (!success) return reply({ error: 'Too many grading requests. Try again in a minute.' }, 429);
+    if (!env.takeGradeSlot()) return reply({ error: 'Too many grading requests. Try again in a minute.' }, 429);
     if (request.headers.get('Content-Type')?.split(';')[0].trim() !== 'application/json') {
       return reply({ error: 'Expected an FRQ submission.' }, 415);
     }

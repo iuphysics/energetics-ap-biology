@@ -48,4 +48,6 @@ On GitHub Pages, **Grade response** uses [GPT-5.6 Sol via Puter](https://develop
 
 ### Share your own API allowance
 
-The optional Cloudflare Worker in `worker/` can grade public FRQ submissions on the owner's OpenAI account. From that folder, authenticate with `npx wrangler login`, deploy with `npx wrangler deploy`, and enter credentials at the hidden prompts for `npx wrangler secret put OPENAI_API_KEY` and `npx wrangler secret put ENERGETICS_ACCESS_CODE`. Use a strong shared code. Finally, set the `energetics-grader` meta tag in `index.html` to the Worker's HTTPS URL with `/grade` appended and redeploy Pages. Only the Worker URL belongs in the repo.
+The standalone Node grader in `backend/` can grade public FRQs on the owner's OpenAI account. It requires Node.js 22 or later and has no package dependencies. Run `node backend/server.mjs` locally or deploy the Dockerfile on a container host. Set `OPENAI_API_KEY` and a strong `ENERGETICS_ACCESS_CODE` as private environment secrets on the host. Use one backend instance for the shared eight-request-per-minute quota.
+
+Once the hosted HTTPS endpoint is deployed, set the `energetics-grader` meta tag in `index.html` to that endpoint's `/grade` URL and redeploy GitHub Pages. The site only needs the endpoint URL. The owner shares the access code privately with their group.
