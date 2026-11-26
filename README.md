@@ -22,7 +22,7 @@ python3 server.py --ask-key
 
 Enter an OpenAI API key at the hidden terminal prompt. The server also accepts the `OPENAI_API_KEY` environment variable and supports overriding the default model, GPT-5.6 Sol, with `OPENAI_MODEL`. The server listens only on this computer.
 
-Open the **Ask Neko** tab and choose Neko or Chad. Each avatar has a separate conversation while the panel is open. Closing the panel clears both conversations. Questions and recent chat turns are sent to the [OpenAI Responses API](https://developers.openai.com/api/reference/resources/responses/methods/create). When chat is opened from a checked quiz question, the request can also include its text and feedback.
+Open the **Ask Neko** tab and choose Neko or Chad. Each avatar has a separate conversation while the panel is open. Closing the panel clears both conversations. On the public site, the Cloudflare Worker sends the last five turns to the [OpenAI Responses API](https://developers.openai.com/api/reference/resources/responses/methods/create) using the owner's private API key. The public chat allows roughly ten requests per minute per Cloudflare location. When chat is opened from a quiz question, the request can also include its text and feedback. The local `server.py` chat still uses its own key prompt.
 
 ## Practice and scoring
 

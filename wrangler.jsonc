@@ -10,6 +10,11 @@
       "name": "GRADE_LIMIT",
       "namespace_id": "1001",
       "simple": { "limit": 8, "period": 60 }
+    },
+    {
+      "name": "CHAT_LIMIT",
+      "namespace_id": "1002",
+      "simple": { "limit": 10, "period": 60 }
     }
   ]
 }

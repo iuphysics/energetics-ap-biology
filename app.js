@@ -764,19 +764,22 @@ async function sendBuddyQuestion(question, fromComposer = false) {
   renderConversation();
 
   try {
-    const response = await fetch('/api/study-buddy', {
+    const publicBuddy = location.origin === 'https://iuphysics.github.io'
+      ? document.querySelector('meta[name="energetics-grader"]')?.content.replace(/\/grade$/, '/chat')
+      : null;
+    const response = await fetch(publicBuddy || '/api/study-buddy', {
       method: 'POST',
       signal: controller.signal,
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         avatar: currentAvatar,
-        messages: conversation.slice(-13),
+        messages: conversation.slice(publicBuddy ? -5 : -13),
         context: buddyContext(),
         questionId: currentBuddyQuestionId(),
       }),
     });
     if (!response.headers.get('Content-Type')?.includes('application/json')) {
-      throw new Error('Start Energetics with server.py to connect Study Buddy.');
+      throw new Error('Study Buddy could not connect. Try again shortly.');
     }
     const result = await response.json();
     if (!response.ok) throw new Error(result.error);
