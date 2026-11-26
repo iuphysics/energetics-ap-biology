@@ -135,6 +135,100 @@ export const questions = [
             0,
             "time."
           ]
+        ],
+        [
+          [
+            "text",
+            "1.",
+            [
+              [
+                0,
+                "A researcher claims that the incorporation of carbon dioxide into organic molecules during photosynthesis"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "does not violate the second law of thermodynamics."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best helps justify the researcher’s claim?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Organisms contain enzymes that lower the activation energies of specific chemical reactions."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "An ecosystem is formed by the interaction of a community of organisms with their surrounding"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "environment."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Photosynthetic organisms use the organic molecules produced during photosynthesis for"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "growth and repair."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The total system that includes photosynthetic organisms and the Sun becomes less ordered over"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "time."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -427,6 +521,148 @@ export const questions = [
             0,
             "low to high."
           ]
+        ],
+        [
+          [
+            "text",
+            "5.",
+            [
+              [
+                0,
+                "Acetylcholinesterase (AChE) is a protein that catalyzes the conversion of acetylcholine to acetate and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "choline. When the concentration of AChE in an aqueous solution is held constant, the rate of the reaction"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "catalyzed by AChE increases with increasing concentrations of substrate. At low concentrations of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "acetylcholine, a small increase in the substrate concentration results in a large increase in the reaction rate."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "At high concentrations of acetylcholine, however, a large increase in the substrate concentration results in"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "only a small increase in the reaction rate."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements correctly explains the observed effect of the acetylcholine"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "concentration on the rate of the enzyme-catalyzed reaction?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The active site of AChE is specific for acetylcholine, and only one substrate molecule can"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "occupy the active site at a time."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "AChE begins converting product into substrate as the acetylcholine concentration changes"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "from low to high."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The AChE protein becomes denatured as the acetylcholine concentration changes from low to"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "high."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The substrate specificity of AChE changes as the acetylcholine concentration changes from"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "low to high."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -582,6 +818,116 @@ export const questions = [
             665.05,
             0,
             "time, which increases the reaction’s equilibrium constant."
+          ]
+        ],
+        [
+          [
+            "text",
+            "8.",
+            [
+              [
+                0,
+                "A researcher proposes a model of an enzyme-catalyzed reaction in which a reactant is converted to a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "product. The model is based on the idea that the reactant passes through a transition state within the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "enzyme-substrate complex before the reactant is converted to the product."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best helps explain how the enzyme speeds up the reaction?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The enzyme’s active site binds to and stabilizes the reactant, which decreases the free-energy"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "change of the reaction."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The enzyme’s active site binds to and stabilizes the transition state, which decreases the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "activation energy of the reaction."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The enzyme’s active site binds to and stabilizes the product, which increases the amount of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "energy released by the reaction."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The enzyme’s active site binds to and stabilizes both the reactant and the product at the same"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "time, which increases the reaction’s equilibrium constant."
+              ]
+            ]
           ]
         ]
       ]
@@ -754,6 +1100,129 @@ export const questions = [
             179.74,
             0,
             "by the reaction."
+          ]
+        ],
+        [
+          [
+            "text",
+            "9.",
+            [
+              [
+                0,
+                "In an experiment, a researcher prepares a reaction mixture by dissolving a substance in a buffered"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "solution. The substance is the substrate of a certain enzyme. The researcher adds a small amount of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "enzyme to the reaction mixture and measures the amount of product that is formed over time. The data are"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "represented in Figure 1."
+              ]
+            ]
+          ],
+          [
+            "art",
+            162,
+            547.78
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following best predicts the immediate result of adding more substrate to the reaction mixture"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "at the point indicated by the arrow in Figure 1?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The amount of product will decrease until the reaction rate goes to zero."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The amount of product will decrease until the reaction reaches its equilibrium point or until the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "enzyme is been used up by the reaction."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The amount of product will increase until the reaction reaches its equilibrium point or until the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "substrate is used up by the reaction."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The amount of product will increase without stopping because the enzyme will be unchanged"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "by the reaction."
+              ]
+            ]
           ]
         ]
       ]
@@ -1030,6 +1499,132 @@ export const questions = [
             261.56,
             0,
             "substrate will increase."
+          ]
+        ],
+        [
+          [
+            "text",
+            "10.",
+            [
+              [
+                0,
+                "Alcohol dehydrogenase (ADH) is an enzyme that aids in the decomposition of ethyl alcohol (C"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                "H"
+              ],
+              [
+                64,
+                "5"
+              ],
+              [
+                0,
+                "OH)"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "into nontoxic substances. Methyl alcohol acts as a competitive inhibitor of ethyl alcohol by competing for"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the same active site on ADH. When attached to ADH, methyl alcohol is converted to formaldehyde,"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "which is toxic in the body."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best predicts the effect of increasing the concentration of substrate"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "(ethyl alcohol), while keeping the concentration of the inhibitor (methyl alcohol) constant?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "There will be an increase in formaldehyde because ADH activity increases."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Competitive inhibition will be terminated because ethyl alcohol will bind to methyl alcohol and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "decrease ADH activity."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The peptide bonds in the active site of the enzyme will be denatured, inhibiting the enzyme."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Competitive inhibition will decrease because the proportion of the active sites occupied by"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "substrate will increase."
+              ]
+            ]
           ]
         ]
       ]
@@ -1755,6 +2350,141 @@ export const questions = [
             0,
             "It will show the color change that occurs in the absence of the amylase protein."
           ]
+        ],
+        [
+          [
+            "text",
+            "11.",
+            [
+              [
+                0,
+                "Amylase is a protein that catalyzes the conversion of starch to simple sugars. Amylase activity in an"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "aqueous solution can be measured by using iodine as a starch indicator. A solution containing iodine and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "starch will have a dark-blue color, whereas a solution containing iodine but no starch will have a light-"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "brown color. The color change of an iodine solution from dark blue to light brown can be used to measure"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the rate at which starch is converted to simple sugars."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "A student designs an experiment to investigate the effect of environmental pH on amylase function. The"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "design of the experiment is presented in Table 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                16,
+                "Table 1. An experiment for investigating the effect of "
+              ],
+              [
+                0,
+                "pH"
+              ],
+              [
+                16,
+                " on amylase function"
+              ]
+            ]
+          ],
+          [
+            "art",
+            367,
+            881
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best justifies the inclusion of test tube V as a control in the experiment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "It will provide a measurement of amylase activity at an acidic pH."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "It will provide a measurement of amylase activity at a basic pH."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "It will show the color change that occurs in the absence of enzyme activity."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "It will show the color change that occurs in the absence of the amylase protein."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -2062,6 +2792,124 @@ export const questions = [
             6.81,
             0,
             "."
+          ]
+        ],
+        [
+          [
+            "text",
+            "12.",
+            [
+              [
+                0,
+                "A researcher claims that the synthesis of ATP from ADP and inorganic phosphate (P"
+              ],
+              [
+                64,
+                "i"
+              ],
+              [
+                0,
+                ") is essential to"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "cellular function."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best helps justify the researcher’s claim?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "ADP is a small molecule that some cells release into their environment as a way of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "communicating with other cells."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "ATP hydrolysis is an energy-releasing reaction that is often coupled with reactions that require"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "an input of energy."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Inorganic phosphate (P"
+              ],
+              [
+                64,
+                "i"
+              ],
+              [
+                0,
+                ") is a substance that cells typically acquire from their environment."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "ATP synthase is a mitochondrial enzyme that catalyzes the conversion of ADP and P"
+              ],
+              [
+                64,
+                "i"
+              ],
+              [
+                0,
+                " to"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "ATP."
+              ]
+            ]
           ]
         ]
       ]
@@ -2651,6 +3499,123 @@ export const questions = [
             0,
             "They will show the rate of product formation in the absence of the substrate."
           ]
+        ],
+        [
+          [
+            "text",
+            "13.",
+            [
+              [
+                0,
+                "A researcher claims that some bacteria contain factors that influence the function of a particular enzyme"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "but other bacteria do not. To test the claim experimentally, the researcher will grow two different bacterial"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "strains in separate liquid cultures and isolate the contents of the cells in each culture. The researcher will"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "add different combinations of cellular contents, substrate, and enzyme to test tubes containing a buffer"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "solution adjusted to the optimal pH of the enzyme and then measure the rate of product formation. The"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "design of the researcher’s experiment is presented in Table 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                16,
+                "Table 1. An experiment for investigating the influence of bacterial factors on enzyme function"
+              ]
+            ]
+          ],
+          [
+            "art",
+            298,
+            813
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best justifies the inclusion of test tubes 3 and 7 in the experiment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "They will show whether the isolated cellular contents have enzymatic activity."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "They will show whether environmental pH affects the function of the enzyme."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "They will show the rate of product formation in the absence of bacterial factors."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "They will show the rate of product formation in the absence of the substrate."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -2895,6 +3860,157 @@ export const questions = [
             0,
             "the proton gradient that allows more heat energy to be produced to warm the animal."
           ]
+        ],
+        [
+          [
+            "text",
+            "14.",
+            [
+              [
+                0,
+                "Brown fat is a type of fat tissue found in hibernating mammals. Inside the mitochondria of these fat tissue"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "cells, these mammals have an uncoupling protein embedded in the inner mitochondrial membrane. This"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "uncoupling protein allows hydrogen ions to leak from the intermembrane space back into the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "mitochondrial matrix. Figure 1 shows details of the processes in the inner mitochondrial membrane."
+              ]
+            ]
+          ],
+          [
+            "art",
+            231,
+            595
+          ],
+          [
+            "art",
+            610,
+            947
+          ],
+          [
+            "art",
+            999,
+            1032
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. Processes in the inner mitochondrial membrane"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements provides reasoning that supports the claim that brown fatty tissue keeps"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "an animal warm?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The uncoupling protein in this tissue increases the production of ATP and causes more body"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "heat to be produced to warm the animal."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The uncoupling protein in this tissue reduces the proton gradient across the membrane and thus"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "produces heat to warm the animal without ATP production."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The uncoupling protein in this tissue causes an increase in the proton gradient, which causes"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "more ATP to be produced that helps to warm the animal."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The uncoupling protein in this tissue reduces the production of ATP and creates an increase in"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the proton gradient that allows more heat energy to be produced to warm the animal."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -3075,6 +4191,122 @@ export const questions = [
             0,
             "changing the primary structure of the enzyme."
           ]
+        ],
+        [
+          [
+            "text",
+            "15.",
+            [
+              [
+                0,
+                "The browning of certain fruits, such as apples, after they are cut, is due to the activity of the enzyme"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "catechol oxidase in the presence of oxygen. Soaking apple slices in lemon juice, which is acidic (high"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "concentration of H"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                "), prevents the browning of the apples."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                " Which of the following best explains the effect of lemon juice on catechol oxidase?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The acidity of lemon juice disrupts bonds between nonadjacent amino acids, changing the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "structure of the active site of the enzyme."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The acidity of lemon juice creates bonds between amino acids, increasing the activation energy"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "required by the enzyme."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The acidity of lemon juice creates bonds between oxygen atoms and amino acids, changing the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "secondary structure of the enzyme."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The acidity of lemon juice replaces amino acid R groups with R groups from other amino acids,"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "changing the primary structure of the enzyme."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -3222,6 +4454,108 @@ export const questions = [
             125.82,
             0,
             "and starch."
+          ]
+        ],
+        [
+          [
+            "text",
+            "16.",
+            [
+              [
+                0,
+                "A researcher claims that only a portion of the light energy captured by green plants is available for growth"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "and repair."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following observations best helps justify the researcher’s claim?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Light-capturing pigment molecules in green plants absorb red, blue, and violet light but reflect"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "green light."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The energy of a photon of light is proportional to its frequency and inversely proportional to its"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "wavelength."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "As light energy is converted to chemical energy by metabolic processes, some of the energy is"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "lost as heat."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Captured energy is stored in the molecular bonds of organic molecules, including simple sugars"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "and starch."
+              ]
+            ]
           ]
         ]
       ]
@@ -3491,6 +4825,157 @@ export const questions = [
             0,
             "Water and yeast only"
           ]
+        ],
+        [
+          [
+            "text",
+            "17.",
+            [
+              [
+                0,
+                "Catalase is an enzyme found in yeast cells that facilitates the chemical breakdown of hydrogen peroxide to"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "water and oxygen gas. An experiment was conducted to determine the effect of pH on catalase function."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "Five buffer solutions of varying pH (2, 4, 6, 8, and 10) were prepared and added to separate test tubes."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "Hydrogen peroxide (H"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                "O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                ") was added to each test tube. Yeast was added, and the reactions were timed."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "After 1 minute the amount of oxygen gas released was determined by measuring the foam layer produced"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "in each test tube. Figure 1 illustrates the experimental setup."
+              ]
+            ]
+          ],
+          [
+            "art",
+            263,
+            294
+          ],
+          [
+            "art",
+            305,
+            605
+          ],
+          [
+            "art",
+            616,
+            662
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. Illustration of experimental procedure"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "A set of five additional test tubes were prepared and used as controls. Which of the following best"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "describes the contents expected to be contained in one of the five control test tubes?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "pH 4 buffer solution and hydrogen peroxide only"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "All five pH buffer solutions combined and hydrogen peroxide only"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Water, hydrogen peroxide, and yeast"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Water and yeast only"
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -3614,6 +5099,84 @@ export const questions = [
             545.42,
             0,
             "The temperature of the aqueous buffer solution"
+          ]
+        ],
+        [
+          [
+            "text",
+            "20.",
+            [
+              [
+                0,
+                "A researcher designs an experiment to investigate the effect of environmental temperature on the function"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "of an enzyme. For each trial included in the experiment, the researcher will add the enzyme and its"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "substrate to an aqueous buffer solution and then measure the amount of product formed over 20 minutes."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following must remain the same for all trials of this experiment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The initial concentration of the substrate"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The final concentration of the product"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The three-dimensional structure of the enzyme"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The temperature of the aqueous buffer solution"
+              ]
+            ]
           ]
         ]
       ]
@@ -4155,6 +5718,295 @@ export const questions = [
             0,
             "The difference between net and gross rates of photosynthesis is greater at the low concentration"
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "The coral species "
+              ],
+              [
+                2,
+                "Acropora millepora"
+              ],
+              [
+                0,
+                " is a marine animal that has a symbiotic relationship with algae species in the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "genus "
+              ],
+              [
+                2,
+                "Symbiodinium."
+              ],
+              [
+                0,
+                " An increase in the concentration of dissolved CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " in oceans has a negative impact on this"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "relationship and the health of the coral species. Scientists investigated the effect of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " concentrations on the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "number of algae cells found in the coral (Figure 1) and on both the gross (total) and net rates of photosynthesis of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "those algae (Figure 2). The net rate of photosynthesis is equal to the gross rate of photosynthesis minus the rate of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "respiration by the algae."
+              ]
+            ]
+          ],
+          [
+            "art",
+            272,
+            632
+          ],
+          [
+            "art",
+            661,
+            686
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. Effect of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " concentration on the number of algae per cm"
+              ],
+              [
+                32,
+                "2"
+              ],
+              [
+                0,
+                " of coral. Error bars represent ±2SE"
+              ],
+              [
+                64,
+                "x"
+              ],
+              [
+                0,
+                "."
+              ]
+            ]
+          ],
+          [
+            "art",
+            808,
+            1164
+          ],
+          [
+            "art",
+            1186,
+            1212
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 2. Average gross and net rates of photosynthesis in algae under various concentrations of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                ". Error bars represent ±2SE"
+              ],
+              [
+                64,
+                "x"
+              ],
+              [
+                0,
+                "."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "21.",
+            [
+              [
+                0,
+                "Based on Figure 2, which of the following best supports the claim that CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " concentration and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "photosynthetic productivity are inversely related?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The net rate of photosynthesis is less than the gross rate of photosynthesis at the high"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "concentration of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                "."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Both the net and gross rates of photosynthesis at the high concentration of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " are lower than"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "those at the low concentration of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                "."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The net rate of photosynthesis at the low concentration of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " is lower than the gross rate of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "photosynthesis at the high concentration of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                "."
+              ]
+            ]
+          ],
+          [
+            "art",
+            1655.6,
+            1706
+          ]
         ]
       ]
     ]
@@ -4439,6 +6291,170 @@ export const questions = [
             6.14,
             0,
             "."
+          ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "The coral species "
+              ],
+              [
+                2,
+                "Acropora millepora"
+              ],
+              [
+                0,
+                " is a marine animal that has a symbiotic relationship with algae species in the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "genus "
+              ],
+              [
+                2,
+                "Symbiodinium."
+              ],
+              [
+                0,
+                " An increase in the concentration of dissolved CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " in oceans has a negative impact on this"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "relationship and the health of the coral species. Scientists investigated the effect of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " concentrations on the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "number of algae cells found in the coral (Figure 1) and on both the gross (total) and net rates of photosynthesis of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "those algae (Figure 2). The net rate of photosynthesis is equal to the gross rate of photosynthesis minus the rate of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "respiration by the algae."
+              ]
+            ]
+          ],
+          [
+            "art",
+            272,
+            632
+          ],
+          [
+            "art",
+            661,
+            686
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. Effect of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " concentration on the number of algae per cm"
+              ],
+              [
+                32,
+                "2"
+              ],
+              [
+                0,
+                " of coral. Error bars represent ±2SE"
+              ],
+              [
+                64,
+                "x"
+              ],
+              [
+                0,
+                "."
+              ]
+            ]
+          ],
+          [
+            "art",
+            808,
+            1164
+          ],
+          [
+            "art",
+            1186,
+            1212
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 2. Average gross and net rates of photosynthesis in algae under various concentrations of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                ". Error bars represent ±2SE"
+              ],
+              [
+                64,
+                "x"
+              ],
+              [
+                0,
+                "."
+              ]
+            ]
           ]
         ]
       ],
@@ -4783,6 +6799,172 @@ export const questions = [
             0,
             "quaternary structures of the enzymes."
           ]
+        ],
+        [
+          [
+            "text",
+            "22.",
+            [
+              [
+                0,
+                "Researchers observe that the water with the high CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " concentration has a lower pH than does the water"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "with the low CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " concentration. The researchers claim that lower pH alters the structure of the enzymes"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "of photosynthesis."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following most likely explains how a lower pH could alter the structure of photosynthetic"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "enzymes?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "There will not be enough H"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                " ions for the ribosome to correctly form peptide bonds between"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "amino acids during synthesis of the enzymes."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "There will not be enough H"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                " ions for the necessary hydrogen bonds to form in the secondary,"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "tertiary, and quaternary structures of the enzymes."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "There will be additional H"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                " ions that can disrupt peptide bonds in the primary structure of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "enzymes."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "There will be additional H"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                " ions that can disrupt hydrogen bonds in the secondary, tertiary and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "quaternary structures of the enzymes."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -4987,6 +7169,132 @@ export const questions = [
             0,
             "2-phosphoglycerate"
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Certain chemicals, including sodium fluoride (NaF), are capable of inhibiting specific steps of glycolysis. Figure 1"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "shows the steps of the glycolysis pathway, indicating where various macromolecules enter the pathway as well as"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the specific reaction inhibited by NaF."
+              ]
+            ]
+          ],
+          [
+            "art",
+            181,
+            371
+          ],
+          [
+            "art",
+            404,
+            482
+          ],
+          [
+            "art",
+            516,
+            654
+          ],
+          [
+            "art",
+            689,
+            738
+          ],
+          [
+            "art",
+            748,
+            886
+          ],
+          [
+            "art",
+            925,
+            948
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                2,
+                "Figure 1. Key steps in the metabolic pathway of glucose"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "24.",
+            [
+              [
+                0,
+                "If NaF is added to cells undergoing cellular respiration, which of the following will most likely"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "accumulate in the cells?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Glucose Transporter"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Pyruvate"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Phosphoenolpyruvate (PEP)"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "2-phosphoglycerate"
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -5071,6 +7379,74 @@ export const questions = [
             649.88,
             2,
             "Figure 1. Key steps in the metabolic pathway of glucose"
+          ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Certain chemicals, including sodium fluoride (NaF), are capable of inhibiting specific steps of glycolysis. Figure 1"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "shows the steps of the glycolysis pathway, indicating where various macromolecules enter the pathway as well as"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the specific reaction inhibited by NaF."
+              ]
+            ]
+          ],
+          [
+            "art",
+            181,
+            371
+          ],
+          [
+            "art",
+            404,
+            482
+          ],
+          [
+            "art",
+            516,
+            654
+          ],
+          [
+            "art",
+            689,
+            738
+          ],
+          [
+            "art",
+            748,
+            886
+          ],
+          [
+            "art",
+            925,
+            948
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                2,
+                "Figure 1. Key steps in the metabolic pathway of glucose"
+              ]
+            ]
           ]
         ]
       ],
@@ -5263,6 +7639,90 @@ export const questions = [
             0,
             "The water potential will increase, resulting in a decrease in the rate of glycolysis."
           ]
+        ],
+        [
+          [
+            "text",
+            "25.",
+            [
+              [
+                0,
+                "An increase in the concentration of protons in the cytosol will most likely have which of the following"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "effects on glycolysis?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Glycolytic enzymes will denature as a result of the increased H"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                "concentration."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Reaction rate will increase as a result of the increased H"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                "concentration."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "H"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                " will replace phosphorous and inhibit ATP formation from ADP."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The water potential will increase, resulting in a decrease in the rate of glycolysis."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -5347,6 +7807,74 @@ export const questions = [
             649.88,
             2,
             "Figure 1. Key steps in the metabolic pathway of glucose"
+          ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Certain chemicals, including sodium fluoride (NaF), are capable of inhibiting specific steps of glycolysis. Figure 1"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "shows the steps of the glycolysis pathway, indicating where various macromolecules enter the pathway as well as"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the specific reaction inhibited by NaF."
+              ]
+            ]
+          ],
+          [
+            "art",
+            181,
+            371
+          ],
+          [
+            "art",
+            404,
+            482
+          ],
+          [
+            "art",
+            516,
+            654
+          ],
+          [
+            "art",
+            689,
+            738
+          ],
+          [
+            "art",
+            748,
+            886
+          ],
+          [
+            "art",
+            925,
+            948
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                2,
+                "Figure 1. Key steps in the metabolic pathway of glucose"
+              ]
+            ]
           ]
         ]
       ],
@@ -5459,6 +7987,66 @@ export const questions = [
             0,
             "8"
           ]
+        ],
+        [
+          [
+            "text",
+            "26.",
+            [
+              [
+                0,
+                "Based on Figure 1, the net number of ATP molecules produced during glycolysis from the metabolism of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "a single glucose molecule is closest to which of the following?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "0"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "2"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "4"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "8"
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -5543,6 +8131,74 @@ export const questions = [
             649.88,
             2,
             "Figure 1. Key steps in the metabolic pathway of glucose"
+          ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Certain chemicals, including sodium fluoride (NaF), are capable of inhibiting specific steps of glycolysis. Figure 1"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "shows the steps of the glycolysis pathway, indicating where various macromolecules enter the pathway as well as"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the specific reaction inhibited by NaF."
+              ]
+            ]
+          ],
+          [
+            "art",
+            181,
+            371
+          ],
+          [
+            "art",
+            404,
+            482
+          ],
+          [
+            "art",
+            516,
+            654
+          ],
+          [
+            "art",
+            689,
+            738
+          ],
+          [
+            "art",
+            748,
+            886
+          ],
+          [
+            "art",
+            925,
+            948
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                2,
+                "Figure 1. Key steps in the metabolic pathway of glucose"
+              ]
+            ]
           ]
         ]
       ],
@@ -5694,6 +8350,106 @@ export const questions = [
             860.29,
             0,
             "Carbohydrates cannot be stored, while amino acids and fatty acids can be."
+          ]
+        ],
+        [
+          [
+            "text",
+            "27.",
+            [
+              [
+                0,
+                "Tarui disease is an inherited disorder that is caused by mutations in PFKM, the gene that encodes a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "subunit of phosphofructokinase, an enzyme in the glycolysis pathway. Individuals with Tarui disease"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "produce little or no functional phosphofructokinase in skeletal muscle cells. Based on Figure 1, which of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the following best explains why a low carbohydrate diet is recommended for those with Tarui disease?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Carbohydrates are capable of undergoing lactic acid fermentation, and amino acids and fatty"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "acids are not."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Carbohydrate metabolism requires all the reactions of glycolysis, and amino acids and fatty"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "acids do not."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Carbohydrates cannot be used to synthesize important metabolic enzymes like amino acids and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "fatty acids can be."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Carbohydrates cannot be stored, while amino acids and fatty acids can be."
+              ]
+            ]
           ]
         ]
       ]
@@ -6019,6 +8775,84 @@ export const questions = [
             0,
             " represents phosphorylation of a substrate."
           ]
+        ],
+        [
+          [
+            "text",
+            "28.",
+            []
+          ],
+          [
+            "art",
+            66,
+            384
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. Change in energy over the course of four chemical reactions"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                " Based on the data in Figure 1, which of the following most likely represents the change in energy that"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "occurs when ATP hydrolysis is coupled with the phosphorylation of a substrate?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Line 4 represents ATP hydrolysis, and line 1 represents phosphorylation of a substrate."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Line 1 represents ATP hydrolysis, and line 4 represents phosphorylation of a substrate."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Line 2 represents ATP hydrolysis, and line 3 represents phosphorylation of a substrate."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Line 3 represents ATP hydrolysis, and line 2 represents phosphorylation of a substrate."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -6183,6 +9017,146 @@ export const questions = [
             0,
             "reaction, but the products have the same free energy in both reactions."
           ]
+        ],
+        [
+          [
+            "text",
+            "33.",
+            [
+              [
+                0,
+                "The figure shows a model of free energy showing the changes of an enzyme-catalyzed reaction and the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "same reaction when it is not catalyzed by an enzyme. "
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                16,
+                "Changes in Free Energy in Two Reactions"
+              ]
+            ]
+          ],
+          [
+            "art",
+            252,
+            598
+          ],
+          [
+            "art",
+            625,
+            671
+          ],
+          [
+            "art",
+            702,
+            741
+          ],
+          [
+            "art",
+            755,
+            862
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                " Based on the model provided, which of the following best describes the difference between the free"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "energy of the enzyme-catalyzed reaction and the free energy of the uncatalyzed reaction?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The free energy of the substrate is higher in an enzyme-catalyzed reaction than it is in an"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "uncatalyzed reaction."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The free energy of the product is higher in an enzyme-catalyzed reaction than it is in an"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "uncatalyzed reaction."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The activation energy of the enzyme-catalyzed reaction is higher than in the uncatalyzed"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "reaction, but the substrates have the same free energy in both reactions."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The activation energy of the uncatalyzed reaction is higher than in the enzyme-catalyzed"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "reaction, but the products have the same free energy in both reactions."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -6322,6 +9296,82 @@ export const questions = [
             1102.01,
             0,
             "The frequency of enzyme-substrate interactions increased until all of the enzyme was depleted."
+          ]
+        ],
+        [
+          [
+            "text",
+            "35.",
+            [
+              [
+                0,
+                "Which of the following best describes how an increase in the concentration of substrate in the reaction"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "mixture affected the frequency of enzyme‑substrate interactions?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The frequency of enzyme-substrate interactions decreased over all substrate concentrations."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The frequency of enzyme-substrate interactions increased exponentially over all substrate"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "concentrations."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The frequency of enzyme-substrate interactions increased until all of the active sites were"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "interacting with substrate."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The frequency of enzyme-substrate interactions increased until all of the enzyme was depleted."
+              ]
+            ]
           ]
         ]
       ]
@@ -6727,6 +9777,122 @@ export const questions = [
             0,
             "reaction mixture and the enzyme concentration are increased."
           ]
+        ],
+        [
+          [
+            "text",
+            "36.",
+            [
+              [
+                0,
+                "Which of the following experimental designs would best allow researchers to investigate the effect of pH"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "on the rate of the enzyme-catalyzed reaction?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Measure reaction rates at different pH levels when the enzyme concentration remains the same"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "and the substrate concentration is 100"
+              ],
+              [
+                0,
+                " μM."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Measure the pH of the reaction mixture when the enzyme concentration remains the same and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "substrate concentrations vary between 0"
+              ],
+              [
+                0,
+                " μM and 1,000"
+              ],
+              [
+                0,
+                " μM."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Measure reaction rates when the enzyme concentration remains the same but the pH of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "reaction mixture increases and the substrate concentration increases from 0"
+              ],
+              [
+                0,
+                " μM to 1,000"
+              ],
+              [
+                0,
+                " μM."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Measure reaction rates when the substrate concentration is 100"
+              ],
+              [
+                0,
+                " μM and both the pH of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "reaction mixture and the enzyme concentration are increased."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -6835,6 +10001,66 @@ export const questions = [
             0,
             "Does the inhibitor bind to an allosteric site or the active site of the enzyme?"
           ]
+        ],
+        [
+          [
+            "text",
+            "37.",
+            [
+              [
+                0,
+                "Which of the following questions best addresses whether a particular inhibitor is competitive or"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "noncompetitive?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Does the inhibitor bind more tightly to the substrate or to the enzyme?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Can the inhibitor be converted to product by the enzyme?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "How much inhibitor is necessary to completely inhibit the activity of the enzyme?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Does the inhibitor bind to an allosteric site or the active site of the enzyme?"
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -6910,6 +10136,66 @@ export const questions = [
             38.83,
             0,
             "(D)"
+          ]
+        ],
+        [
+          [
+            "text",
+            "38.",
+            [
+              [
+                0,
+                "Which of the following graphs predicts the most likely rate of the enzyme-catalyzed reaction if the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "concentration of the enzyme in the mixture were doubled?"
+              ]
+            ]
+          ],
+          [
+            "art",
+            77.11,
+            373
+          ],
+          [
+            "art",
+            389,
+            418
+          ],
+          [
+            "art",
+            435.98,
+            732
+          ],
+          [
+            "art",
+            748,
+            777
+          ],
+          [
+            "art",
+            794.85,
+            1091
+          ],
+          [
+            "art",
+            1107,
+            1136
+          ],
+          [
+            "art",
+            1151.86,
+            1448
+          ],
+          [
+            "art",
+            1464,
+            1493
           ]
         ]
       ]
@@ -7018,6 +10304,66 @@ export const questions = [
             109.08,
             0,
             "substrate."
+          ]
+        ],
+        [
+          [
+            "text",
+            "39.",
+            [
+              [
+                0,
+                "Which of the following statements best helps explain the reaction specificity of an enzyme?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The free energy of the reactants is greater than the free energy of the products."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The equilibrium constant of the reaction is much greater than 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The shape and charge of the substrates are compatible with the active site of the enzyme."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The concentration of the enzyme inside living cells is greater than the concentration of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "substrate."
+              ]
+            ]
           ]
         ]
       ]
@@ -7167,6 +10513,108 @@ export const questions = [
             0,
             "active site."
           ]
+        ],
+        [
+          [
+            "text",
+            "40.",
+            [
+              [
+                0,
+                "A researcher proposes a model to explain how enzyme-substrate interactions determine enzyme"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "specificity. The model is based on the idea that substrate molecules form favorable interactions with the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "amino acid side chains in an enzyme’s active site."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Based on the model, which of the following statements best explains an enzyme’s specificity for a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "particular substrate molecule?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "A hydrophilic molecule interacts with nonpolar side chains in the enzyme’s active site."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "A hydrophobic molecule interacts with polar side chains in the enzyme’s active site."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "A molecule with positive charges interacts with positively charged side chains in the enzyme’s"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "active site."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "A molecule with negative charges interacts with positively charged side chains in the enzyme’s"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "active site."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -7306,6 +10754,98 @@ export const questions = [
             363.82,
             0,
             "convergent evolution occurred."
+          ]
+        ],
+        [
+          [
+            "text",
+            "42.",
+            [
+              [
+                0,
+                "Experimental evidence shows that the process of glycolysis is present and virtually identical in organisms"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "from all three domains, Archaea, Bacteria, and Eukarya. Which of the following hypotheses could be best"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "supported by this evidence?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "All organisms carry out glycolysis in mitochondria."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Glycolysis is a universal energy-releasing process and therefore suggests a common ancestor"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "for all forms of life."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Across the three domains, all organisms depend solely on the process of anaerobic respiration"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "for ATP production."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The presence of glycolysis as an energy releasing process in all organisms suggests that"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "convergent evolution occurred."
+              ]
+            ]
           ]
         ]
       ]
@@ -7470,6 +11010,141 @@ export const questions = [
             984.94,
             0,
             "A test tube containing a piece of exposed camera film and all three enzyme solutions"
+          ]
+        ],
+        [
+          [
+            "text",
+            "44.",
+            [
+              [
+                0,
+                "Gelatin is a protein that is derived from collagen which is found in the bones, skin, and connective tissue"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "of animals. To investigate the ability of various enzymes to digest gelatin, a group of students set up an"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "assay involving camera film. Camera film contains gelatin and appears black when exposed to light but"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "turns clear as the gelatin gets broken down. The students incubated pieces of exposed camera film in test"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "tubes, each containing one of three different enzyme solutions (trypsin, lipase, or amylase) as indicated in"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "Figure 1. The students recorded the time it took for the enzymes to digest the gelatin in each test tube,"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "turning the film from black to clear."
+              ]
+            ]
+          ],
+          [
+            "art",
+            294,
+            659
+          ],
+          [
+            "art",
+            687,
+            747
+          ],
+          [
+            "art",
+            776,
+            867
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. Diagram of experimental setup."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following would be the most appropriate control for this experiment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "A test tube containing no camera film"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "A test tube containing only a piece of exposed camera film"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "A test tube containing a piece of exposed camera film submerged in water"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "A test tube containing a piece of exposed camera film and all three enzyme solutions"
+              ]
+            ]
           ]
         ]
       ]
@@ -7811,6 +11486,116 @@ export const questions = [
             0,
             " synthase."
           ]
+        ],
+        [
+          [
+            "text",
+            "47.",
+            [
+              [
+                0,
+                "In plants the enzyme EPSP synthase catalyzes a reaction between two different substrates, S3P and PEP,"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "to form a product used in the synthesis of three amino acids. The structure of glyphosate, the active"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "chemical in many herbicides, is very similar to that of PEP."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following explains how glyphosate most likely functions as an herbicide?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Glyphosate prevents synthesis of the three amino acids by competing with PEP for binding to"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the active site of EPSP synthase."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Glyphosate prevents synthesis of the three amino acids by binding to an allosteric site of EPSP"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "synthase, increasing the likelihood that PEP will bind to the active site."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Glyphosate causes too much synthesis of the three amino acids by reducing the activation"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "energy of the reaction catalyzed by EPSP synthase."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Glyphosate alters the structure of the three amino acids by binding to both S3P and PEP in the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "active site of EPSP synthase."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -8047,6 +11832,142 @@ export const questions = [
             0,
             "needed for catalysis, whereas water does not."
           ]
+        ],
+        [
+          [
+            "text",
+            "48.",
+            [
+              [
+                0,
+                "The enzyme hexokinase catalyzes the conversion of glucose to glucose-6-phosphate, which is an"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "important step in glycolysis. The reaction involves the transfer of a phosphate group from ATP to"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "glucose."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Either a glucose molecule or a water molecule can fit in the active site of hexokinase. The presence of a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "water molecule in hexokinase’s active site would result in the hydrolysis of ATP to ADP instead of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "conversion of glucose to glucose-6-phosphate."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best helps explain the reaction specificity of hexokinase?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Both glucose and water are polar molecules that form favorable interactions with charged and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "polar amino acid side chains in hexokinase’s active site."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Both glucose and water have oxygen atoms that can form covalent bonds with the phosphorus"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "atoms of phosphate groups."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Glucose is an energy-rich organic molecule that can be broken down by glycolysis to produce"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "ATP, whereas water is an inorganic molecule."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Glucose has the right shape and charge to cause hexokinase to undergo a structural change"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "needed for catalysis, whereas water does not."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -8178,6 +12099,92 @@ export const questions = [
             339.65,
             0,
             "similar to animal hexokinase."
+          ]
+        ],
+        [
+          [
+            "text",
+            "49.",
+            [
+              [
+                0,
+                "Glycolysis is a metabolic pathway that converts glucose into pyruvate and is observed in each of the three"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "domains. The hexokinase family of enzymes is required during glycolysis to phosphorylate six-carbon"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "sugars. Researchers designed a general hexokinase inhibitor that is effective in the neurons of rats."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following best predicts the effect of adding this inhibitor to a culture of plant cells?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Plant cells will be unaffected by the inhibitor as they do not perform glycolysis."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Plant cells will be unable to perform glycolysis due to the inhibitor and will die."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Plant cells will be unable to perform photosynthesis due to the inhibitor and will die."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Plant cells will still be able to perform glycolysis since plant hexokinase is not structurally"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "similar to animal hexokinase."
+              ]
+            ]
           ]
         ]
       ]
@@ -8751,6 +12758,203 @@ export const questions = [
             0,
             "4"
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Dichlorophenolindophenol (DCPIP) is a chemical dye. When DCPIP is chemically reduced, it changes color"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "from blue to clear. DCPIP can be used as an electron acceptor in experiments that measure the rate of electron"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "transport through the electron transport chain. A student performed an experiment to study the effects of a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "chemical, DCMU, on photosynthesis."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "The student prepared four tubes with a liquid buffer and chloroplasts that had been extracted from spinach leaves."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "The student then added DCPIP to three of the tubes and added DCMU to one of them. Additionally, tube 3 was"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "wrapped in tin foil. The contents of each tube are shown in the table. The student then incubated each tube for 60"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "minutes and measured the absorbance (A"
+              ],
+              [
+                64,
+                "600"
+              ],
+              [
+                0,
+                ") of each solution at five-minute intervals. The absorbance readings of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "each solution are shown in Figure 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 1:"
+              ],
+              [
+                0,
+                " Buffer and water"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 2:"
+              ],
+              [
+                0,
+                " DCPIP, buffer, and water"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 3:"
+              ],
+              [
+                0,
+                " DCPIP, buffer, and water (wrapped in foil)"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 4:"
+              ],
+              [
+                0,
+                " DCPIP, buffer, and 1.0 mM DCMU"
+              ]
+            ]
+          ],
+          [
+            "art",
+            607,
+            1057.1
+          ],
+          [
+            "text",
+            "50.",
+            [
+              [
+                0,
+                "In which of the following tubes did the greatest reduction of DCPIP occur after 60 minutes?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Tube 1"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Tube 2"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Tube 3"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Tube 4"
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -9180,6 +13384,153 @@ export const questions = [
             0,
             "-minute period."
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Dichlorophenolindophenol (DCPIP) is a chemical dye. When DCPIP is chemically reduced, it changes color"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "from blue to clear. DCPIP can be used as an electron acceptor in experiments that measure the rate of electron"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "transport through the electron transport chain. A student performed an experiment to study the effects of a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "chemical, DCMU, on photosynthesis."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "The student prepared four tubes with a liquid buffer and chloroplasts that had been extracted from spinach leaves."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "The student then added DCPIP to three of the tubes and added DCMU to one of them. Additionally, tube 3 was"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "wrapped in tin foil. The contents of each tube are shown in the table. The student then incubated each tube for 60"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "minutes and measured the absorbance (A"
+              ],
+              [
+                64,
+                "600"
+              ],
+              [
+                0,
+                ") of each solution at five-minute intervals. The absorbance readings of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "each solution are shown in Figure 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 1:"
+              ],
+              [
+                0,
+                " Buffer and water"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 2:"
+              ],
+              [
+                0,
+                " DCPIP, buffer, and water"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 3:"
+              ],
+              [
+                0,
+                " DCPIP, buffer, and water (wrapped in foil)"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 4:"
+              ],
+              [
+                0,
+                " DCPIP, buffer, and 1.0 mM DCMU"
+              ]
+            ]
+          ],
+          [
+            "art",
+            607,
+            1057.1
+          ]
         ]
       ],
       [
@@ -9354,6 +13705,66 @@ export const questions = [
             179.74,
             0,
             "photosynthesis."
+          ]
+        ],
+        [
+          [
+            "text",
+            "51.",
+            [
+              [
+                0,
+                "Which of the following best explains how DCMU affected the reaction?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "DCMU acts as a second buffer in the reaction."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "DCMU acts as an additional carrier of electrons from photosystem II to DCPIP."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "DCMU acts as an additional source of electrons to the light reaction of photosynthesis."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "DCMU acts as an inhibitor to the movement of electrons within the light reaction of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "photosynthesis."
+              ]
+            ]
           ]
         ]
       ]
@@ -9784,6 +14195,153 @@ export const questions = [
             0,
             "-minute period."
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Dichlorophenolindophenol (DCPIP) is a chemical dye. When DCPIP is chemically reduced, it changes color"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "from blue to clear. DCPIP can be used as an electron acceptor in experiments that measure the rate of electron"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "transport through the electron transport chain. A student performed an experiment to study the effects of a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "chemical, DCMU, on photosynthesis."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "The student prepared four tubes with a liquid buffer and chloroplasts that had been extracted from spinach leaves."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "The student then added DCPIP to three of the tubes and added DCMU to one of them. Additionally, tube 3 was"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "wrapped in tin foil. The contents of each tube are shown in the table. The student then incubated each tube for 60"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "minutes and measured the absorbance (A"
+              ],
+              [
+                64,
+                "600"
+              ],
+              [
+                0,
+                ") of each solution at five-minute intervals. The absorbance readings of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "each solution are shown in Figure 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 1:"
+              ],
+              [
+                0,
+                " Buffer and water"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 2:"
+              ],
+              [
+                0,
+                " DCPIP, buffer, and water"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 3:"
+              ],
+              [
+                0,
+                " DCPIP, buffer, and water (wrapped in foil)"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 4:"
+              ],
+              [
+                0,
+                " DCPIP, buffer, and 1.0 mM DCMU"
+              ]
+            ]
+          ],
+          [
+            "art",
+            607,
+            1057.1
+          ]
         ]
       ],
       [
@@ -9894,6 +14452,74 @@ export const questions = [
             363.82,
             0,
             "reaction in the absence of light."
+          ]
+        ],
+        [
+          [
+            "text",
+            "52.",
+            [
+              [
+                0,
+                "Which of the following claims is best supported by the experimental results?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Light is required for the electron transport chain to transfer electrons."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Water, not carbon dioxide, is the source of electrons used in the light-dependent reaction of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "photosynthesis."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Carbon dioxide is the source of carbon used by green plants to build carbohydrates."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "DCPIP provides a significant source of electrons to the electron transport chain of the light"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "reaction in the absence of light."
+              ]
+            ]
           ]
         ]
       ]
@@ -10324,6 +14950,153 @@ export const questions = [
             0,
             "-minute period."
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Dichlorophenolindophenol (DCPIP) is a chemical dye. When DCPIP is chemically reduced, it changes color"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "from blue to clear. DCPIP can be used as an electron acceptor in experiments that measure the rate of electron"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "transport through the electron transport chain. A student performed an experiment to study the effects of a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "chemical, DCMU, on photosynthesis."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "The student prepared four tubes with a liquid buffer and chloroplasts that had been extracted from spinach leaves."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "The student then added DCPIP to three of the tubes and added DCMU to one of them. Additionally, tube 3 was"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "wrapped in tin foil. The contents of each tube are shown in the table. The student then incubated each tube for 60"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "minutes and measured the absorbance (A"
+              ],
+              [
+                64,
+                "600"
+              ],
+              [
+                0,
+                ") of each solution at five-minute intervals. The absorbance readings of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "each solution are shown in Figure 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 1:"
+              ],
+              [
+                0,
+                " Buffer and water"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 2:"
+              ],
+              [
+                0,
+                " DCPIP, buffer, and water"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 3:"
+              ],
+              [
+                0,
+                " DCPIP, buffer, and water (wrapped in foil)"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Tube 4:"
+              ],
+              [
+                0,
+                " DCPIP, buffer, and 1.0 mM DCMU"
+              ]
+            ]
+          ],
+          [
+            "art",
+            607,
+            1057.1
+          ]
         ]
       ],
       [
@@ -10498,6 +15271,82 @@ export const questions = [
             187.18,
             0,
             " on the reaction."
+          ]
+        ],
+        [
+          [
+            "text",
+            "53.",
+            [
+              [
+                0,
+                "Which of the following best justifies the use of tube 2 as a control treatment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "It was a negative control for the accuracy of the spectrophotometer, ensuring that an accurate"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "reading for treatment cuvette 2 would be made."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "It was a negative control for the chemical stability of the chlorophyll suspension, ensuring that"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "changes in absorbance could only be attributed to changes in chlorophyll content."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "It was a positive control for the change in DCPIP color associated with changes in light"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "intensity."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "It was a positive control for measuring the effect of DCMU on the reaction."
+              ]
+            ]
           ]
         ]
       ]
@@ -10919,6 +15768,148 @@ export const questions = [
             0,
             "Test tubes 2, 4, 6, and 8"
           ]
+        ],
+        [
+          [
+            "text",
+            "54.",
+            [
+              [
+                0,
+                "A student designs an experiment to investigate the influence of temperature on enzyme function. The"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "student’s plan is presented in Table 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                16,
+                "Table 1. An experiment to investigate the influence of temperature on enzyme function"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Test Tube"
+              ],
+              [
+                0,
+                " Substrate Added"
+              ],
+              [
+                0,
+                " Enzyme Added"
+              ],
+              [
+                0,
+                " Temperature (°C)"
+              ]
+            ]
+          ],
+          [
+            "art",
+            204.41,
+            248.41
+          ],
+          [
+            "art",
+            258.33,
+            302.33
+          ],
+          [
+            "art",
+            310.4,
+            354.4
+          ],
+          [
+            "art",
+            362.46,
+            406.46
+          ],
+          [
+            "art",
+            414.52,
+            458.52
+          ],
+          [
+            "art",
+            466.59,
+            510.59
+          ],
+          [
+            "art",
+            518.65,
+            562.65
+          ],
+          [
+            "art",
+            570.72,
+            614.72
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which test tubes are controls in the experiment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Test tubes 1 and 2 only"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Test tubes 5 and 6 only"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Test tubes 1, 3, 5, and 7"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Test tubes 2, 4, 6, and 8"
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -11050,6 +16041,92 @@ export const questions = [
             172.3,
             0,
             "of the enzyme."
+          ]
+        ],
+        [
+          [
+            "text",
+            "55.",
+            [
+              [
+                0,
+                "Pyruvate kinase, a key enzyme in the glycolysis pathway, is inhibited by the amino acid alanine. The"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "ability of alanine to inhibit the enzyme is not affected by increasing the concentration of substrate."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                " Which of the following best explains the mechanism by which alanine inhibits pyruvate kinase activity?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Alanine binds to an allosteric site of the enzyme, changing the shape of the enzyme’s active"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "site."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Alanine increases the enzyme-substrate binding until the enzyme becomes saturated."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Alanine is a competitive inhibitor that reversibly binds to the active site of the enzyme."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Alanine binds to the substrate, preventing the substrate from being able to bind to the active site"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "of the enzyme."
+              ]
+            ]
           ]
         ]
       ]
@@ -11334,6 +16411,124 @@ export const questions = [
             380.56,
             0,
             "reaction proceeds at a faster rate."
+          ]
+        ],
+        [
+          [
+            "text",
+            "60.",
+            [
+              [
+                0,
+                "Aminolevulinate dehydratase (ALAD) is an enzyme that relies on zinc as a cofactor. A zinc ion binds to"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the ALAD active site, where it forms favorable interactions with the side chains of three amino acids."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "Researchers have found that substituting a lead ion for a zinc ion in the ALAD active site causes"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "inhibition of ALAD."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best helps explain how the lead ion causes inhibition of ALAD?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "It changes the shape and charge of the substrate so that it becomes more compatible with"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "ALAD’s active site."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "It changes the amino acid sequence of the ALAD protein so that the enzyme catalyzes a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "different reaction."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "It changes the three-dimensional structure of the active site so that ALAD is no longer"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "compatible with its substrate."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "It changes the enzyme-substrate complex so that the transition state is more stable and the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "reaction proceeds at a faster rate."
+              ]
+            ]
           ]
         ]
       ]
@@ -11651,6 +16846,152 @@ export const questions = [
             0,
             "stops before the end of the exercise period."
           ]
+        ],
+        [
+          [
+            "text",
+            "62.",
+            [
+              [
+                0,
+                "Muscle contraction depends on ATP hydrolysis. During periods of intense exercise, muscle cells rely on"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the ATP supplied by three metabolic pathways: glycolysis, mitochondrial respiration, and the phosphagen"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "system. Figure 1 shows the rates at which the three metabolic pathways produce ATP following the start"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "of an intense period of exercise."
+              ]
+            ]
+          ],
+          [
+            "art",
+            203,
+            732
+          ],
+          [
+            "art",
+            743,
+            774
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. ATP production by three metabolic pathways following the start of an intense period of exercise"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following correctly uses the data to justify the claim that the phosphagen system is an"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "immediate, short-term source of ATP for muscle cells?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "ATP production by the phosphagen system increases and decreases rapidly following the start"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "of the exercise period."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "ATP production by the phosphagen system increases gradually and continuously throughout"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the entire exercise period."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The ATP produced by the phosphagen system contains more energy per molecule than does"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the ATP produced by the other pathways."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "ATP hydrolysis in muscle cells occurs immediately after the start of the exercise period but"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "stops before the end of the exercise period."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -11854,6 +17195,180 @@ export const questions = [
             479.11,
             0,
             "seawater than in the more basic seawater."
+          ]
+        ],
+        [
+          [
+            "text",
+            "63.",
+            [
+              [
+                0,
+                "To investigate the effect of oceans becoming more acidic as a result of rising carbon dioxide levels in the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "atmosphere, researchers examined the relationship between the dissolved oxygen concentration and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "respiration rates of adult sea urchins under different levels of seawater acidity, as shown in the figure. "
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                16,
+                "The Relationship Between Dissolved Oxygen Concentration and Respiration Rates of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                16,
+                "Adult Sea Urchins in More Basic and More Acidic Seawater (Error Bars Represent "
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "± SE"
+              ],
+              [
+                64,
+                "x"
+              ],
+              [
+                16,
+                ")"
+              ]
+            ]
+          ],
+          [
+            "art",
+            334,
+            363
+          ],
+          [
+            "art",
+            397,
+            720
+          ],
+          [
+            "art",
+            733,
+            770
+          ],
+          [
+            "art",
+            796,
+            851
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                " Based on the figure, which of the following best describes the effect of dissolved oxygen and acidity on"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the respiration rate of urchins?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "As the dissolved oxygen concentration increased, the respiration rate decreased in the more"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "basic seawater."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "At the same dissolved oxygen concentration, the respiration rate was lower in the more basic"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "seawater than in the more acidic seawater."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "As the dissolved oxygen concentration increased, the respiration rate decreased in the more"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "acidic seawater."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "At the same dissolved oxygen concentration, the respiration rate was lower in the more acidic"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "seawater than in the more basic seawater."
+              ]
+            ]
           ]
         ]
       ]
@@ -12147,6 +17662,108 @@ export const questions = [
             0,
             " for trypsin is acidic."
           ]
+        ],
+        [
+          [
+            "art",
+            0.73,
+            410
+          ],
+          [
+            "art",
+            427,
+            457
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                2,
+                "Figure 1. Activity levels of two digestive enzymes over a range of "
+              ],
+              [
+                0,
+                "pH"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Trypsin and pepsin are enzymes that function in different areas of the digestive tract. One functions in the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "stomach, where the pH is between 1.5 and 3.5, while the other functions in the small intestines, where the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "pH is between 6 and 8."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                " Based on Figure 1, which of the following best describes where each enzyme functions?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Pepsin works in the intestines because the optimal pH for pepsin is basic."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Trypsin works in the stomach because the optimal pH for trypsin is basic."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Pepsin works in the stomach because the optimal pH for pepsin is acidic."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Trypsin works in the stomach because the optimal pH for trypsin is acidic."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -12286,6 +17903,98 @@ export const questions = [
             782.19,
             0,
             "reflect past symbiotic relationships between prokaryotic precursors."
+          ]
+        ],
+        [
+          [
+            "text",
+            "66.",
+            [
+              [
+                0,
+                "Which of the following statements best supports the claim that organisms share fundamental processes as a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "result of evolution?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "All organisms that are introduced into new environments have the capacity to fill vacant"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "ecological roles."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "All organisms have the ability to utilize oxygen to harness energy from the chemical"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "breakdown of organic compounds."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "All organisms share a genetic code organized into triplet codons, making it possible for one"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "organism to express a gene from another organism."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "All organisms possess structures such as chloroplasts and mitochondria within their cells that"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "reflect past symbiotic relationships between prokaryotic precursors."
+              ]
+            ]
           ]
         ]
       ]
@@ -12859,6 +18568,139 @@ export const questions = [
             0,
             "concentration."
           ]
+        ],
+        [
+          [
+            "text",
+            "67.",
+            [
+              [
+                0,
+                "Pectinase is a protein that catalyzes the breakdown of pectic polysaccharides in plant cell walls. A"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "researcher designs an experiment to investigate the effect of salinity on the ability of pectinase to lower the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "activation energy of the reaction involved. The design of the experiment is presented in Table 1. For each"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "test tube, the researcher will measure the amount of product formed over 20 minutes."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                16,
+                "Table 1. An experiment to investigate the effect of salinity on pectinase function"
+              ]
+            ]
+          ],
+          [
+            "art",
+            237,
+            753
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best helps justify the inclusion of test tube 5 in the experiment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "It will act as a control for test tube 4 by showing the effect of the presence or absence of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "substrate."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "It will act as a control for test tube 4 by showing the effect of a change in environmental"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "temperature."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "It will act as a control for test tube 6 by showing the effect of the presence or absence of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "enzyme."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "It will act as a control for test tube 6 by showing the effect of a change in sodium chloride"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "concentration."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -13030,6 +18872,104 @@ export const questions = [
             38.45,
             0,
             "pH"
+          ]
+        ],
+        [
+          [
+            "text",
+            "68.",
+            [
+              [
+                0,
+                "A researcher claims that different enzymes exhibit maximal function over different pH ranges. To test the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "claim, the researcher carries out an experiment that includes three different enzymes: pepsin, salivary"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "amylase, and arginase. The results of the experiment are represented in Figure 1."
+              ]
+            ]
+          ],
+          [
+            "art",
+            175,
+            532
+          ],
+          [
+            "art",
+            548,
+            570
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. The effect of pH on three different enzymes"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following actions will provide the most appropriate negative control for the experiment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Repeating the experiment with a fourth enzyme"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Repeating the experiment at several different temperatures"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Repeating the experiment with denatured enzymes"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Repeating the experiment using several different methods for measuring pH"
+              ]
+            ]
           ]
         ]
       ]
@@ -13283,6 +19223,144 @@ export const questions = [
             0,
             "Peroxidase activity will increase at first and then decrease."
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Researchers investigated the influence of environmental pH on the activity of peroxidase, an enzyme that catalyzes"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the conversion of hydrogen peroxide to water and oxygen gas. In an experiment, the researchers added a hydrogen"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "peroxide solution containing guaiacol to several identical test tubes and adjusted the solution in each test tube to a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "different pH. The researchers included the guaiacol because it caused the solutions to change color as the reactions"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "proceeded, which the researchers relied on for measuring reaction rates. Finally, the researchers added the same"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "amount of peroxidase to each test tube and measured the rate of each reaction at 23°C. The results of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "experiment are represented in Figure 1."
+              ]
+            ]
+          ],
+          [
+            "art",
+            363,
+            531
+          ],
+          [
+            "art",
+            552,
+            619
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. The effect of pH on peroxidase activity"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "69.",
+            [
+              [
+                0,
+                "Based on Figure 1, which of the following statements best predicts the effect that a change from a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "moderately acidic environment (pH near 6) to a basic environment will have on peroxidase activity?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Peroxidase activity will decrease."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Peroxidase activity will increase."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Peroxidase activity will stay the same."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Peroxidase activity will increase at first and then decrease."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -13432,6 +19510,86 @@ export const questions = [
             0,
             " on peroxidase activity"
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Researchers investigated the influence of environmental pH on the activity of peroxidase, an enzyme that catalyzes"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the conversion of hydrogen peroxide to water and oxygen gas. In an experiment, the researchers added a hydrogen"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "peroxide solution containing guaiacol to several identical test tubes and adjusted the solution in each test tube to a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "different pH. The researchers included the guaiacol because it caused the solutions to change color as the reactions"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "proceeded, which the researchers relied on for measuring reaction rates. Finally, the researchers added the same"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "amount of peroxidase to each test tube and measured the rate of each reaction at 23°C. The results of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "experiment are represented in Figure 1."
+              ]
+            ]
+          ],
+          [
+            "art",
+            363,
+            531
+          ],
+          [
+            "art",
+            552,
+            619
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. The effect of pH on peroxidase activity"
+              ]
+            ]
+          ]
         ]
       ],
       [
@@ -13526,6 +19684,58 @@ export const questions = [
             681.49,
             0,
             "Repeating the experiment using heat-denatured peroxidase"
+          ]
+        ],
+        [
+          [
+            "text",
+            "70.",
+            [
+              [
+                0,
+                "Which of the following actions will provide a negative control for the investigation?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Repeating the experiment at 25°C"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Repeating the experiment using twice the amount of hydrogen peroxide"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Repeating the experiment using twice the amount of peroxidase"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Repeating the experiment using heat-denatured peroxidase"
+              ]
+            ]
           ]
         ]
       ]
@@ -13676,6 +19886,86 @@ export const questions = [
             0,
             " on peroxidase activity"
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Researchers investigated the influence of environmental pH on the activity of peroxidase, an enzyme that catalyzes"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the conversion of hydrogen peroxide to water and oxygen gas. In an experiment, the researchers added a hydrogen"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "peroxide solution containing guaiacol to several identical test tubes and adjusted the solution in each test tube to a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "different pH. The researchers included the guaiacol because it caused the solutions to change color as the reactions"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "proceeded, which the researchers relied on for measuring reaction rates. Finally, the researchers added the same"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "amount of peroxidase to each test tube and measured the rate of each reaction at 23°C. The results of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "experiment are represented in Figure 1."
+              ]
+            ]
+          ],
+          [
+            "art",
+            363,
+            531
+          ],
+          [
+            "art",
+            552,
+            619
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. The effect of pH on peroxidase activity"
+              ]
+            ]
+          ]
         ]
       ],
       [
@@ -13810,6 +20100,106 @@ export const questions = [
             291.31,
             0,
             "occur inside a living cell."
+          ]
+        ],
+        [
+          [
+            "text",
+            "71.",
+            [
+              [
+                0,
+                "One of the researchers proposes using oxygen gas production to measure reaction rates. Which of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "following statements best justifies the use of the proposed modification as a way of creating an appropriate"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "control for the investigation?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The experiment can be repeated without hydrogen peroxide, which will help eliminate an"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "uncontrolled variable."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The experiment can be repeated without peroxidase, which will introduce a second independent"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "variable."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The experiment can be repeated without guaiacol, which will reveal the effect of guaiacol on"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the reaction rates."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The experiment can be repeated without water, which will reveal whether the reaction can"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "occur inside a living cell."
+              ]
+            ]
           ]
         ]
       ]
@@ -14071,6 +20461,104 @@ export const questions = [
             0,
             " 7."
           ]
+        ],
+        [
+          [
+            "text",
+            "72.",
+            [
+              [
+                0,
+                "The enzyme peroxidase is found in many organisms. It catalyzes the breakdown of hydrogen peroxide"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "into water and oxygen gas. The rate of peroxidase activity at different pH values was assessed by students"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "in the lab. The students’ results are shown in graph 1."
+              ]
+            ]
+          ],
+          [
+            "art",
+            136,
+            468
+          ],
+          [
+            "art",
+            485,
+            511
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Graph 1. Effect of pH on peroxidase activity"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "If the experiment is repeated at pH 11, the observed activity level of the enzyme will most likely be"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "the same as the level at pH 7"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "lower than the level at pH 9"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "greater than the level at pH 9"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "between the levels observed at pH 5 and pH 7."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -14300,6 +20788,194 @@ export const questions = [
             16,
             "for Intertidal Oysters in Both the Control and Experimental Groups"
           ]
+        ],
+        [
+          [
+            "text",
+            "73.",
+            [
+              [
+                0,
+                "Pacific oysters are marine organisms that are exposed to different environmental conditions, depending on"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the location where they are found. Some oysters live in the subtidal zone where they are always"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "submerged in ocean water. Other oysters live in the intertidal zone where they are covered by ocean water"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "during high tide but exposed to air and potentially warmer temperatures during low tide. Scientists"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "hypothesized that an epigenetic change, DNA methylation, allows oysters to survive and reproduce in the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "different habitats. DNA methylation is the addition of methyl groups, ‐ CH"
+              ],
+              [
+                64,
+                "3"
+              ],
+              [
+                0,
+                ", to certain nitrogenous bases. "
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Scientists collected oysters from subtidal regions and intertidal regions and maintained them in separate"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "tanks at a constant temperature of 23°C for one month. Half of the oysters from each tank were then"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "placed in separate tanks and exposed to 35°C seawater for 6 hours (heat stress), after which time DNA"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "samples were collected and analyzed. The samples were compared with samples collected from oysters"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "not exposed to heat stress (Figure 1A in subtidal environments and Figure 1B in intertidal environments)."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "For the genomic regions showing differences in methylation, the scientists determined that the differences"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "were statistically significant. "
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                16,
+                "Figure 1A. Distribution of DNA Methylation Levels Among Different Genomic Regions"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                16,
+                "for Subtidal Oysters in Both the Control and Experimental Groups"
+              ]
+            ]
+          ],
+          [
+            "art",
+            619,
+            649
+          ],
+          [
+            "art",
+            681,
+            781
+          ],
+          [
+            "art",
+            792,
+            866
+          ],
+          [
+            "art",
+            907,
+            1054
+          ],
+          [
+            "art",
+            1070,
+            1099
+          ],
+          [
+            "art",
+            1128,
+            1188
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                16,
+                "Figure 1B. Distribution of DNA Methylation Levels Among Different Genomic Regions"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                16,
+                "for Intertidal Oysters in Both the Control and Experimental Groups"
+              ]
+            ]
+          ]
         ]
       ],
       [
@@ -14402,6 +21078,107 @@ export const questions = [
             410.31,
             0,
             "substrates as temperature increases."
+          ]
+        ],
+        [
+          [
+            "art",
+            10,
+            40
+          ],
+          [
+            "art",
+            72,
+            262
+          ],
+          [
+            "art",
+            291,
+            445
+          ],
+          [
+            "art",
+            460,
+            489
+          ],
+          [
+            "art",
+            519,
+            578
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                " Which of the following best explains the effect of increased environmental temperature on the metabolic"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "rate of ectotherms, such as oysters?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Metabolic rate is unaffected because ectotherms maintain homeostatic body temperatures."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Metabolic rate is unaffected because energy use is unrelated to body temperature."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Metabolic rate decreases because substrates involved in metabolic pathways become less active"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "as temperature increases."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Metabolic rate increases because the frequency of collisions increases between enzymes and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "substrates as temperature increases."
+              ]
+            ]
           ]
         ]
       ]
@@ -14831,6 +21608,201 @@ export const questions = [
             0,
             "Energy is required for the growth of the grass but not the maintenance of order."
           ]
+        ],
+        [
+          [
+            "text",
+            "76.",
+            [
+              [
+                0,
+                "A student is investigating photosynthesis in plants. The student planted grass seeds in a tray with three"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "sections and grew the grass under artificial lights for 14 days (Figure 1). After 14 days, the student"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "collected all of the grass from section I and recorded its mass (Table 1). The student then placed a clear"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "cover over section II and placed an aluminum foil cover over section III (Figure 2). The student then"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "placed the tray back under the artificial lights for seven additional days. On day 21, the student collected"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "and measured the mass of the grass from sections II and III (Table 1)."
+              ]
+            ]
+          ],
+          [
+            "art",
+            220,
+            491
+          ],
+          [
+            "art",
+            542,
+            643
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "TABLE 1. MASS OF GRASS GROWN IN EACH SECTION"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                16,
+                "Section"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                16,
+                "Day Mass was Measured"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                16,
+                "Mass ("
+              ],
+              [
+                0,
+                "g"
+              ],
+              [
+                16,
+                ")"
+              ]
+            ]
+          ],
+          [
+            "art",
+            827.31,
+            871.31
+          ],
+          [
+            "art",
+            879.38,
+            923.38
+          ],
+          [
+            "art",
+            931.44,
+            975.44
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                " Which of the following best explains the connection between energy, growth, and the maintenance of an"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "ordered system in the experiment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Energy input from light is required for the grass to grow and maintain an ordered structure."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The grass obtains the energy for growth and maintenance of order from nutrients from the soil."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The grass couples the release of energy from the light reactions with the production of oxygen ("
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                ") used to produce sugars for growth."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Energy is required for the growth of the grass but not the maintenance of order."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -14979,6 +21951,108 @@ export const questions = [
             0,
             "Function will be unaffected by the addition and removal of the urea."
           ]
+        ],
+        [
+          [
+            "text",
+            "77.",
+            [
+              [
+                0,
+                "Researchers investigated the effect of urea on the three-dimensional structure of a certain enzyme. The"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "researchers dissolved the enzyme in an aqueous buffer solution and added urea to the solution. The"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "enzyme did not appear to have a secondary or tertiary structure. The researchers carefully removed the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "urea from the solution and determined that the enzyme had the original secondary and tertiary structure"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "again."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Based on the results of the experiment, which of the following statements best predicts the effect of urea"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "on the enzyme’s function?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Function will be disrupted by adding the urea and regained by removing the urea."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Function will be disrupted by adding the urea, but it will not be regained by removing the urea."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Function will be gained by adding the urea and disrupted by removing the urea."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Function will be unaffected by the addition and removal of the urea."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -15094,6 +22168,81 @@ export const questions = [
             891.9,
             0,
             "The rate decreases because the enzyme is used up as the reaction progresses."
+          ]
+        ],
+        [
+          [
+            "art",
+            0.74,
+            572
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                2,
+                "Figure 1. Change in the relative concentration of product over time"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1 shows the amount of product produced in an enzyme-catalyzed reaction over five minutes."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                " Which of the following best explains how the rate of the reaction changes over time?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The rate increases because more products are made over time."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The rate increases because the ratio of product to substrate increases."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The rate decreases because the ratio of product to substrate increases."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The rate decreases because the enzyme is used up as the reaction progresses."
+              ]
+            ]
           ]
         ]
       ]
@@ -15579,6 +22728,105 @@ export const questions = [
             0,
             "It will show the effect of increased enzyme activity on the rate of product formation."
           ]
+        ],
+        [
+          [
+            "text",
+            "79.",
+            [
+              [
+                0,
+                "A researcher claims that increasing the environmental temperature by 10°C will double the rate of an"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "enzyme-catalyzed reaction. To test the claim, the researcher designs an experiment that uses a particular"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "enzyme isolated from plants. The design of the experiment is presented in Table 1. For each test tube in the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "experiment, the researcher will measure the rate of product formation."
+              ]
+            ]
+          ],
+          [
+            "art",
+            198,
+            608
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best helps justify the inclusion of test tube 5 as a control in the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "experiment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "It will provide a measurement of product formation in the absence of the substrate."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "It will provide a measurement of product formation in the presence of a denatured enzyme."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "It will show the effect of doubling the amount of substrate on the rate of product formation."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "It will show the effect of increased enzyme activity on the rate of product formation."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -15815,6 +23063,152 @@ export const questions = [
             0,
             "intestine, both of which act as competitive inhibitors."
           ]
+        ],
+        [
+          [
+            "text",
+            "82.",
+            [
+              [
+                0,
+                "Protein digestion in humans is primarily carried out by three enzymes. Pepsin is found in the stomach"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "(pH 2), where it aids in the breakdown of large proteins into smaller peptides, while trypsin and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "chymotrypsin are found in the small intestine (pH 8), where they aid in the further breakdown of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "proteins into amino acids and dipeptides that can be absorbed into the bloodstream. Graph 1 shows the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "effect of pH on the activity levels of the three enzymes."
+              ]
+            ]
+          ],
+          [
+            "art",
+            256,
+            585
+          ],
+          [
+            "art",
+            598,
+            620
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Graph 1. Relative activity of pepsin, trypsin, and chymotrypsin at pH 0 through 11"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following best predicts how the structure and function of pepsin will change as it enters the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "small intestine?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Pepsin will not change in shape and will continue to break down proteins in the small intestine."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Pepsin will not change in shape but may not work due to the basic environment of the small"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "intestine."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Pepsin will change in shape because of the basic environment of the small intestine; therefore,"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "its enzymatic activity will decrease."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Pepsin will change in shape because of the presence of trypsin and chymotrypsin in the small"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "intestine, both of which act as competitive inhibitors."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -16018,6 +23412,114 @@ export const questions = [
             129.54,
             0,
             "are mobile."
+          ]
+        ],
+        [
+          [
+            "text",
+            "85.",
+            [
+              [
+                0,
+                "A mutation in the upland cotton plant causes the development of chloroplasts with a single outer"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "membrane and no internal membranes. Which of the following would most likely be observed in"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "chloroplasts of cotton plants with this mutation?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "They would be unable to remove waste products, because internal transport proteins would not"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "be present."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "They would be unable to generate the ATP and NADPH needed to make sugars, because"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "these processes occur on membranes within the chloroplast."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "They would be unable to take up carbon dioxide, because CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " is transported into the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "chloroplast in membrane-bound vesicles."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "They would be unable to move within the cell, because only organelles with double membranes"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "are mobile."
+              ]
+            ]
           ]
         ]
       ]
@@ -16351,6 +23853,197 @@ export const questions = [
             0,
             "C."
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "An experiment to measure the rate of respiration in crickets and mice at 10"
+              ],
+              [
+                32,
+                "o"
+              ],
+              [
+                0,
+                "C and 25"
+              ],
+              [
+                32,
+                "o"
+              ],
+              [
+                0,
+                "C was performed using a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "respirometer, an apparatus that measures changes in gas volume. Respiration was measured in mL of O consumed"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "per gram of organism over several five-minute trials and the following data were obtained."
+              ]
+            ]
+          ],
+          [
+            "art",
+            147,
+            368
+          ],
+          [
+            "text",
+            "90.",
+            [
+              [
+                0,
+                "According to the data, the mice at 10"
+              ],
+              [
+                32,
+                "o"
+              ],
+              [
+                0,
+                "C demonstrated greater oxygen consumption per gram of tissue than"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "did the mice at 25"
+              ],
+              [
+                32,
+                "o"
+              ],
+              [
+                0,
+                "C. This is most likely explained by which of the following statements?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The mice at 10"
+              ],
+              [
+                32,
+                "o"
+              ],
+              [
+                0,
+                "C had a higher rate of ATP production than the mice at 25"
+              ],
+              [
+                32,
+                "o"
+              ],
+              [
+                0,
+                "C."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The mice at 10"
+              ],
+              [
+                32,
+                "o"
+              ],
+              [
+                0,
+                "C had a lower metabolic rate than the mice at 25"
+              ],
+              [
+                32,
+                "o"
+              ],
+              [
+                0,
+                "C."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The mice at 25"
+              ],
+              [
+                32,
+                "o"
+              ],
+              [
+                0,
+                "C weighed less than the mice at 10"
+              ],
+              [
+                32,
+                "o"
+              ],
+              [
+                0,
+                "C."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The mice at 25"
+              ],
+              [
+                32,
+                "o"
+              ],
+              [
+                0,
+                "C were more active than the mice at 10"
+              ],
+              [
+                32,
+                "o"
+              ],
+              [
+                0,
+                "C."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -16466,6 +24159,74 @@ export const questions = [
             362.37,
             0,
             "A valve to release excess water"
+          ]
+        ],
+        [
+          [
+            "text",
+            "91.",
+            [
+              [
+                0,
+                "During aerobic cellular respiration, oxygen gas is consumed at the same rate as carbon dioxide gas is"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "produced. In order to provide accurate volumetric measurements of oxygen gas consumption, the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "experimental setup should include which of the following?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "A substance that removes carbon dioxide gas"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "A plant to produce oxygen"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "A glucose reserve"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "A valve to release excess water"
+              ]
+            ]
           ]
         ]
       ]
@@ -16615,6 +24376,113 @@ export const questions = [
             0,
             "accelerated in green-leaved seedlings"
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "A student placed 20 tobacco seeds of the same species on moist paper towels in each of two petri dishes. Dish A"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "was wrapped completely in an opaque cover to exclude all light. Dish B was not wrapped. The dishes were placed"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "equidistant from a light source set to a cycle of 14 hours of light and 10 hours of dark. All other conditions were"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the same for both dishes. The dishes were examined after 7 days and the opaque cover was permanently removed"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "from dish A. Both dishes were returned to the light and examined again at 14 days. The following data were"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "obtained."
+              ]
+            ]
+          ],
+          [
+            "art",
+            252,
+            527
+          ],
+          [
+            "text",
+            "94.",
+            [
+              [
+                0,
+                "According to the results of this experiment, germination of tobacco seeds during the first week is"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "increased by exposure to light"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "unaffected by light intensity"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "prevented by paper towels"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "accelerated in green-leaved seedlings"
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -16683,6 +24551,63 @@ export const questions = [
             107.22,
             0,
             "obtained."
+          ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "A student placed 20 tobacco seeds of the same species on moist paper towels in each of two petri dishes. Dish A"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "was wrapped completely in an opaque cover to exclude all light. Dish B was not wrapped. The dishes were placed"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "equidistant from a light source set to a cycle of 14 hours of light and 10 hours of dark. All other conditions were"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the same for both dishes. The dishes were examined after 7 days and the opaque cover was permanently removed"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "from dish A. Both dishes were returned to the light and examined again at 14 days. The following data were"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "obtained."
+              ]
+            ]
+          ],
+          [
+            "art",
+            252,
+            527
           ]
         ]
       ],
@@ -16778,6 +24703,66 @@ export const questions = [
             973.78,
             0,
             "a higher rate of respiration in yellow-leaved seedlings depleted their stored nutrients"
+          ]
+        ],
+        [
+          [
+            "text",
+            "95.",
+            [
+              [
+                0,
+                "Additional observations were made on day 21, and no yellow-leaved seedlings were found alive in either"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "dish. This is most likely because"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "yellow-leaved seedlings were unable to absorb water from the paper towels"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "taller green-leaved seedlings blocked the light and prevented photosynthesis"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "yellow-leaved seedlings were unable to convert light energy to chemical energy"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "a higher rate of respiration in yellow-leaved seedlings depleted their stored nutrients"
+              ]
+            ]
           ]
         ]
       ]
@@ -16983,6 +24968,102 @@ export const questions = [
             0,
             "The mitochondrial matrix"
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Pyruvate dehydrogenase is an enzyme that converts pyruvate to acetyl-CoA. Acetyl-CoA is further metabolized in"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the Krebs cycle. A researcher measured the accumulation of acetyl-CoA in a reaction containing pyruvate and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "pyruvate dehydrogenase under several different conditions (Figure 1)."
+              ]
+            ]
+          ],
+          [
+            "art",
+            174,
+            470
+          ],
+          [
+            "art",
+            487,
+            615.42
+          ],
+          [
+            "text",
+            "96.",
+            [
+              [
+                0,
+                "Which of the following best describes the cellular location where pyruvate dehydrogenase is most likely"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "active?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The cytosol"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The lysosomes"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The nucleus"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The mitochondrial matrix"
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -17099,6 +25180,44 @@ export const questions = [
             308.11,
             0,
             " under different conditions"
+          ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Pyruvate dehydrogenase is an enzyme that converts pyruvate to acetyl-CoA. Acetyl-CoA is further metabolized in"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the Krebs cycle. A researcher measured the accumulation of acetyl-CoA in a reaction containing pyruvate and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "pyruvate dehydrogenase under several different conditions (Figure 1)."
+              ]
+            ]
+          ],
+          [
+            "art",
+            174,
+            470
+          ],
+          [
+            "art",
+            487,
+            615.42
           ]
         ]
       ],
@@ -17251,6 +25370,74 @@ export const questions = [
             0,
             "micromoles/sec"
           ]
+        ],
+        [
+          [
+            "text",
+            "97.",
+            [
+              [
+                0,
+                "The maximum production rate of acetyl-CoA under condition 1 is closest to which of the following?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "1"
+              ],
+              [
+                0,
+                " micromole/sec"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "24"
+              ],
+              [
+                0,
+                " micromoles/sec"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "35"
+              ],
+              [
+                0,
+                " micromoles/sec"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "65"
+              ],
+              [
+                0,
+                " micromoles/sec"
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -17367,6 +25554,44 @@ export const questions = [
             308.11,
             0,
             " under different conditions"
+          ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Pyruvate dehydrogenase is an enzyme that converts pyruvate to acetyl-CoA. Acetyl-CoA is further metabolized in"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the Krebs cycle. A researcher measured the accumulation of acetyl-CoA in a reaction containing pyruvate and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "pyruvate dehydrogenase under several different conditions (Figure 1)."
+              ]
+            ]
+          ],
+          [
+            "art",
+            174,
+            470
+          ],
+          [
+            "art",
+            487,
+            615.42
           ]
         ]
       ],
@@ -17518,6 +25743,106 @@ export const questions = [
             68.18,
             0,
             "cycle."
+          ]
+        ],
+        [
+          [
+            "text",
+            "98.",
+            [
+              [
+                0,
+                "Pyruvate dehydrogenase deficiency is a genetic disease most commonly linked to a mutation in the α-"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "subunit of the mitochondrial enzyme that causes the enzyme to cease functioning. As a result of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "mutation, affected individuals build up dangerous amounts of lactic acid. Which of the following best"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "explains the buildup of lactic acid in individuals with the mutation?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Cells use lactic acid to shunt electrons from pyruvate to the electron transport chain in the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "mitochondria."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Cells undergo glycolysis because there is a buildup of pyruvate in affected individuals."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Cells cannot transport pyruvate to the mitochondria in the absence of pyruvate dehydrogenase"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "activity, so the pyruvate is broken down to lactic acid and ethanol."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Cells undergo fermentation because pyruvate cannot be metabolized to proceed into the Krebs"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "cycle."
+              ]
+            ]
           ]
         ]
       ]
@@ -18011,6 +26336,232 @@ export const questions = [
             0,
             "of cellular respiration over time."
           ]
+        ],
+        [
+          [
+            "art",
+            10,
+            501
+          ],
+          [
+            "art",
+            513,
+            542
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. Effect of light intensity (μmol⋅m"
+              ],
+              [
+                32,
+                "-2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "-1"
+              ],
+              [
+                0,
+                ") on the pH of a solution containing algae"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Students investigated the effect of light intensity on the rates of photosynthesis and cellular respiration in algae."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "They placed equal numbers of algal cells into test tubes containing a solution at pH"
+              ],
+              [
+                0,
+                " 7.40. The test tubes were"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "divided into four treatment groups, and each treatment group was exposed to a different light intensity. The pH in"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the tubes was measured every 10 minutes and used as an indicator of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " concentration because CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " produces an"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "acidic solution when dissolved in water (Figure 1)."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "100.",
+            [
+              [
+                0,
+                "Which of the following claims is best supported by the data?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Algae only carry out photosynthesis when exposed to 200"
+              ],
+              [
+                0,
+                " μmol⋅m"
+              ],
+              [
+                32,
+                "−2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "−1"
+              ],
+              [
+                0,
+                "."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Algae double the rate of photosynthesis when the light intensity doubles."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Algae that are exposed to 30"
+              ],
+              [
+                0,
+                " μmol⋅m"
+              ],
+              [
+                32,
+                "−2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "−1"
+              ],
+              [
+                0,
+                " of light perform photosynthesis instead of cellular"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "respiration."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Algae that are exposed to 100"
+              ],
+              [
+                0,
+                " μmol⋅m"
+              ],
+              [
+                32,
+                "−2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "−1"
+              ],
+              [
+                0,
+                " of light have a greater rate of photosynthesis than"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "of cellular respiration over time."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -18239,6 +26790,106 @@ export const questions = [
             586.95,
             0,
             "acidic solution when dissolved in water (Figure 1)."
+          ]
+        ],
+        [
+          [
+            "art",
+            10,
+            501
+          ],
+          [
+            "art",
+            513,
+            542
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. Effect of light intensity (μmol⋅m"
+              ],
+              [
+                32,
+                "-2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "-1"
+              ],
+              [
+                0,
+                ") on the pH of a solution containing algae"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Students investigated the effect of light intensity on the rates of photosynthesis and cellular respiration in algae."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "They placed equal numbers of algal cells into test tubes containing a solution at pH"
+              ],
+              [
+                0,
+                " 7.40. The test tubes were"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "divided into four treatment groups, and each treatment group was exposed to a different light intensity. The pH in"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the tubes was measured every 10 minutes and used as an indicator of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " concentration because CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " produces an"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "acidic solution when dissolved in water (Figure 1)."
+              ]
+            ]
           ]
         ]
       ],
@@ -18511,6 +27162,100 @@ export const questions = [
             0,
             "."
           ]
+        ],
+        [
+          [
+            "text",
+            "101.",
+            [
+              [
+                0,
+                "Scientists claim that changes in the rate of photosynthesis will be reflected by changes in pH."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following best supports their claim?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Algae performing photosynthesis remove CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " from the solution, increasing pH."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Algae performing photosynthesis release CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " into the solution, decreasing pH."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Algae performing photosynthesis remove O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " from the solution, decreasing pH."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Algae performing photosynthesis release O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " into the solution, increasing pH."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -18739,6 +27484,106 @@ export const questions = [
             586.95,
             0,
             "acidic solution when dissolved in water (Figure 1)."
+          ]
+        ],
+        [
+          [
+            "art",
+            10,
+            501
+          ],
+          [
+            "art",
+            513,
+            542
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. Effect of light intensity (μmol⋅m"
+              ],
+              [
+                32,
+                "-2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "-1"
+              ],
+              [
+                0,
+                ") on the pH of a solution containing algae"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Students investigated the effect of light intensity on the rates of photosynthesis and cellular respiration in algae."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "They placed equal numbers of algal cells into test tubes containing a solution at pH"
+              ],
+              [
+                0,
+                " 7.40. The test tubes were"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "divided into four treatment groups, and each treatment group was exposed to a different light intensity. The pH in"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the tubes was measured every 10 minutes and used as an indicator of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " concentration because CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " produces an"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "acidic solution when dissolved in water (Figure 1)."
+              ]
+            ]
           ]
         ]
       ],
@@ -19251,6 +28096,206 @@ export const questions = [
             0,
             "−1"
           ]
+        ],
+        [
+          [
+            "text",
+            "102.",
+            [
+              [
+                0,
+                "Based on Figure 1, which of the following environmental changes will result in the greatest increase in the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "net photosynthetic productivity by the algae?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "A change in light intensity from 0 μmol⋅m"
+              ],
+              [
+                32,
+                "−2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "−1"
+              ],
+              [
+                0,
+                " to 30"
+              ],
+              [
+                0,
+                " μmol⋅m"
+              ],
+              [
+                32,
+                "−2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "−1"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "A change in light intensity from 30"
+              ],
+              [
+                0,
+                " μmol⋅m"
+              ],
+              [
+                32,
+                "−2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "−1"
+              ],
+              [
+                0,
+                " to 100"
+              ],
+              [
+                0,
+                " μmol⋅m"
+              ],
+              [
+                32,
+                "−2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "−1"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "A change in light intensity from 100"
+              ],
+              [
+                0,
+                " μmol⋅m"
+              ],
+              [
+                32,
+                "−2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "−1"
+              ],
+              [
+                0,
+                " to 200"
+              ],
+              [
+                0,
+                " μmol⋅m"
+              ],
+              [
+                32,
+                "−2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "−1"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "A change in light intensity from 200"
+              ],
+              [
+                0,
+                " μmol⋅m"
+              ],
+              [
+                32,
+                "−2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "−1"
+              ],
+              [
+                0,
+                " to 30"
+              ],
+              [
+                0,
+                " μmol⋅m"
+              ],
+              [
+                32,
+                "−2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "−1"
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -19480,6 +28525,106 @@ export const questions = [
             0,
             "acidic solution when dissolved in water (Figure 1)."
           ]
+        ],
+        [
+          [
+            "art",
+            10,
+            501
+          ],
+          [
+            "art",
+            513,
+            542
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. Effect of light intensity (μmol⋅m"
+              ],
+              [
+                32,
+                "-2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "-1"
+              ],
+              [
+                0,
+                ") on the pH of a solution containing algae"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Students investigated the effect of light intensity on the rates of photosynthesis and cellular respiration in algae."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "They placed equal numbers of algal cells into test tubes containing a solution at pH"
+              ],
+              [
+                0,
+                " 7.40. The test tubes were"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "divided into four treatment groups, and each treatment group was exposed to a different light intensity. The pH in"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the tubes was measured every 10 minutes and used as an indicator of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " concentration because CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " produces an"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "acidic solution when dissolved in water (Figure 1)."
+              ]
+            ]
+          ]
         ]
       ],
       [
@@ -19679,6 +28824,98 @@ export const questions = [
             0,
             "A test tube containing no algal cells"
           ]
+        ],
+        [
+          [
+            "text",
+            "103.",
+            [
+              [
+                0,
+                "Based on Figure 1, which of the following was used as a control in the experiment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "A test tube placed directly in front of a light source"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The 0"
+              ],
+              [
+                0,
+                " μmol⋅m"
+              ],
+              [
+                32,
+                "−2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "−1"
+              ],
+              [
+                0,
+                " light-intensity treatment"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The 200"
+              ],
+              [
+                0,
+                " μmol⋅m"
+              ],
+              [
+                32,
+                "−2"
+              ],
+              [
+                0,
+                "⋅s"
+              ],
+              [
+                32,
+                "−1"
+              ],
+              [
+                0,
+                " light-intensity treatment"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "A test tube containing no algal cells"
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -19826,6 +29063,108 @@ export const questions = [
             562.78,
             0,
             "producing sugars and other organic compounds."
+          ]
+        ],
+        [
+          [
+            "text",
+            "109.",
+            [
+              [
+                0,
+                "A researcher claims that increased atmospheric carbon dioxide levels cause increased growth rates in"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "plants."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best supports the researcher’s claim?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Atmospheric carbon dioxide is produced by the burning of fossil fuels, which are formed from"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the remains of living organisms such as plants."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Atmospheric carbon dioxide is a byproduct of cellular respiration, which is a metabolic process"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "that occurs in plants and other living organisms."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Atmospheric carbon dioxide typically enters plant leaves through stomata, which plants rely on"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "for regulating gas exchange with the atmosphere."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Atmospheric carbon dioxide is the raw material for photosynthesis, which plants rely on for"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "producing sugars and other organic compounds."
+              ]
+            ]
           ]
         ]
       ]
@@ -20463,6 +29802,164 @@ export const questions = [
             0,
             "."
           ]
+        ],
+        [
+          [
+            "text",
+            "111.",
+            [
+              [
+                0,
+                "A scientist performed an experiment to test the ability of chloroplasts to produce ATP in the dark. The"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "scientist maintained chloroplasts under dark conditions and placed them first in a pH 4 solution for 15"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "seconds and then in a pH 8 solution containing ADP and P"
+              ],
+              [
+                64,
+                "i"
+              ],
+              [
+                0,
+                " (inorganic phosphate). Under these"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "conditions, the pH of the stroma increased to 8, the pH of the thylakoid space remained at 4, and the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "chloroplasts produced ATP."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following best explains how the difference in pH between the stroma and the thylakoid"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "space enabled the chloroplasts to produce ATP in the dark?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The difference in pH created a proton gradient that enabled protons to pass through ATP"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "synthase, activating it to produce ATP."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The difference in pH enabled complexes of protons and ADP in the thylakoid space to move"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "through ATP synthase to the stroma, producing ATP."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The difference in pH stimulated the electron flow needed to pump protons into the stroma and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "induce P"
+              ],
+              [
+                64,
+                "i"
+              ],
+              [
+                0,
+                " and ADP to bond and form ATP."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The difference in pH caused the photosystems to release high energy electrons that provided"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "enough energy for ADP and P"
+              ],
+              [
+                64,
+                "i"
+              ],
+              [
+                0,
+                " to bond and form ATP."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -20602,6 +30099,110 @@ export const questions = [
             289.16,
             0,
             "synthase in chloroplasts?"
+          ]
+        ],
+        [
+          [
+            "text",
+            "112.",
+            [
+              [
+                0,
+                "The figures below illustrate the similarities between ATP synthesis in mitochondria and chloroplasts."
+              ]
+            ]
+          ],
+          [
+            "art",
+            64,
+            303
+          ],
+          [
+            "art",
+            313,
+            618
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "The figures can best assist in answering which of the following questions?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Do electron transport chains create a gradient so that ATP synthase can generate ATP"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "molecules?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "What are the sources of energy that drive mitochondrial and chloroplast electron transport"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "systems?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "What is the optimal temperature at which ATP synthase chemically converts ADP and a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "phosphate group into one molecule of ATP?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "What is the evolutionary relationship between the ATP synthase in mitochondria and the ATP"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "synthase in chloroplasts?"
+              ]
+            ]
           ]
         ]
       ]
@@ -21239,6 +30840,194 @@ export const questions = [
             0,
             " in the Krebs cycle that is then converted into lactic acid."
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "To investigate bacterial metabolism, a researcher divided a population (culture) of "
+              ],
+              [
+                2,
+                "Staphylococcus capitis "
+              ],
+              [
+                0,
+                "bacteria"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "into two sets of culture tubes containing glucose. The researcher added a chemical to one set of tubes and measured"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the pH of the cultures at 5-minute intervals as the bacteria metabolized the glucose into lactic acid. The data are"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "shown in Table 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "TABLE 1. AVERAGE CHANGE IN pH IN CONTROL AND TREATMENT GROUPS OVER A 40-MINUTE"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "PERIOD"
+              ]
+            ]
+          ],
+          [
+            "art",
+            333.55,
+            411.88
+          ],
+          [
+            "art",
+            419.94,
+            463.94
+          ],
+          [
+            "art",
+            473.87,
+            517.87
+          ],
+          [
+            "art",
+            525.93,
+            569.93
+          ],
+          [
+            "art",
+            577.99,
+            621.99
+          ],
+          [
+            "art",
+            630.06,
+            674.06
+          ],
+          [
+            "art",
+            682.12,
+            726.12
+          ],
+          [
+            "art",
+            734.18,
+            778.18
+          ],
+          [
+            "art",
+            786.25,
+            830.25
+          ],
+          [
+            "art",
+            838.31,
+            882.31
+          ],
+          [
+            "text",
+            "114.",
+            [
+              [
+                0,
+                "Which of the following best describes the process by which the bacteria are breaking down the glucose to"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "produce lactic acid?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The bacteria are breaking down sugars in the absence of oxygen."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The bacteria are creating a H"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                " gradient to synthesize more ATP."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The bacteria are using their mitochondria to break down glucose in the presence of oxygen."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The bacteria are producing CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " in the Krebs cycle that is then converted into lactic acid."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -21724,6 +31513,120 @@ export const questions = [
             0,
             "7.59 ± 0.02"
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "To investigate bacterial metabolism, a researcher divided a population (culture) of "
+              ],
+              [
+                2,
+                "Staphylococcus capitis "
+              ],
+              [
+                0,
+                "bacteria"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "into two sets of culture tubes containing glucose. The researcher added a chemical to one set of tubes and measured"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the pH of the cultures at 5-minute intervals as the bacteria metabolized the glucose into lactic acid. The data are"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "shown in Table 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "TABLE 1. AVERAGE CHANGE IN pH IN CONTROL AND TREATMENT GROUPS OVER A 40-MINUTE"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "PERIOD"
+              ]
+            ]
+          ],
+          [
+            "art",
+            333.55,
+            411.88
+          ],
+          [
+            "art",
+            419.94,
+            463.94
+          ],
+          [
+            "art",
+            473.87,
+            517.87
+          ],
+          [
+            "art",
+            525.93,
+            569.93
+          ],
+          [
+            "art",
+            577.99,
+            621.99
+          ],
+          [
+            "art",
+            630.06,
+            674.06
+          ],
+          [
+            "art",
+            682.12,
+            726.12
+          ],
+          [
+            "art",
+            734.18,
+            778.18
+          ],
+          [
+            "art",
+            786.25,
+            830.25
+          ],
+          [
+            "art",
+            838.31,
+            882.31
+          ]
         ]
       ],
       [
@@ -21810,6 +31713,58 @@ export const questions = [
             290.68,
             0,
             "Lactic acid concentration"
+          ]
+        ],
+        [
+          [
+            "text",
+            "115.",
+            [
+              [
+                0,
+                "Which of the following was the dependent variable in the researcher’s experiment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Time"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "pH"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Glucose concentration"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Lactic acid concentration"
+              ]
+            ]
           ]
         ]
       ]
@@ -22297,6 +32252,120 @@ export const questions = [
             0,
             "7.59 ± 0.02"
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "To investigate bacterial metabolism, a researcher divided a population (culture) of "
+              ],
+              [
+                2,
+                "Staphylococcus capitis "
+              ],
+              [
+                0,
+                "bacteria"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "into two sets of culture tubes containing glucose. The researcher added a chemical to one set of tubes and measured"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the pH of the cultures at 5-minute intervals as the bacteria metabolized the glucose into lactic acid. The data are"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "shown in Table 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "TABLE 1. AVERAGE CHANGE IN pH IN CONTROL AND TREATMENT GROUPS OVER A 40-MINUTE"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "PERIOD"
+              ]
+            ]
+          ],
+          [
+            "art",
+            333.55,
+            411.88
+          ],
+          [
+            "art",
+            419.94,
+            463.94
+          ],
+          [
+            "art",
+            473.87,
+            517.87
+          ],
+          [
+            "art",
+            525.93,
+            569.93
+          ],
+          [
+            "art",
+            577.99,
+            621.99
+          ],
+          [
+            "art",
+            630.06,
+            674.06
+          ],
+          [
+            "art",
+            682.12,
+            726.12
+          ],
+          [
+            "art",
+            734.18,
+            778.18
+          ],
+          [
+            "art",
+            786.25,
+            830.25
+          ],
+          [
+            "art",
+            838.31,
+            882.31
+          ]
         ]
       ],
       [
@@ -22319,6 +32388,18 @@ export const questions = [
             772.61,
             0,
             "Which of the following graphs best represents the data in Table 1 ?"
+          ]
+        ],
+        [
+          [
+            "text",
+            "116.",
+            [
+              [
+                0,
+                "Which of the following graphs best represents the data in Table 1 ?"
+              ]
+            ]
           ]
         ]
       ],
@@ -22358,6 +32439,43 @@ export const questions = [
             38.83,
             0,
             "(D)"
+          ]
+        ],
+        [
+          [
+            "art",
+            0.75,
+            213
+          ],
+          [
+            "art",
+            254,
+            278
+          ],
+          [
+            "art",
+            318,
+            942
+          ],
+          [
+            "art",
+            949.05,
+            1308.15
+          ],
+          [
+            "art",
+            1321,
+            1362
+          ],
+          [
+            "art",
+            1387,
+            1578
+          ],
+          [
+            "art",
+            1604,
+            1693
           ]
         ]
       ]
@@ -22844,6 +32962,120 @@ export const questions = [
             0,
             "7.59 ± 0.02"
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "To investigate bacterial metabolism, a researcher divided a population (culture) of "
+              ],
+              [
+                2,
+                "Staphylococcus capitis "
+              ],
+              [
+                0,
+                "bacteria"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "into two sets of culture tubes containing glucose. The researcher added a chemical to one set of tubes and measured"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the pH of the cultures at 5-minute intervals as the bacteria metabolized the glucose into lactic acid. The data are"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "shown in Table 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "TABLE 1. AVERAGE CHANGE IN pH IN CONTROL AND TREATMENT GROUPS OVER A 40-MINUTE"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "PERIOD"
+              ]
+            ]
+          ],
+          [
+            "art",
+            333.55,
+            411.88
+          ],
+          [
+            "art",
+            419.94,
+            463.94
+          ],
+          [
+            "art",
+            473.87,
+            517.87
+          ],
+          [
+            "art",
+            525.93,
+            569.93
+          ],
+          [
+            "art",
+            577.99,
+            621.99
+          ],
+          [
+            "art",
+            630.06,
+            674.06
+          ],
+          [
+            "art",
+            682.12,
+            726.12
+          ],
+          [
+            "art",
+            734.18,
+            778.18
+          ],
+          [
+            "art",
+            786.25,
+            830.25
+          ],
+          [
+            "art",
+            838.31,
+            882.31
+          ]
         ]
       ],
       [
@@ -22986,6 +33218,66 @@ export const questions = [
             98.0,
             0,
             " minutes"
+          ]
+        ],
+        [
+          [
+            "text",
+            "117.",
+            [
+              [
+                0,
+                "Based on the data in Table 1, which of the following is the earliest time point at which there is a statistical"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "difference in average pH between the control and treatment groups?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "5 minutes"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "15 minutes"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "20 minutes"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "35 minutes"
+              ]
+            ]
           ]
         ]
       ]
@@ -23472,6 +33764,120 @@ export const questions = [
             0,
             "7.59 ± 0.02"
           ]
+        ],
+        [
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "To investigate bacterial metabolism, a researcher divided a population (culture) of "
+              ],
+              [
+                2,
+                "Staphylococcus capitis "
+              ],
+              [
+                0,
+                "bacteria"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "into two sets of culture tubes containing glucose. The researcher added a chemical to one set of tubes and measured"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the pH of the cultures at 5-minute intervals as the bacteria metabolized the glucose into lactic acid. The data are"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "shown in Table 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "TABLE 1. AVERAGE CHANGE IN pH IN CONTROL AND TREATMENT GROUPS OVER A 40-MINUTE"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "PERIOD"
+              ]
+            ]
+          ],
+          [
+            "art",
+            333.55,
+            411.88
+          ],
+          [
+            "art",
+            419.94,
+            463.94
+          ],
+          [
+            "art",
+            473.87,
+            517.87
+          ],
+          [
+            "art",
+            525.93,
+            569.93
+          ],
+          [
+            "art",
+            577.99,
+            621.99
+          ],
+          [
+            "art",
+            630.06,
+            674.06
+          ],
+          [
+            "art",
+            682.12,
+            726.12
+          ],
+          [
+            "art",
+            734.18,
+            778.18
+          ],
+          [
+            "art",
+            786.25,
+            830.25
+          ],
+          [
+            "art",
+            838.31,
+            882.31
+          ]
         ]
       ],
       [
@@ -23663,6 +34069,82 @@ export const questions = [
             0,
             "oxygen."
           ]
+        ],
+        [
+          [
+            "text",
+            "118.",
+            [
+              [
+                0,
+                "According to the data, which of the following best explains the results of the experiment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The pH of the treatment culture was lower than the pH of the control because the chemical"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "increased the bacterial metabolic rate."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The pH of the treatment culture was higher than the pH of the control because the chemical"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "denatured bacterial enzymes and decreased the metabolic rate."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The chemical increased the metabolic rate of the bacteria because it lowered the pH."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The chemical decreased the metabolic rate of the bacteria because it bound all available"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "oxygen."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -23826,6 +34308,130 @@ export const questions = [
             981.22,
             0,
             "Evidence that the cyanobacteria produced oxygen as a by-product of photosynthesis"
+          ]
+        ],
+        [
+          [
+            "text",
+            "125.",
+            [
+              [
+                0,
+                "A researcher claims that the initial rise of oxygen in Earth’s early atmosphere, which occurred"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "approximately 2.3 billion years ago, resulted from the metabolic activity of prokaryotic organisms. The"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "claim is based on an interpretation of the geochemical and fossil evidence represented in Figure 1."
+              ]
+            ]
+          ],
+          [
+            "art",
+            173,
+            244
+          ],
+          [
+            "art",
+            269,
+            461
+          ],
+          [
+            "art",
+            476,
+            529
+          ],
+          [
+            "art",
+            543,
+            574
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. Selected events in geologic time based on geochemical and fossil evidence"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following types of evidence will best support the researcher’s claim?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Evidence that some of the earliest eukaryotes used oxygen to produce ATP by cellular"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "respiration"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Evidence that the earliest plants produced oxygen as a by-product of photosynthesis"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Evidence that some of the earliest organisms carried out photosynthesis without producing"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "oxygen"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Evidence that the cyanobacteria produced oxygen as a by-product of photosynthesis"
+              ]
+            ]
           ]
         ]
       ]
@@ -24223,6 +34829,205 @@ export const questions = [
             0,
             "across the membrane."
           ]
+        ],
+        [
+          [
+            "art",
+            0.75,
+            649
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                2,
+                "Figure 1. Diagram of the electron transport chain and "
+              ],
+              [
+                0,
+                "ATP"
+              ],
+              [
+                2,
+                " synthase in the membrane of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                2,
+                "mitochondria"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "On average, more ATP can be produced from an NADH molecule than can be produced from a"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "molecule of FADH"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                "."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                " Based on Figure 1, which of the following best explains the difference in "
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "ATP production between these"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "two molecules?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "NADH contributes more electrons to the electron transport chain than FADH"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " does and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "therefore provides more energy to pump protons."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The electrons of FADH"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " are transferred through three complexes of the electron transport"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "chain whereas those of NADH are transferred through all four complexes."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "FADH"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " contributes more protons to the mitochondrial matrix, which decreases the proton"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "gradient."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The protons contributed by FADH"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " are combined with O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " to make water and are not pumped"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "across the membrane."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -24402,6 +35207,152 @@ export const questions = [
             322.92,
             0,
             "the electron transport chain."
+          ]
+        ],
+        [
+          [
+            "art",
+            0.73,
+            118
+          ],
+          [
+            "art",
+            143,
+            489
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. Model of a mitochondrion in cells under normal conditions and in cells experiencing cold-"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "induced stress"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "In a certain type of fat cells, cold temperatures trigger a series of events that include changes to the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "structure of the mitochondria. A model of a mitochondrion from these fat cells under normal"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "environmental conditions and when experiencing cold-induced stress is shown in Figure 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following best explains how the changes in mitochondrial structure observed when the cell"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "experiences cold-induced stress affect cellular respiration?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The volume of the mitochondrial intermembrane space decreases, preventing the reactions of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the Krebs cycle from occurring."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The surface area of the inner membrane decreases, preventing the transport of oxygen"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "molecules into the mitochondria."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The volume within the mitochondria increases, providing more space for the reactions of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "glycolysis to take place."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The surface area of the inner membrane increases, providing more space for the components of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the electron transport chain."
+              ]
+            ]
           ]
         ]
       ]
@@ -24687,6 +35638,118 @@ export const questions = [
             0,
             "."
           ]
+        ],
+        [
+          [
+            "text",
+            "130.",
+            [
+              [
+                0,
+                "Newborn babies and hibernating animals contain a large amount of brown adipose (fat) tissue (BAT)."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "Certain proteins in the BAT cells increase the permeability of the inner mitochondrial membrane to"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "protons, disrupting the proton gradient."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                " Which of the following best predicts the effect of disrupting the proton gradient in "
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "BAT?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The pH of the matrix will increase, allowing the production of more ATP per gram of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "substrate."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The pH of the intermembrane space will decrease, allowing a steeper proton gradient to form."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Electron transport and oxidative phosphorylation will be decoupled, generating more heat but"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "less ATP."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The number of protons available to pass through ATP synthase will increase, resulting in more"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "ATP."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -24964,6 +36027,140 @@ export const questions = [
             0,
             "?"
           ]
+        ],
+        [
+          [
+            "text",
+            "131.",
+            [
+              [
+                0,
+                "Melanocytes are skin cells that can become cancerous and develop into a cancer known as melanoma."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "Some cancerous melanocytes have developed resistance to the drugs currently used to treat melanoma. As"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "a result, researchers are investigating the effects of a new compound (drug X) on four different melanoma"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "cell lines. Researchers analyzed cell survival in two cell lines (Figure 1) and oxygen consumption in the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "presence of drug X in all four cell lines (Figure 2). Figure 3 shows the proposed mechanism by which"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "drug X affects cells."
+              ]
+            ]
+          ],
+          [
+            "art",
+            264,
+            689.09
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "after treatment with different concentrations of drug X"
+              ]
+            ]
+          ],
+          [
+            "art",
+            740,
+            1057
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 2. Oxygen consumption per cell in four melanoma lines after treatment with either solvent alone or"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "solvent containing drug X. Error bars represent ±2SE"
+              ],
+              [
+                64,
+                "x"
+              ],
+              [
+                0,
+                "."
+              ]
+            ]
+          ],
+          [
+            "art",
+            1163,
+            1259
+          ],
+          [
+            "art",
+            1276,
+            1372
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 3. Pathway leading to cell survival, growth, and proliferation and the likely effect of drug X"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                " Based on the information presented, which of the following best explains why the researchers measured"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "oxygen consumption as an indicator of the effectiveness of drug X?"
+              ]
+            ]
+          ]
         ]
       ],
       [
@@ -25050,6 +36247,64 @@ export const questions = [
             99.79,
             0,
             "survival."
+          ]
+        ],
+        [
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Oxygen provides the source of electrons for cellular respiration and is necessary for energy"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "production."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Oxygen consumption increases the mutation rate and causes cells to become cancerous."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Oxygen activates apoptosis, which results in the death of melanoma cells."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Oxygen accepts electrons in oxidative phosphorylation, a process necessary for melanoma cell"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "survival."
+              ]
+            ]
           ]
         ]
       ]
@@ -25406,6 +36661,152 @@ export const questions = [
             68.18,
             0,
             " days."
+          ]
+        ],
+        [
+          [
+            "art",
+            0.75,
+            353
+          ],
+          [
+            "art",
+            366,
+            435
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. Effect of light intensity and growth period on the rate of photosynthesis in sage plants. Error bars"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "represent ±2SE"
+              ],
+              [
+                64,
+                "x"
+              ],
+              [
+                0,
+                "."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Using light-filtering cloths, scientists exposed sage plants to four different light intensities. Half of the sage"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "plants were exposed to light for 60 days, while the other half were exposed to light for 75 days. The rate of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "photosynthesis in each plant was then determined (Figure 1)."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best describes the data?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "At 100% light intensity, the rate of photosynthesis was higher in plants that were treated for 60"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "days than in plants that were treated for 75 days."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "At 75% light intensity, the rate of photosynthesis was unaffected by an increase in treatment"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "time."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "At 50% light intensity, the rate of photosynthesis was the same as the rate of photosynthesis at"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "75% light intensity, regardless of the length of treatment time."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "At 25% light intensity, the rate of photosynthesis was higher in plants treated for 75 days than it"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "was in plants treated for 60 days."
+              ]
+            ]
           ]
         ]
       ]
@@ -26083,6 +37484,233 @@ export const questions = [
             0,
             "levels."
           ]
+        ],
+        [
+          [
+            "text",
+            "133.",
+            [
+              [
+                0,
+                "Scientists investigated the effect of oxygen levels on the net rate of carbon fixation in two types of plants."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "The plants were grown in either well-watered soil (control) or dry soil and then exposed to either 21% or"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "1%"
+              ],
+              [
+                0,
+                " O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                ". The net rate of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " fixation for both types of plants was measured. Data are shown in Figure 1"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "and Figure 2."
+              ]
+            ]
+          ],
+          [
+            "art",
+            215,
+            748.6
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                " Which of the following statements about the rate of "
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " fixation in the two types of plants is supported by"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "the data shown in the figures?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "At 21%"
+              ],
+              [
+                0,
+                " O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                ", plant type 2 has a lower rate of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " fixation than plant type 1 does in both types"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "of soil."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "At 1%"
+              ],
+              [
+                0,
+                " O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                ", plant type 2 has a higher rate of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " fixation than plant type 1 does in the dry soil"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "but not in the control soil."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Plant types 1 and 2 have a statistically different rate of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " fixation in both soil types at both"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "oxygen levels."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The rate of CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " fixation is the same in both types of plants in the control soil at both oxygen"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "levels."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -26583,6 +38211,201 @@ export const questions = [
             0,
             "respiration."
           ]
+        ],
+        [
+          [
+            "text",
+            "134.",
+            [
+              [
+                0,
+                "Scientists were interested in testing the effects of rotenone, a broad-spectrum pesticide, on a cell culture."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "Cell culture A was used as a control, while culture B was treated with rotenone. After a period of time, the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "scientists measured the concentration of several metabolites in the mitochondria of cells in both cultures."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "Their results are shown in the table below."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                16,
+                "Metabolites"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                16,
+                "Concentration in Culture "
+              ],
+              [
+                0,
+                "A"
+              ],
+              [
+                0,
+                " (μM)"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                16,
+                "Concentration in Culture "
+              ],
+              [
+                0,
+                "B"
+              ],
+              [
+                0,
+                " (μM)"
+              ]
+            ]
+          ],
+          [
+            "art",
+            256.47,
+            300.47
+          ],
+          [
+            "art",
+            308.52,
+            352.52
+          ],
+          [
+            "art",
+            360.59,
+            404.59
+          ],
+          [
+            "art",
+            412.66,
+            456.66
+          ],
+          [
+            "art",
+            464.71,
+            508.71
+          ],
+          [
+            "art",
+            516.79,
+            560.79
+          ],
+          [
+            "art",
+            568.86,
+            612.86
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                " Based on the data in the table, which of the following best explains the effects of rotenone on cellular"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "respiration?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Rotenone acts as an inhibitor of the enzymes in the Krebs cycle."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "NADH, produced during glycolysis, is not able to enter the mitochondria because transport"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "proteins are blocked from entering."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Treated cells are not able to break down NADH because certain enzymes of the electron"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "transport chain are inhibited."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Rotenone acts as an allosteric inhibitor of glycolytic enzymes, thus inhibiting cellular"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "respiration."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -26819,6 +38642,138 @@ export const questions = [
             0,
             "The valinomycin treatment caused a decrease in the activity of the mitochondria."
           ]
+        ],
+        [
+          [
+            "text",
+            "135.",
+            [
+              [
+                0,
+                "Researchers conducted an experiment to investigate the effects of a valinomycin treatment on skeletal"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "muscle cells. Valinomycin is a naturally occurring substance that can be used as a drug. The results of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "experiment are presented in the table."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Relative Rates of ATP Production"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Time after Treatment"
+              ],
+              [
+                0,
+                " Untreated Cells"
+              ],
+              [
+                0,
+                " Valinomycin-Treated Cells"
+              ]
+            ]
+          ],
+          [
+            "art",
+            275.07,
+            319.07
+          ],
+          [
+            "art",
+            327.14,
+            371.14
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following claims about the effects of the valinomycin treatment is best supported by the data"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "presented in the table?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The valinomycin treatment caused an increase in the activity of the rough endoplasmic"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "reticulum."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The valinomycin treatment caused an increase in the activity of the Golgi complex."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The valinomycin treatment caused a decrease in the activity of the lysosome."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The valinomycin treatment caused a decrease in the activity of the mitochondria."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -26864,6 +38819,26 @@ export const questions = [
             0,
             "chain during the light-dependent reactions of photosynthesis?"
           ]
+        ],
+        [
+          [
+            "text",
+            "136.",
+            [
+              [
+                0,
+                "Which of the following best illustrates the movement of protons and electrons within the electron transport"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "chain during the light-dependent reactions of photosynthesis?"
+              ]
+            ]
+          ]
         ]
       ],
       [
@@ -26902,6 +38877,53 @@ export const questions = [
             38.83,
             0,
             "(D)"
+          ]
+        ],
+        [
+          [
+            "text",
+            "(A)",
+            []
+          ],
+          [
+            "art",
+            128,
+            371
+          ],
+          [
+            "text",
+            "(B)",
+            []
+          ],
+          [
+            "art",
+            555,
+            801
+          ],
+          [
+            "text",
+            "(C)",
+            []
+          ],
+          [
+            "art",
+            1024,
+            1244
+          ],
+          [
+            "text",
+            "(D)",
+            []
+          ],
+          [
+            "art",
+            1416,
+            1441
+          ],
+          [
+            "art",
+            1455,
+            1677
           ]
         ]
       ]
@@ -27058,6 +39080,116 @@ export const questions = [
             350.81,
             0,
             "energy outside the membrane."
+          ]
+        ],
+        [
+          [
+            "text",
+            "138.",
+            [
+              [
+                0,
+                "The electron transport chain (ETC) is made up of several carrier molecules that transport electrons. These"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "carrier molecules are found within membranes."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best explains why these carrier molecules are typically found within"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "membranes?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The electrons that move through the ETC are directly used to drive the processes of endocytosis"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "and exocytosis."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The electrons that move through the ETC are coupled with the pumping of ATP out of the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "intermembrane space."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The energy derived from the ETC creates a difference in the concentration of protons on either"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "side of the membrane."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The energy derived from the ETC is used to fully oxidize an ATP molecule, releasing stored"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "energy outside the membrane."
+              ]
+            ]
           ]
         ]
       ]
@@ -27639,6 +39771,187 @@ export const questions = [
             0,
             " if this complex cannot accept electrons."
           ]
+        ],
+        [
+          [
+            "art",
+            0.75,
+            510
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. The electron transport chain of cellular respiration. The bold arrows passing through the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "complexes in the membrane represent the path of electron flow in mitochondria."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Compound X binds to complex IV of the mitochondrial electron transport chain and prevents complex IV"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "from accepting electrons."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Based on Figure 1, which of the following best explains why the cells of an animal exposed to compound"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "X have an increased ratio of NADH to NAD"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                "?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "NADH increases because compound X directly prevents ATP synthase from producing the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "ATP necessary for the oxidation of NADH to NAD"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                "."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "NADH increases because the binding of compound X to complex IV also prevents the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "transport of NAD"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                " out of the mitochondria."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "NADH cannot be oxidized to NAD"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                " because complexes I, II, and III cannot accept electrons"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "if electrons cannot be passed to complex IV."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "NADH cannot be oxidized to NAD"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                " because H"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                "O cannot bind to the active site of complex"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "IV if this complex cannot accept electrons."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -27963,6 +40276,119 @@ export const questions = [
             0,
             "Carbon fixation in the Calvin-Benson cycle takes place in the stroma of chloroplasts."
           ]
+        ],
+        [
+          [
+            "text",
+            "141.",
+            [
+              [
+                0,
+                "A researcher claims that a certain herbicide suppresses plant growth by inhibiting chloroplast function. To"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "test the claim, the researcher treats isolated chloroplasts with increasing concentrations of the herbicide."
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "The data from the experiment are presented in Table 1."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                16,
+                "Table 1. The effect of an herbicide on the function of isolated chloroplasts"
+              ]
+            ]
+          ],
+          [
+            "art",
+            215.57,
+            294.91
+          ],
+          [
+            "art",
+            302.96,
+            346.96
+          ],
+          [
+            "art",
+            355.03,
+            399.03
+          ],
+          [
+            "art",
+            407.1,
+            451.1
+          ],
+          [
+            "art",
+            459.15,
+            503.15
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements best clarifies how the data support the researcher’s claim?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The thylakoid membrane is more permeable to carbon dioxide than to polar molecules."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "ATP synthase activity depends on a proton gradient across the thylakoid membrane."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Some enzymes embedded in the thylakoid membrane catalyze the hydrolysis of ATP."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Carbon fixation in the Calvin-Benson cycle takes place in the stroma of chloroplasts."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -28070,6 +40496,66 @@ export const questions = [
             785.91,
             0,
             "The outer membrane has a greater surface area for electron transfer."
+          ]
+        ],
+        [
+          [
+            "text",
+            "145.",
+            [
+              [
+                0,
+                "Which of the following best explains why the inner mitochondrial membrane has more embedded proteins"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "of the electron transport chain than the outer mitochondrial membrane?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The inner membrane is more efficient at capturing light than the outer membrane."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The inner membrane has a smaller surface area than the outer membrane."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The Krebs cycle occurs in the mitochondrial matrix and not the intermembrane space."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The outer membrane has a greater surface area for electron transfer."
+              ]
+            ]
           ]
         ]
       ]
@@ -28387,6 +40873,124 @@ export const questions = [
             0,
             " at a high rate."
           ]
+        ],
+        [
+          [
+            "text",
+            "146.",
+            [
+              [
+                0,
+                "In chloroplasts, ATP is synthesized from ADP plus inorganic phosphate (P"
+              ],
+              [
+                64,
+                "i"
+              ],
+              [
+                0,
+                ") in a reaction catalyzed by"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "ATP synthase molecules that are embedded in the thylakoid membrane."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following statements provides evidence to support the claim that no ATP will be"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "synthesized in the absence of a proton gradient across the thylakoid membrane?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Blocking electron flow from one carrier to the next in the electron transport chains blocks"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "formation of a proton gradient in the thylakoid."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Increasing the proton concentration difference across the thylakoid membrane is not associated"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "with a parallel increase in the rate of ATP synthesis."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "No ATP is synthesized when channel proteins that allow the free passage of protons are"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "inserted into the thylakoid membrane."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "No ATP is synthesized while the Calvin cycle is synthesizing carbohydrates and using ATP"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "and NADPH at a high rate."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -28655,6 +41259,116 @@ export const questions = [
             0,
             "growth."
           ]
+        ],
+        [
+          [
+            "text",
+            "150.",
+            [
+              [
+                0,
+                "In an experiment, researchers compared the growth of two different plants, plant X and plant Y. The"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "researchers maintained the plants under nearly identical conditions and observed that plant X grew faster"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "than plant Y. The researchers also observed that the inner mitochondrial membranes of plant X had more"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "folds than did those of plant Y."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following conclusions about increasing the number of folds in the inner mitochondrial"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "membrane is best supported by the results of the experiment?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "It increases the efficiency of photosynthesis, which results in faster cell growth."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "It increases the surface area available for ATP production, which results in faster cell growth."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "It increases the amount of space available for storing cellular wastes, which results in faster cell"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "growth."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "It increases the rate of protein transport to the plasma membrane, which results in faster cell"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "growth."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -28770,6 +41484,74 @@ export const questions = [
             161.15,
             0,
             "mitochondria."
+          ]
+        ],
+        [
+          [
+            "text",
+            "151.",
+            [
+              [
+                0,
+                "Which of the following best explains how the extensive folding of the inner mitochondrial membrane"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "benefits a eukaryotic cell?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "It enlarges the volume of the matrix, which allows for more enzymatic reactions."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "It increases the area available for proteins involved in energy transfer."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "It allows for greater area for the diffusion of water into and out of the mitochondria."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "It provides better insulation for reactions in the matrix from conditions outside the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "mitochondria."
+              ]
+            ]
           ]
         ]
       ]
@@ -28894,6 +41676,66 @@ export const questions = [
             864.01,
             0,
             "Lysosomes split glucose molecules, producing oxygen as a waste product."
+          ]
+        ],
+        [
+          [
+            "text",
+            "155.",
+            [
+              [
+                0,
+                "Which of the following best explains the process by which oxygen is produced in plant cells?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Mitochondria produce oxygen at the end of the electron transport chain."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Photosystem II splits water molecules, producing oxygen as a waste product."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Photons excite electrons in CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                ", splitting it into carbon and oxygen."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Lysosomes split glucose molecules, producing oxygen as a waste product."
+              ]
+            ]
           ]
         ]
       ]
@@ -29059,6 +41901,73 @@ export const questions = [
             0,
             "(D)"
           ]
+        ],
+        [
+          [
+            "text",
+            "156.",
+            [
+              [
+                0,
+                "A researcher claims that spinach leaves capture the most energy from light waves in the range of 500 nm"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "to 600 nm. To test the claim, the researcher will place spinach leaves in separate chambers and expose the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "leaves to different wavelengths of light. For each chamber, the researcher will measure the amount of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "oxygen gas (O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                ") that is produced in one hour."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following graphs best represents data from the experiment that will support the researcher’s"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "claim?"
+              ]
+            ]
+          ],
+          [
+            "art",
+            268.64,
+            1689
+          ]
         ]
       ]
     ]
@@ -29215,6 +42124,92 @@ export const questions = [
             0,
             " grows in the dark when food sources are available."
           ]
+        ],
+        [
+          [
+            "text",
+            "158.",
+            [
+              [
+                0,
+                "A scientist claims that "
+              ],
+              [
+                2,
+                "Elysia chlorotica,"
+              ],
+              [
+                0,
+                " a species of sea slug, is capable of photosynthesis."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Which of the following observations provides the best evidence to support the claim?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                2,
+                "Elysia chlorotica"
+              ],
+              [
+                0,
+                " will die if not exposed to light."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                2,
+                "Elysia chlorotica"
+              ],
+              [
+                0,
+                " grows when exposed to light in the absence of other food sources."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                2,
+                "Elysia chlorotica"
+              ],
+              [
+                0,
+                " grows faster when exposed to light than when placed in the dark."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                2,
+                "Elysia chlorotica"
+              ],
+              [
+                0,
+                " grows in the dark when food sources are available."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -29330,6 +42325,74 @@ export const questions = [
             994.17,
             0,
             "The cells of these organisms generate more metabolic heat than cells that use oxygen."
+          ]
+        ],
+        [
+          [
+            "text",
+            "165.",
+            [
+              [
+                0,
+                "Some organisms use a weaker terminal electron acceptor than oxygen during cellular respiration. Which"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "of the following best explains why the cells of these organisms might generate less ATP per molecule of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "glucose than cells that use oxygen as the terminal electron acceptor?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The cells of these organisms remove fewer electrons from glucose than cells that use oxygen."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The cells of these organisms create a smaller proton gradient than cells that use oxygen."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The cells of these organisms convert pyruvate to lactate more often than cells that use oxygen."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The cells of these organisms generate more metabolic heat than cells that use oxygen."
+              ]
+            ]
           ]
         ]
       ]
@@ -29510,6 +42573,122 @@ export const questions = [
             408.45,
             0,
             "energy available for ATP synthesis."
+          ]
+        ],
+        [
+          [
+            "text",
+            "166.",
+            [
+              [
+                0,
+                "A student claims that the presence of a proton concentration gradient is required for the formation of ATP"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "from ADP and inorganic phosphate in mitochondria. Which of the following pieces of evidence most"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "directly supports the claim?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Decoupling the movement of protons across the mitochondrial membrane from the transport of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "electrons through the membrane produces heat that can be used by endotherms to regulate"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "body temperature."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Electron transport chains that use energy from electrons to establish proton concentration"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "gradients across membranes are found in chloroplasts, mitochondria, and prokaryotes."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Decreasing a cell’s supply of NADH or FADH"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " increases the ATP available for energy-"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "requiring processes."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Increasing the permeability of the inner mitochondrial membrane to protons decreases the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "energy available for ATP synthesis."
+              ]
+            ]
           ]
         ]
       ]
@@ -29819,6 +42998,145 @@ export const questions = [
             0,
             "synthesis, and oxygen gas is released."
           ]
+        ],
+        [
+          [
+            "text",
+            "169.",
+            [
+              [
+                0,
+                "The chemical reaction for photosynthesis is"
+              ]
+            ]
+          ],
+          [
+            "art",
+            51.94,
+            95.94
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "If the input water is labeled with a radioactive isotope of oxygen, "
+              ],
+              [
+                32,
+                "13"
+              ],
+              [
+                0,
+                "O, then the oxygen gas released as the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "reaction proceeds is also labeled with "
+              ],
+              [
+                32,
+                "13"
+              ],
+              [
+                0,
+                "O. Which of the following is the most likely explanation?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "During the light reactions of photosynthesis, water is split, the hydrogen atoms combine with"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "the CO"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                ", and oxygen gas is released."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "During the light reactions of photosynthesis, water is split, removing electrons and protons, and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "oxygen gas is released."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "During the Calvin cycle, water is split, regenerating NADPH from NADP"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                ", and oxygen gas is"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "released."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "During the Calvin cycle, water is split, the hydrogen atoms are added to intermediates of sugar"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "synthesis, and oxygen gas is released."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -30087,6 +43405,74 @@ export const questions = [
             0,
             "."
           ]
+        ],
+        [
+          [
+            "text",
+            "175.",
+            [
+              [
+                0,
+                "Which of the following best describes the role of ATP and NADPH in the process of photosynthesis?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "ATP is required for the chemiosmotic production of NADPH during photosynthesis."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "ATP and NADPH are necessary to initiate the Krebs cycle in photosynthesis."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "ATP and NADPH are carriers of chemical energy that is used in the production of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "carbohydrates."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "ATP and NADPH are required to boost electrons to a higher energy state in photosystems I"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                " and II."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -30259,6 +43645,82 @@ export const questions = [
             0,
             "The plant cells will split fewer water molecules into hydrogen ions and oxygen."
           ]
+        ],
+        [
+          [
+            "text",
+            "176.",
+            [
+              [
+                0,
+                "A researcher is investigating the effects of a chemical that makes thylakoid membranes permeable to"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "hydrogen ions (H"
+              ],
+              [
+                32,
+                "+"
+              ],
+              [
+                0,
+                "). Which of the following is the most likely direct effect of adding the chemical to plant"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "cells?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The plant cells will produce less NADPH."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The chloroplasts will generate less ATP."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Chlorophyll will require less light energy to excite its electrons."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The plant cells will split fewer water molecules into hydrogen ions and oxygen."
+              ]
+            ]
+          ]
         ]
       ]
     ]
@@ -30366,6 +43828,66 @@ export const questions = [
             70.03,
             0,
             "chain."
+          ]
+        ],
+        [
+          [
+            "text",
+            "178.",
+            [
+              [
+                0,
+                "Which of the following best describes the role of water in photosynthesis?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "Water is the only source of protons for the formation of a proton gradient."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "Water molecules donate electrons to the electron transport chain."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "Water molecules combine with stored carbon molecules to produce glucose."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "Water is the terminal electron acceptor for electrons that pass through the electron transport"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "chain."
+              ]
+            ]
           ]
         ]
       ]
@@ -31106,6 +44628,219 @@ export const questions = [
             6.81,
             0,
             "."
+          ]
+        ],
+        [
+          [
+            "art",
+            0.75,
+            65
+          ],
+          [
+            "art",
+            78,
+            463
+          ],
+          [
+            "art",
+            477,
+            507
+          ],
+          [
+            "art",
+            521,
+            575
+          ],
+          [
+            "art",
+            589,
+            618
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Figure 1. The rate of O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " uptake for three species of "
+              ],
+              [
+                2,
+                "Saccharomyces"
+              ],
+              [
+                0,
+                " yeast at 30°C and 35°C"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Researchers studied the effect of increased temperature on the rate of respiration of three species of"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                2,
+                "Saccharomyces"
+              ],
+              [
+                0,
+                " yeast (Q, R, and S) by measuring the rate of oxygen uptake in each species at 30°C and"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "at 35°C (Figure 1)."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "",
+            [
+              [
+                0,
+                "Based on Figure 1, which of the following statements about the effect of the temperature increase on the"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "respiratory rate of one of the species, Q, R, or S, is most likely true?"
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(A)",
+            [
+              [
+                0,
+                "The median O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " uptake rate for species S at 35°C is 0.1 μL⋅mg"
+              ],
+              [
+                32,
+                "−1"
+              ],
+              [
+                0,
+                "⋅min"
+              ],
+              [
+                32,
+                "−1"
+              ],
+              [
+                0,
+                " less than it is at 30°C."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(B)",
+            [
+              [
+                0,
+                "The range from minimum to maximum O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " uptake rate for species R at 35°C is"
+              ],
+              [
+                0,
+                " "
+              ],
+              [
+                0,
+                "0.1 μL⋅mg"
+              ],
+              [
+                32,
+                "−1"
+              ],
+              [
+                0,
+                "⋅min"
+              ],
+              [
+                32,
+                "−1"
+              ],
+              [
+                0,
+                " more than it is at 30°C."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(C)",
+            [
+              [
+                0,
+                "The median O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " uptake rate for species Q at 35°C is the same as it is at 30°C."
+              ]
+            ]
+          ],
+          [
+            "text",
+            "(D)",
+            [
+              [
+                0,
+                "The range of the O"
+              ],
+              [
+                64,
+                "2"
+              ],
+              [
+                0,
+                " uptake rate for species S at 35°C is the same as it is at 30°C."
+              ]
+            ]
           ]
         ]
       ]

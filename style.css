@@ -332,3 +332,12 @@ body{background:radial-gradient(ellipse at 82% 0%,#232c22 0%,transparent 42%),va
   .quiz-card{padding-inline:17px}
   .question-page{min-width:0}
 }
+.question-copy{padding:4px clamp(2px,1.2vw,12px);font-size:clamp(15px,1.9vw,17px);line-height:1.58;overflow-wrap:break-word}
+.question-copy .question-line{margin:0 0 .8em}
+.question-line.labeled{display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:.25em}
+.question-marker{font-weight:650;color:var(--quiet)}
+.question-copy .question-line:last-child{margin-bottom:0}
+.question-copy .question-page{min-width:0;margin:8px 0}
+.question-copy sup,.question-copy sub{font-size:.75em;line-height:0}
+.prompt.light .question-copy{background:#fff;color:#222;border-radius:5px}
+.prompt.light .question-marker{color:#333}

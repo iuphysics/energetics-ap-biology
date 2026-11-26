@@ -280,7 +280,7 @@ function practiceIds() {
 
 function tally(answers) {
   return Object.fromEntries(Object.keys(topics).map(topic => {
-    const items = answers.filter(({ id }) => questionById.get(id).topic === topic);
+    const items = answers.filter(({ id, skipped }) => !skipped && questionById.get(id).topic === topic);
     const correct = items.filter(item => item.correct).length;
     return [topic, { correct, total: items.length, score: items.length ? Math.round(100 * correct / items.length) : null }];
   }));
@@ -370,11 +370,23 @@ function questionPages(question) {
     const label = image.startsWith('context') ? 'Shared stimulus' : `Question excerpt ${index + 1}`;
     const layout = question.layout?.[index];
     if (!layout) return `<img src="bank/${image}.png" alt="${label}">`;
-    const [width, height, art, spans] = layout;
-    return `<svg class="question-page" viewBox="0 0 ${width} ${height}" aria-label="${label}" xml:space="preserve">
+    const [width, height, art, spans, flow] = layout;
+    const sourceRegion = (top, bottom) => `<svg class="question-page" viewBox="0 ${top} ${width} ${bottom - top}" aria-label="${label}" xml:space="preserve">
       ${art ? `<image class="question-figure" href="bank/${art}.png" width="${width}" height="${height}"/>` : ''}
-      ${spans.map(([x,y,size,length,flags,text]) => `<text x="${x}" y="${y}" font-size="${size}" ${length > 0 ? `textLength="${length}" lengthAdjust="spacingAndGlyphs"` : ''} ${flags & 16 ? 'font-weight="700"' : ''} ${flags & 2 ? 'font-style="italic"' : ''}>${escape(text)}</text>`).join('')}
+      ${spans.filter(([, y]) => y >= top && y <= bottom).map(([x,y,size,length,flags,text]) => `<text x="${x}" y="${y}" font-size="${size}" ${length > 0 ? `textLength="${length}" lengthAdjust="spacingAndGlyphs"` : ''} ${flags & 16 ? 'font-weight="700"' : ''} ${flags & 2 ? 'font-style="italic"' : ''}>${escape(text)}</text>`).join('')}
     </svg>`;
+    if (!flow) return sourceRegion(0, height);
+    return `<div class="question-copy">${flow.map(([kind, lead, content]) => {
+      if (kind === 'art') return sourceRegion(lead, content);
+      const text = content.map(([flags, value]) => {
+        const literal = escape(value);
+        const styled = flags & 16 ? `<strong>${literal}</strong>` : flags & 2 ? `<em>${literal}</em>` : literal;
+        return flags & 32 ? `<sup>${styled}</sup>` : flags & 64 ? `<sub>${styled}</sub>` : styled;
+      }).join('');
+      return lead
+        ? `<p class="question-line labeled"><span class="question-marker">${lead}</span><span>${text}</span></p>`
+        : `<p class="question-line">${text}</p>`;
+    }).join('')}</div>`;
   }).join('');
 }
 
@@ -391,7 +403,7 @@ function quiz(moveFocus = true) {
   show(`<div class="narrow quiz-screen">
     <div class="between quiz-toolbar"><p class="kicker">${session.mode === 'redemption' ? 'Redemption set' : 'Practice set'}</p><button class="secondary" data-action="home">Save & exit</button></div>
     <h1>Question ${session.index + 1} <span>of ${session.ids.length}</span></h1>
-    <progress max="${session.ids.length}" value="${session.answers.length}" aria-label="Questions answered"></progress>
+    <progress max="${session.ids.length}" value="${session.answers.length}" aria-label="Questions completed"></progress>
     ${session.mode === 'redemption' ? `<div class="comeback-counter ${redeemed >= 3 ? 'combo-earned' : ''}" aria-label="${redeemed} redeemed in this set"><strong>${redeemed >= 3 ? 'Comeback Combo earned' : 'Comeback Combo'}</strong><span>${redeemed} redeemed${redeemed < 3 && session.ids.length >= 3 ? ' / 3' : ''}</span></div>` : ''}
     <section class="panel quiz-card">
       <div class="between"><span class="metric quiet">GUIDE ITEM ${id}</span><button class="secondary" data-action="paper" aria-pressed="false">Original colors</button></div>
@@ -403,7 +415,7 @@ function quiz(moveFocus = true) {
       </div>
       ${answered ? `<div class="feedback ${answered.correct ? '' : 'missed'}" role="status"><strong>${answered.correct ? 'Correct' : `Missed · Answer ${question.answer}`}</strong><p class="tag answer-topic">${topics[question.topic][2]}</p><p class="quiet">${escape(question.explanation)}</p></div>
         <button class="primary" data-action="next">${last ? 'See results' : 'Next question'}</button>`
-        : `<div class="actions"><button class="primary" data-action="check" ${choice ? '' : 'disabled'}>Check answer</button><button class="secondary" data-action="hint">Ask for a hint</button></div>`}
+        : `<div class="actions"><button class="primary" data-action="check" ${choice ? '' : 'disabled'}>Check answer</button><button class="secondary" data-action="hint">Ask for a hint</button><button class="secondary" data-action="skip">Skip question</button></div>`}
     </section>
   </div>`, moveFocus);
 }
@@ -438,9 +450,12 @@ function check() {
   }
 }
 
-function advance() {
+function advance(skip = false) {
   const session = saved.session;
-  if (!session.answers[session.index]) return;
+  if (!session.answers[session.index]) {
+    if (!skip) return;
+    session.answers.push({ id: session.ids[session.index], skipped: true });
+  }
   choice = null;
   if (session.index + 1 < session.ids.length) {
     session.index++;
@@ -463,18 +478,20 @@ function results() {
   const recoveredTopics = new Set(mode === 'redemption'
     ? answers.filter(answer => answer.correct).map(({ id }) => questionById.get(id).topic)
     : []);
-  const score = Math.round(100 * right / answers.length);
+  const skipped = answers.filter(answer => answer.skipped).length;
+  const attempted = answers.length - skipped;
+  const score = attempted ? Math.round(100 * right / attempted) : null;
   const rating = score >= 90 ? 'Excellent' : score >= 75 ? 'Strong' : score >= 60 ? 'Developing' : 'Needs review';
   const gaps = focusGroups.map(([title, advice, ids]) => ({
-    title, advice, missed: answers.filter(({ id, correct }) => !correct && ids.includes(id)).length,
+    title, advice, missed: answers.filter(({ id, correct, skipped }) => !skipped && !correct && ids.includes(id)).length,
   })).filter(item => item.missed).sort((a,b) => b.missed - a.missed);
   show(`
-    <div class="hero results-heading"><p class="kicker">${mode === 'redemption' ? 'Redemption' : 'Practice'} results</p><h1>${score}% · ${rating}</h1>
-    <p class="lead">${right} of ${answers.length} correct · ${answers.length - right} missed</p>
+    <div class="hero results-heading"><p class="kicker">${mode === 'redemption' ? 'Redemption' : 'Practice'} results</p><h1>${attempted ? `${score}% · ${rating}` : 'Set complete'}</h1>
+    <p class="lead">${right} of ${attempted} attempted correct · ${attempted - right} missed${skipped ? ` · ${skipped} skipped` : ''}</p>
     ${mode === 'redemption' && right ? `<p class="result-comeback">${right >= 3 ? 'Comeback Combo · ' : ''}${right} redeemed</p>` : ''}</div>
     <div class="grid">
       <section class="panel"><h2>What to focus on</h2>
-        ${gaps.length ? `<ul class="focus-list">${gaps.map(({title,advice,missed}) => `<li><div class="between"><h3>${title}</h3><span class="tag">${missed} MISSED</span></div><p class="quiet">${advice}</p></li>`).join('')}</ul>` : '<p class="quiet">You answered every question in this set correctly.</p>'}
+        ${gaps.length ? `<ul class="focus-list">${gaps.map(({title,advice,missed}) => `<li><div class="between"><h3>${title}</h3><span class="tag">${missed} MISSED</span></div><p class="quiet">${advice}</p></li>`).join('')}</ul>` : `<p class="quiet">${attempted ? 'You got every attempted question right.' : 'No questions were scored.'}</p>`}
         <div class="actions" style="margin-top:18px"><button class="secondary" data-action="home">Dashboard</button>${saved.missed.length ? '<button class="primary" data-action="review">Review flagged questions →</button>' : ''}</div>
       </section>
       <section class="panel"><h2>Topic radar</h2>${radar(tally(answers), '', recoveredTopics)}</section>
@@ -517,6 +534,7 @@ app.addEventListener('click', event => {
     case 'results': results(); break;
     case 'check': check(); break;
     case 'next': advance(); break;
+    case 'skip': advance(true); break;
     case 'paper': control.setAttribute('aria-pressed', app.querySelector('.prompt').classList.toggle('light')); break;
     case 'review': filter = 'all'; selected = new Set(saved.missed); redemption(); break;
     case 'redeem': begin(shuffle([...selected]), 'redemption'); break;
