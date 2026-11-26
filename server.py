@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import re
+import ssl
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
@@ -107,7 +108,7 @@ class Handler(SimpleHTTPRequestHandler):
             headers={"Authorization": f"Bearer {self.server.api_key}", "Content-Type": "application/json"},
         )
         try:
-            with urlopen(request, timeout=45) as response:
+            with urlopen(request, timeout=45, context=self.server.tls_context) as response:
                 result = json.load(response)
             answer = "\n\n".join(
                 part.get("text", part.get("refusal", ""))
@@ -136,6 +137,12 @@ if __name__ == "__main__":
     args = parser.parse_args()
     key = getpass.getpass("OpenAI API key: ").strip() if args.ask_key else os.environ.get("OPENAI_API_KEY", "").strip()
     with ThreadingHTTPServer(("127.0.0.1", args.port), Handler) as server:
+        trust = ssl.get_default_verify_paths()
+        fallback = Path("/etc/ssl/cert.pem")
+        if trust.cafile is None and fallback.is_file() and "SSL_CERT_FILE" not in os.environ:
+            server.tls_context = ssl.create_default_context(cafile=str(fallback))
+        else:
+            server.tls_context = ssl.create_default_context()
         server.api_key = key
         server.model = os.environ.get("OPENAI_MODEL", "gpt-4.1-mini")
         print(f"Energetics is running at http://127.0.0.1:{args.port}/", flush=True)
