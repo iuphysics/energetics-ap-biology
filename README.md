@@ -38,4 +38,4 @@ The bank uses 102 items with explicit answer keys in the supplied *AP Biology Un
 
 ## Study music
 
-Click the chibi avatar to start the built-in violin loop, or click again to switch it to reading. The selected Neko or Chad avatar plays the same music. The Music menu also accepts a local audio file, which stays in the browser. The header Sound control mutes both music and sound effects.
+Click the chibi avatar to start the bundled focus loop, or click again to switch it to reading. The Music menu also offers the built-in violin loop. The bundled excerpt starts at 16:07 in [iCanStudy’s Study With Me video](https://www.youtube.com/watch?v=74cOUSKXMz0&t=967s). The selected Neko or Chad avatar plays the same music. The Music menu also accepts a local audio file, which stays in the browser. The header Sound control mutes both music and sound effects.

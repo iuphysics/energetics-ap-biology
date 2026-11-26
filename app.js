@@ -96,7 +96,9 @@ const studioFile = document.querySelector('#studio-file');
 const customTrack = new Audio();
 customTrack.loop = true;
 customTrack.volume = 0.28;
-let trackUrl;
+const bundledTrack = './focus-music-loop.m4a';
+let trackUrl = bundledTrack;
+customTrack.src = bundledTrack;
 let playing = false;
 let musicTimer;
 let musicGain;
@@ -158,6 +160,11 @@ function syncStudio() {
   }
   if (trackUrl) {
     customTrack.play().catch(() => {
+      if (playing && !muted && trackUrl === bundledTrack) {
+        trackUrl = undefined;
+        syncStudio();
+        return;
+      }
       if (playing && !muted && customTrack.paused) studioStatus.textContent = 'Could not play this audio file.';
     });
     return;
@@ -184,17 +191,26 @@ studioToggle.addEventListener('click', () => {
 studioFile.addEventListener('change', () => {
   if (!studioFile.files.length) return;
   customTrack.pause();
-  if (trackUrl) URL.revokeObjectURL(trackUrl);
+  if (trackUrl?.startsWith('blob:')) URL.revokeObjectURL(trackUrl);
   trackUrl = URL.createObjectURL(studioFile.files[0]);
   customTrack.src = trackUrl;
   playing = true;
   syncStudio();
 });
 
+document.querySelector('#studio-focus').addEventListener('click', () => {
+  customTrack.pause();
+  if (trackUrl?.startsWith('blob:')) URL.revokeObjectURL(trackUrl);
+  trackUrl = bundledTrack;
+  customTrack.src = bundledTrack;
+  studioFile.value = '';
+  syncStudio();
+});
+
 document.querySelector('#studio-default').addEventListener('click', () => {
   customTrack.pause();
   customTrack.removeAttribute('src');
-  if (trackUrl) URL.revokeObjectURL(trackUrl);
+  if (trackUrl?.startsWith('blob:')) URL.revokeObjectURL(trackUrl);
   trackUrl = undefined;
   studioFile.value = '';
   syncStudio();

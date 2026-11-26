@@ -22,7 +22,7 @@ INSTRUCTIONS = (
     "Use plain text with optional numbered lists. If asked about a live quiz question, "
     "offer conceptual hints. After an answer is checked, you can explain it directly."
 )
-PUBLIC_FILES = {"/", "/index.html", "/app.js", "/bank.js", "/style.css", "/chad.png"}
+PUBLIC_FILES = {"/", "/index.html", "/app.js", "/bank.js", "/style.css", "/chad.png", "/focus-music-loop.m4a"}
 
 
 class Handler(SimpleHTTPRequestHandler):
