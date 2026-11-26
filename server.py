@@ -24,6 +24,8 @@ INSTRUCTIONS = (
     "Use plain text with optional numbered lists. If asked about a live quiz question, "
     "offer conceptual hints. After an answer is checked, you can explain it directly."
 )
+PAGES_ORIGIN = "https://iuphysics.github.io"
+PUBLIC_GRADE_ROUTE = "/api/frq-grade"
 PUBLIC_FILES = {"/", "/index.html", "/app.js", "/bank.js", "/style.css", "/chad.png", "/focus-music-loop.m4a"}
 
 
@@ -78,11 +80,64 @@ class Handler(SimpleHTTPRequestHandler):
         if self.static_allowed():
             super().do_HEAD()
 
+    def allows_pages_grading(self):
+        return (
+            self.server.forward_grading
+            and self.path == PUBLIC_GRADE_ROUTE
+            and self.valid_host()
+            and self.headers.get("Origin") == PAGES_ORIGIN
+        )
+
+    def do_OPTIONS(self):
+        if not self.allows_pages_grading() or self.headers.get("Access-Control-Request-Method") != "POST":
+            return self.send_error(403)
+        self.send_response(204)
+        self.send_header("Access-Control-Allow-Origin", PAGES_ORIGIN)
+        self.send_header("Access-Control-Allow-Methods", "POST")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Allow-Private-Network", "true")
+        self.send_header("Vary", "Origin")
+        self.end_headers()
+
+    def forward_grade(self):
+        if not self.allows_pages_grading():
+            return self.reply(403, {"error": "This grading connection is for Energetics on GitHub Pages."})
+        if self.headers.get_content_type() != "application/json":
+            return self.reply(415, {"error": "Expected a JSON grading request."})
+        try:
+            size = int(self.headers.get("Content-Length", 0))
+            if not 0 < size <= 64000:
+                raise ValueError
+            payload = json.loads(self.rfile.read(size))
+            turns = payload["messages"]
+            if len(turns) != 1 or turns[0]["role"] != "user" or not turns[0]["content"].startswith("My submitted FRQ response:"):
+                raise ValueError
+        except (ValueError, KeyError, TypeError, AttributeError):
+            return self.reply(400, {"error": "Expected one FRQ submission."})
+        request = Request(
+            "http://127.0.0.1:8736/api/study-buddy",
+            data=json.dumps(payload).encode(),
+            headers={"Content-Type": "application/json"},
+        )
+        try:
+            with urlopen(request, timeout=48) as response:
+                return self.reply(response.status, json.load(response))
+        except HTTPError as error:
+            try:
+                return self.reply(error.code, json.load(error))
+            except ValueError:
+                return self.reply(502, {"error": "Could not read the local grader's response."})
+        except (OSError, ValueError):
+            return self.reply(502, {"error": "Start local Energetics with your API key to grade from this browser."})
+
     def reply(self, status, payload):
         data = json.dumps(payload).encode()
         self.send_response(status)
         self.send_header("Content-Type", "application/json")
         self.send_header("Cache-Control", "no-store")
+        if self.allows_pages_grading():
+            self.send_header("Access-Control-Allow-Origin", PAGES_ORIGIN)
+            self.send_header("Vary", "Origin")
         self.send_header("Content-Length", str(len(data)))
         self.end_headers()
         try:
@@ -91,6 +146,8 @@ class Handler(SimpleHTTPRequestHandler):
             pass
 
     def do_POST(self):
+        if self.path == PUBLIC_GRADE_ROUTE:
+            return self.forward_grade()
         if self.path != "/api/study-buddy":
             return self.reply(404, {"error": "Unknown endpoint."})
         origin = self.headers.get("Origin")
@@ -175,7 +232,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", type=int, default=8736)
     parser.add_argument("--ask-key", action="store_true", help="Prompt for the API key without displaying it")
+    parser.add_argument("--forward-grading", action="store_true", help="Allow the public Energetics page to use the local grader")
     args = parser.parse_args()
+    if args.forward_grading and args.port == 8736:
+        parser.error("--forward-grading needs a separate port, such as 8740")
     key = getpass.getpass("OpenAI API key: ").strip() if args.ask_key else os.environ.get("OPENAI_API_KEY", "").strip()
     with ThreadingHTTPServer(("127.0.0.1", args.port), Handler) as server:
         trust = ssl.get_default_verify_paths()
@@ -184,6 +244,7 @@ if __name__ == "__main__":
             server.tls_context = ssl.create_default_context(cafile=str(fallback))
         else:
             server.tls_context = ssl.create_default_context()
+        server.forward_grading = args.forward_grading
         server.api_key = key
         server.model = os.environ.get("OPENAI_MODEL", "gpt-5.6-sol")
         print(f"Energetics is running at http://127.0.0.1:{args.port}/", flush=True)

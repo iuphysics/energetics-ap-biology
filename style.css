@@ -379,3 +379,17 @@ body{background:radial-gradient(ellipse at 82% 0%,#232c22 0%,transparent 42%),va
 .comparison-marks circle{fill:var(--green)}
 .comparison-marks polyline{fill:none;stroke:var(--green);stroke-width:3}
 @media(max-width:560px){.comparison-columns{grid-template-columns:minmax(0,1fr)}}
+
+.grade-report{margin-top:14px;border:1px solid #495641;border-radius:9px;overflow:hidden;background:#1c231c}
+.grade-report-header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 15px;background:#283326}
+.grade-report-header .kicker{display:block;font-size:12px}
+.grade-total{font-size:28px;font-variant-numeric:tabular-nums;color:var(--green)}
+.grade-total span{font-size:13px;font-weight:500;color:var(--quiet)}
+.grade-points{list-style:none;margin:0;padding:0 15px}
+.grade-points li{border-bottom:1px solid var(--line);padding:11px 0}
+.grade-points li div{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.grade-points p,.grade-prose{white-space:pre-wrap;color:var(--quiet);overflow-wrap:anywhere}
+.grade-point{font-size:12px;color:var(--red)}
+.grade-point.earned{color:var(--green)}
+.grade-improvement,.grade-prose{padding:12px 15px}
+.grade-improvement h4{margin:0}
