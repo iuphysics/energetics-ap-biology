@@ -137,6 +137,10 @@ studioToggle.addEventListener('click', () => {
 updateSoundToggle();
 
 const app = document.querySelector('#app');
+const figureViewer = document.querySelector('#figure-viewer');
+const figureViewerContent = document.querySelector('#figure-viewer-content');
+const figureCount = document.querySelector('#figure-count');
+let figureIndex = 0;
 const coach = document.querySelector('#coach');
 const coachMessage = document.querySelector('#coach-message');
 const coachToggle = document.querySelector('#coach-toggle');
@@ -145,7 +149,6 @@ const avatarDock = document.querySelector('.avatar-dock');
 const portraits = document.querySelectorAll('[data-mascot]');
 const buddy = document.querySelector('#buddy');
 const buddyTab = document.querySelector('#open-buddy');
-const buddyGrip = buddy.querySelector('.buddy-grip');
 const buddyThinking = document.querySelector('#buddy-thinking');
 const buddyLog = document.querySelector('#buddy-log');
 const buddyStatus = document.querySelector('#buddy-status');
@@ -250,7 +253,14 @@ function persist() {
 
 function show(html, moveFocus = true) {
   hideCoach();
+  if (figureViewer.open) figureViewer.close();
   app.innerHTML = html;
+  for (const figure of app.querySelectorAll('.question-page.zoomable')) {
+    if (figure.closest('.inline-answer')) continue;
+    figure.tabIndex = 0;
+    figure.setAttribute('role', 'button');
+    figure.setAttribute('aria-label', 'Enlarge question figure');
+  }
   if (moveFocus) {
     window.scrollTo(0, 0);
     app.focus();
@@ -369,7 +379,7 @@ function questionPages(question, current, checked) {
   const parts = question.images.flatMap((image, index) => {
     const label = image.startsWith('context') ? 'Shared stimulus' : `Question excerpt ${index + 1}`;
     const [width, height, art, spans, flow] = question.layout[index];
-    const sourceRegion = (top, bottom, keepSource = false) => `<svg class="question-page" viewBox="0 ${top} ${width} ${bottom - top}" aria-label="${label}" xml:space="preserve">
+    const sourceRegion = (top, bottom, keepSource = false) => `<svg class="question-page${art || keepSource ? ' zoomable' : ''}" ${art || keepSource ? 'data-figure-zoom' : ''} viewBox="0 ${top} ${width} ${bottom - top}" xml:space="preserve">
       ${art || keepSource ? `<image class="question-figure" href="bank/${keepSource ? image : art}.png" width="${width}" height="${height}"/>` : ''}
       ${(keepSource ? [] : spans.filter(([, y]) => y >= top && y <= bottom)).map(([x,y,size,length,flags,text]) => `<text x="${x}" y="${y}" font-size="${size}" ${length > 0 ? `textLength="${length}" lengthAdjust="spacingAndGlyphs"` : ''} ${flags & 16 ? 'font-weight="700"' : ''} ${flags & 2 ? 'font-style="italic"' : ''}>${escape(text)}</text>`).join('')}
     </svg>`;
@@ -429,6 +439,8 @@ function quiz(moveFocus = true) {
   const last = session.index + 1 === session.ids.length;
   const back = `<button class="secondary" data-action="previous" ${session.index === 0 ? 'disabled' : ''}>Back</button>`;
   const redeemed = session.mode === 'redemption' ? session.answers.filter(answer => answer.correct).length : 0;
+  const pageMarkup = questionPages(question, current, Boolean(answered));
+  const figureControl = pageMarkup.includes('data-figure-zoom') ? '<button class="secondary" data-action="figures">Enlarge figures</button>' : '';
 
   show(`<div class="narrow quiz-screen">
     <div class="between quiz-toolbar"><p class="kicker">${session.mode === 'redemption' ? 'Redemption set' : 'Practice set'}</p><button class="secondary" data-action="home">Save & exit</button></div>
@@ -436,8 +448,8 @@ function quiz(moveFocus = true) {
     <progress max="${session.ids.length}" value="${session.answers.length}" aria-label="Questions completed"></progress>
     ${session.mode === 'redemption' ? `<div class="comeback-counter ${redeemed >= 3 ? 'combo-earned' : ''}" aria-label="${redeemed} redeemed in this set"><strong>${redeemed >= 3 ? 'Comeback Combo earned' : 'Comeback Combo'}</strong><span>${redeemed} redeemed${redeemed < 3 && session.ids.length >= 3 ? ' / 3' : ''}</span></div>` : ''}
     <section class="panel quiz-card">
-      <div class="between"><span class="metric quiet">GUIDE ITEM ${id}</span><button class="secondary" data-action="paper" aria-pressed="false">Original colors</button></div>
-      <div class="prompt">${questionPages(question, current, Boolean(answered))}</div>
+      <div class="between"><span class="metric quiet">GUIDE ITEM ${id}</span><div class="actions">${figureControl}<button class="secondary" data-action="paper" aria-pressed="false">Original colors</button></div></div>
+      <div class="prompt">${pageMarkup}</div>
       <details><summary>Question transcript</summary><p class="transcript quiet">${escape(question.transcript.replace(/[^\S\n]+/g, " ").replace(/ *\n */g, "\n").replace(/\n{3,}/g, "\n\n"))}</p><p class="quiet">Figures and tables appear in the guide images above.</p></details>
       ${answered ? `<div class="feedback ${answered.correct ? '' : 'missed'}" role="status"><strong>${answered.correct ? 'Correct' : `Missed · Answer ${question.answer}`}</strong><p class="tag answer-topic">${topics[question.topic][2]}</p><p class="quiet">${escape(question.explanation)}</p></div>
         <div class="actions">${back}<button class="primary" data-action="next">${last ? 'See results' : 'Next question'}</button></div>`
@@ -551,7 +563,49 @@ function redemption(moveFocus = true) {
     </section></div>`, moveFocus);
 }
 
+function renderFigure() {
+  const figures = [...app.querySelectorAll('.question-page.zoomable')];
+  const source = figures[figureIndex];
+  if (!source) return;
+  const enlarged = source.cloneNode(true);
+  enlarged.removeAttribute('tabindex');
+  enlarged.removeAttribute('data-figure-zoom');
+  enlarged.setAttribute('role', 'img');
+  enlarged.setAttribute('aria-label', 'Enlarged question figure');
+  const image = enlarged.querySelector('image');
+  if (image) {
+    const [x, y, width, height] = source.getAttribute('viewBox').split(' ').map(Number);
+    const imageHeight = Number(image.getAttribute('height'));
+    const margin = Math.max(30, height * .12);
+    const top = Math.max(0, y - margin);
+    enlarged.setAttribute('viewBox', `${x} ${top} ${width} ${Math.min(imageHeight, y + height + margin) - top}`);
+  }
+  figureViewerContent.replaceChildren(enlarged);
+  figureCount.textContent = `${figureIndex + 1} of ${figures.length}`;
+  document.querySelector('#figure-prev').disabled = figureIndex === 0;
+  document.querySelector('#figure-next').disabled = figureIndex === figures.length - 1;
+}
+
+function openFigure(source) {
+  const figures = [...app.querySelectorAll('.question-page.zoomable')];
+  if (!figures.length) return;
+  figureIndex = Math.max(0, figures.indexOf(source));
+  renderFigure();
+  figureViewer.showModal();
+  document.querySelector('#figure-viewer-close').focus();
+}
+
+document.querySelector('#figure-viewer-close').addEventListener('click', () => figureViewer.close());
+document.querySelector('#figure-prev').addEventListener('click', () => { figureIndex--; renderFigure(); });
+document.querySelector('#figure-next').addEventListener('click', () => { figureIndex++; renderFigure(); });
+figureViewer.addEventListener('click', event => { if (event.target === figureViewer) figureViewer.close(); });
+
 app.addEventListener('click', event => {
+  const figure = event.target.closest('.question-page.zoomable');
+  if (figure && !figure.closest('.inline-answer')) {
+    openFigure(figure);
+    return;
+  }
   const control = event.target.closest('button');
   if (!control || control.disabled) return;
   if (control.dataset.size) {
@@ -564,6 +618,7 @@ app.addEventListener('click', event => {
     app.querySelector('[data-action="check"]').disabled = false;
   }
   switch (control.dataset.action) {
+    case 'figures': openFigure(app.querySelector('.question-page.zoomable')); break;
     case 'home': dashboard(); break;
     case 'start': begin(practiceIds(), 'practice'); break;
     case 'resume': choice = null; quiz(); break;
@@ -587,6 +642,12 @@ app.addEventListener('click', event => {
       break;
     }
   }
+});
+
+app.addEventListener('keydown', event => {
+  if ((event.key !== 'Enter' && event.key !== ' ') || !event.target.matches('.question-page.zoomable')) return;
+  event.preventDefault();
+  openFigure(event.target);
 });
 
 app.addEventListener('change', event => {
@@ -658,29 +719,11 @@ function currentBuddyQuestionId() {
   return saved.session.ids[saved.session.index];
 }
 
-let buddyPosition;
-let drag;
-
-function positionBuddy(left, top) {
-  const margin = 10;
-  const viewport = window.visualViewport;
-  const maxLeft = Math.max(margin, (viewport?.width ?? window.innerWidth) - buddy.offsetWidth - margin);
-  const maxTop = Math.max(margin, (viewport?.height ?? window.innerHeight) - buddy.offsetHeight - margin);
-  buddyPosition = {
-    left: Math.max(margin, Math.min(left, maxLeft)),
-    top: Math.max(margin, Math.min(top, maxTop)),
-  };
-  buddy.style.left = `${buddyPosition.left}px`;
-  buddy.style.top = `${buddyPosition.top}px`;
-}
-
 function openBuddy() {
   if (buddy.open) return;
   hideCoach();
   buddy.show();
-  const tab = buddyTab.getBoundingClientRect();
-  const position = buddyPosition ?? { left: tab.left, top: tab.top - buddy.offsetHeight - 8 };
-  positionBuddy(position.left, position.top);
+  buddy.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   buddyTab.setAttribute('aria-expanded', 'true');
   buddyInput.focus({ preventScroll: true });
 }
@@ -690,43 +733,9 @@ buddyTab.addEventListener('click', () => {
   else openBuddy();
 });
 
-buddyGrip.addEventListener('pointerdown', event => {
-  if (event.button !== 0 || drag) return;
-  drag = { id: event.pointerId, x: event.clientX - buddyPosition.left, y: event.clientY - buddyPosition.top };
-  buddyGrip.setPointerCapture(event.pointerId);
-  buddyGrip.classList.add('dragging');
-});
-
-buddyGrip.addEventListener('pointermove', event => {
-  if (drag?.id !== event.pointerId) return;
-  positionBuddy(event.clientX - drag.x, event.clientY - drag.y);
-});
-
-buddyGrip.addEventListener('lostpointercapture', event => {
-  if (drag?.id !== event.pointerId) return;
-  drag = undefined;
-  buddyGrip.classList.remove('dragging');
-});
-
-buddyGrip.addEventListener('keydown', event => {
-  const offsets = { ArrowLeft: [-20, 0], ArrowRight: [20, 0], ArrowUp: [0, -20], ArrowDown: [0, 20] };
-  const offset = offsets[event.key];
-  if (!offset) return;
-  event.preventDefault();
-  positionBuddy(buddyPosition.left + offset[0], buddyPosition.top + offset[1]);
-});
-
 buddy.addEventListener('keydown', event => {
   if (event.key === 'Escape') buddy.close();
 });
-
-function fitBuddyWindow() {
-  const viewport = window.visualViewport;
-  if (viewport) buddy.style.setProperty('--buddy-viewport-height', `${viewport.height}px`);
-  if (buddy.open && buddyPosition) positionBuddy(buddyPosition.left, buddyPosition.top);
-}
-window.addEventListener('resize', fitBuddyWindow);
-window.visualViewport?.addEventListener('resize', fitBuddyWindow);
 
 buddy.addEventListener('close', () => {
   buddyTab.setAttribute('aria-expanded', 'false');

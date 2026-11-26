@@ -24,6 +24,8 @@ Enter an OpenAI API key at the hidden terminal prompt. The server also accepts t
 
 Open the **Ask Neko** tab and choose Neko or Chad. Each avatar has a separate conversation while the panel is open. Closing the panel clears both conversations. On the public site, the Cloudflare Worker sends the last five turns to the [OpenAI Responses API](https://developers.openai.com/api/reference/resources/responses/methods/create) using the owner's private API key. The public chat allows roughly ten requests per minute per Cloudflare location. When chat is opened from a quiz question, the request can also include its text and feedback. The local `server.py` chat still uses its own key prompt.
 
+The music, avatar, and chat controls share an in-page study-tools rail on desktop and a compact toolbar above practice content on tablets and phones. The chat expands within that space, so it does not cover questions or graphs. In MCQ practice, tap a figure or **Enlarge figures** to inspect it in a larger viewer; figures embedded in answer choices use the button so tapping an answer still selects it.
+
 ## Practice and scoring
 
 - Choose 20, 50, 100, or all 102 questions. Each set includes all five Unit 3 topics, sampled without repeats. The smaller sets distribute questions across the five topics as evenly as the pool permits.
