@@ -1140,7 +1140,8 @@ export const questions = [
           [
             "art",
             162,
-            547.78
+            547.78,
+            true
           ],
           [
             "text",
@@ -2433,7 +2434,8 @@ export const questions = [
           [
             "art",
             367,
-            881
+            881,
+            true
           ],
           [
             "text",
@@ -3564,7 +3566,8 @@ export const questions = [
           [
             "art",
             298,
-            813
+            813,
+            true
           ],
           [
             "text",
@@ -3899,17 +3902,14 @@ export const questions = [
           [
             "art",
             231,
-            595
-          ],
-          [
-            "art",
-            610,
-            947
+            947,
+            true
           ],
           [
             "art",
             999,
-            1032
+            1032,
+            true
           ],
           [
             "text",
@@ -4896,17 +4896,8 @@ export const questions = [
           [
             "art",
             263,
-            294
-          ],
-          [
-            "art",
-            305,
-            605
-          ],
-          [
-            "art",
-            616,
-            662
+            662,
+            true
           ],
           [
             "text",
@@ -5805,12 +5796,8 @@ export const questions = [
           [
             "art",
             272,
-            632
-          ],
-          [
-            "art",
-            661,
-            686
+            686,
+            true
           ],
           [
             "text",
@@ -5849,12 +5836,8 @@ export const questions = [
           [
             "art",
             808,
-            1164
-          ],
-          [
-            "art",
-            1186,
-            1212
+            1212,
+            true
           ],
           [
             "text",
@@ -6005,7 +5988,8 @@ export const questions = [
           [
             "art",
             1655.6,
-            1706
+            1706,
+            true
           ]
         ]
       ]
@@ -6379,12 +6363,8 @@ export const questions = [
           [
             "art",
             272,
-            632
-          ],
-          [
-            "art",
-            661,
-            686
+            686,
+            true
           ],
           [
             "text",
@@ -6423,12 +6403,8 @@ export const questions = [
           [
             "art",
             808,
-            1164
-          ],
-          [
-            "art",
-            1186,
-            1212
+            1212,
+            true
           ],
           [
             "text",
@@ -7200,32 +7176,20 @@ export const questions = [
           [
             "art",
             181,
-            371
-          ],
-          [
-            "art",
-            404,
-            482
-          ],
-          [
-            "art",
-            516,
-            654
+            654,
+            true
           ],
           [
             "art",
             689,
-            738
-          ],
-          [
-            "art",
-            748,
-            886
+            886,
+            true
           ],
           [
             "art",
             925,
-            948
+            948,
+            true
           ],
           [
             "text",
@@ -7411,32 +7375,20 @@ export const questions = [
           [
             "art",
             181,
-            371
-          ],
-          [
-            "art",
-            404,
-            482
-          ],
-          [
-            "art",
-            516,
-            654
+            654,
+            true
           ],
           [
             "art",
             689,
-            738
-          ],
-          [
-            "art",
-            748,
-            886
+            886,
+            true
           ],
           [
             "art",
             925,
-            948
+            948,
+            true
           ],
           [
             "text",
@@ -7839,32 +7791,20 @@ export const questions = [
           [
             "art",
             181,
-            371
-          ],
-          [
-            "art",
-            404,
-            482
-          ],
-          [
-            "art",
-            516,
-            654
+            654,
+            true
           ],
           [
             "art",
             689,
-            738
-          ],
-          [
-            "art",
-            748,
-            886
+            886,
+            true
           ],
           [
             "art",
             925,
-            948
+            948,
+            true
           ],
           [
             "text",
@@ -8163,32 +8103,20 @@ export const questions = [
           [
             "art",
             181,
-            371
-          ],
-          [
-            "art",
-            404,
-            482
-          ],
-          [
-            "art",
-            516,
-            654
+            654,
+            true
           ],
           [
             "art",
             689,
-            738
-          ],
-          [
-            "art",
-            748,
-            886
+            886,
+            true
           ],
           [
             "art",
             925,
-            948
+            948,
+            true
           ],
           [
             "text",
@@ -8785,7 +8713,8 @@ export const questions = [
           [
             "art",
             66,
-            384
+            384,
+            true
           ],
           [
             "text",
@@ -9050,22 +8979,8 @@ export const questions = [
           [
             "art",
             252,
-            598
-          ],
-          [
-            "art",
-            625,
-            671
-          ],
-          [
-            "art",
-            702,
-            741
-          ],
-          [
-            "art",
-            755,
-            862
+            862,
+            true
           ],
           [
             "text",
@@ -10160,42 +10075,8 @@ export const questions = [
           [
             "art",
             77.11,
-            373
-          ],
-          [
-            "art",
-            389,
-            418
-          ],
-          [
-            "art",
-            435.98,
-            732
-          ],
-          [
-            "art",
-            748,
-            777
-          ],
-          [
-            "art",
-            794.85,
-            1091
-          ],
-          [
-            "art",
-            1107,
-            1136
-          ],
-          [
-            "art",
-            1151.86,
-            1448
-          ],
-          [
-            "art",
-            1464,
-            1493
+            1493,
+            true
           ]
         ]
       ]
@@ -11074,17 +10955,8 @@ export const questions = [
           [
             "art",
             294,
-            659
-          ],
-          [
-            "art",
-            687,
-            747
-          ],
-          [
-            "art",
-            776,
-            867
+            867,
+            true
           ],
           [
             "text",
@@ -12903,7 +12775,8 @@ export const questions = [
           [
             "art",
             607,
-            1057.1
+            1057.1,
+            true
           ],
           [
             "text",
@@ -13529,7 +13402,8 @@ export const questions = [
           [
             "art",
             607,
-            1057.1
+            1057.1,
+            true
           ]
         ]
       ],
@@ -14340,7 +14214,8 @@ export const questions = [
           [
             "art",
             607,
-            1057.1
+            1057.1,
+            true
           ]
         ]
       ],
@@ -15095,7 +14970,8 @@ export const questions = [
           [
             "art",
             607,
-            1057.1
+            1057.1,
+            true
           ]
         ]
       ],
@@ -15823,42 +15699,8 @@ export const questions = [
           [
             "art",
             204.41,
-            248.41
-          ],
-          [
-            "art",
-            258.33,
-            302.33
-          ],
-          [
-            "art",
-            310.4,
-            354.4
-          ],
-          [
-            "art",
-            362.46,
-            406.46
-          ],
-          [
-            "art",
-            414.52,
-            458.52
-          ],
-          [
-            "art",
-            466.59,
-            510.59
-          ],
-          [
-            "art",
-            518.65,
-            562.65
-          ],
-          [
-            "art",
-            570.72,
-            614.72
+            614.72,
+            true
           ],
           [
             "text",
@@ -16885,12 +16727,8 @@ export const questions = [
           [
             "art",
             203,
-            732
-          ],
-          [
-            "art",
-            743,
-            774
+            774,
+            true
           ],
           [
             "text",
@@ -17239,13 +17077,11 @@ export const questions = [
               [
                 16,
                 "Adult Sea Urchins in More Basic and More Acidic Seawater (Error Bars Represent "
-              ]
-            ]
-          ],
-          [
-            "text",
-            "",
-            [
+              ],
+              [
+                0,
+                " "
+              ],
               [
                 0,
                 "± SE"
@@ -17263,22 +17099,8 @@ export const questions = [
           [
             "art",
             334,
-            363
-          ],
-          [
-            "art",
-            397,
-            720
-          ],
-          [
-            "art",
-            733,
-            770
-          ],
-          [
-            "art",
-            796,
-            851
+            851,
+            true
           ],
           [
             "text",
@@ -17667,12 +17489,8 @@ export const questions = [
           [
             "art",
             0.73,
-            410
-          ],
-          [
-            "art",
-            427,
-            457
+            457,
+            true
           ],
           [
             "text",
@@ -18617,7 +18435,8 @@ export const questions = [
           [
             "art",
             237,
-            753
+            753,
+            true
           ],
           [
             "text",
@@ -18904,12 +18723,8 @@ export const questions = [
           [
             "art",
             175,
-            532
-          ],
-          [
-            "art",
-            548,
-            570
+            570,
+            true
           ],
           [
             "text",
@@ -19286,12 +19101,8 @@ export const questions = [
           [
             "art",
             363,
-            531
-          ],
-          [
-            "art",
-            552,
-            619
+            619,
+            true
           ],
           [
             "text",
@@ -19573,12 +19384,8 @@ export const questions = [
           [
             "art",
             363,
-            531
-          ],
-          [
-            "art",
-            552,
-            619
+            619,
+            true
           ],
           [
             "text",
@@ -19949,12 +19756,8 @@ export const questions = [
           [
             "art",
             363,
-            531
-          ],
-          [
-            "art",
-            552,
-            619
+            619,
+            true
           ],
           [
             "text",
@@ -20492,12 +20295,8 @@ export const questions = [
           [
             "art",
             136,
-            468
-          ],
-          [
-            "art",
-            485,
-            511
+            511,
+            true
           ],
           [
             "text",
@@ -20929,32 +20728,14 @@ export const questions = [
           [
             "art",
             619,
-            649
-          ],
-          [
-            "art",
-            681,
-            781
-          ],
-          [
-            "art",
-            792,
-            866
+            866,
+            true
           ],
           [
             "art",
             907,
-            1054
-          ],
-          [
-            "art",
-            1070,
-            1099
-          ],
-          [
-            "art",
-            1128,
-            1188
+            1188,
+            true
           ],
           [
             "text",
@@ -21084,27 +20865,8 @@ export const questions = [
           [
             "art",
             10,
-            40
-          ],
-          [
-            "art",
-            72,
-            262
-          ],
-          [
-            "art",
-            291,
-            445
-          ],
-          [
-            "art",
-            460,
-            489
-          ],
-          [
-            "art",
-            519,
-            578
+            578,
+            true
           ],
           [
             "text",
@@ -21663,12 +21425,14 @@ export const questions = [
           [
             "art",
             220,
-            491
+            491,
+            true
           ],
           [
             "art",
             542,
-            643
+            643,
+            true
           ],
           [
             "text",
@@ -21717,17 +21481,8 @@ export const questions = [
           [
             "art",
             827.31,
-            871.31
-          ],
-          [
-            "art",
-            879.38,
-            923.38
-          ],
-          [
-            "art",
-            931.44,
-            975.44
+            975.44,
+            true
           ],
           [
             "text",
@@ -22174,7 +21929,8 @@ export const questions = [
           [
             "art",
             0.74,
-            572
+            572,
+            true
           ],
           [
             "text",
@@ -22767,7 +22523,8 @@ export const questions = [
           [
             "art",
             198,
-            608
+            608,
+            true
           ],
           [
             "text",
@@ -23110,12 +22867,8 @@ export const questions = [
           [
             "art",
             256,
-            585
-          ],
-          [
-            "art",
-            598,
-            620
+            620,
+            true
           ],
           [
             "text",
@@ -23904,7 +23657,8 @@ export const questions = [
           [
             "art",
             147,
-            368
+            368,
+            true
           ],
           [
             "text",
@@ -24431,7 +24185,8 @@ export const questions = [
           [
             "art",
             252,
-            527
+            527,
+            true
           ],
           [
             "text",
@@ -24607,7 +24362,8 @@ export const questions = [
           [
             "art",
             252,
-            527
+            527,
+            true
           ]
         ]
       ],
@@ -24999,12 +24755,8 @@ export const questions = [
           [
             "art",
             174,
-            470
-          ],
-          [
-            "art",
-            487,
-            615.42
+            615.42,
+            true
           ],
           [
             "text",
@@ -25212,12 +24964,8 @@ export const questions = [
           [
             "art",
             174,
-            470
-          ],
-          [
-            "art",
-            487,
-            615.42
+            615.42,
+            true
           ]
         ]
       ],
@@ -25586,12 +25334,8 @@ export const questions = [
           [
             "art",
             174,
-            470
-          ],
-          [
-            "art",
-            487,
-            615.42
+            615.42,
+            true
           ]
         ]
       ],
@@ -26341,12 +26085,8 @@ export const questions = [
           [
             "art",
             10,
-            501
-          ],
-          [
-            "art",
-            513,
-            542
+            542,
+            true
           ],
           [
             "text",
@@ -26796,12 +26536,8 @@ export const questions = [
           [
             "art",
             10,
-            501
-          ],
-          [
-            "art",
-            513,
-            542
+            542,
+            true
           ],
           [
             "text",
@@ -27490,12 +27226,8 @@ export const questions = [
           [
             "art",
             10,
-            501
-          ],
-          [
-            "art",
-            513,
-            542
+            542,
+            true
           ],
           [
             "text",
@@ -28530,12 +28262,8 @@ export const questions = [
           [
             "art",
             10,
-            501
-          ],
-          [
-            "art",
-            513,
-            542
+            542,
+            true
           ],
           [
             "text",
@@ -30115,12 +29843,8 @@ export const questions = [
           [
             "art",
             64,
-            303
-          ],
-          [
-            "art",
-            313,
-            618
+            618,
+            true
           ],
           [
             "text",
@@ -30891,13 +30615,11 @@ export const questions = [
               [
                 0,
                 "TABLE 1. AVERAGE CHANGE IN pH IN CONTROL AND TREATMENT GROUPS OVER A 40-MINUTE"
-              ]
-            ]
-          ],
-          [
-            "text",
-            "",
-            [
+              ],
+              [
+                0,
+                " "
+              ],
               [
                 0,
                 "PERIOD"
@@ -30907,52 +30629,8 @@ export const questions = [
           [
             "art",
             333.55,
-            411.88
-          ],
-          [
-            "art",
-            419.94,
-            463.94
-          ],
-          [
-            "art",
-            473.87,
-            517.87
-          ],
-          [
-            "art",
-            525.93,
-            569.93
-          ],
-          [
-            "art",
-            577.99,
-            621.99
-          ],
-          [
-            "art",
-            630.06,
-            674.06
-          ],
-          [
-            "art",
-            682.12,
-            726.12
-          ],
-          [
-            "art",
-            734.18,
-            778.18
-          ],
-          [
-            "art",
-            786.25,
-            830.25
-          ],
-          [
-            "art",
-            838.31,
-            882.31
+            882.31,
+            true
           ],
           [
             "text",
@@ -31564,13 +31242,11 @@ export const questions = [
               [
                 0,
                 "TABLE 1. AVERAGE CHANGE IN pH IN CONTROL AND TREATMENT GROUPS OVER A 40-MINUTE"
-              ]
-            ]
-          ],
-          [
-            "text",
-            "",
-            [
+              ],
+              [
+                0,
+                " "
+              ],
               [
                 0,
                 "PERIOD"
@@ -31580,52 +31256,8 @@ export const questions = [
           [
             "art",
             333.55,
-            411.88
-          ],
-          [
-            "art",
-            419.94,
-            463.94
-          ],
-          [
-            "art",
-            473.87,
-            517.87
-          ],
-          [
-            "art",
-            525.93,
-            569.93
-          ],
-          [
-            "art",
-            577.99,
-            621.99
-          ],
-          [
-            "art",
-            630.06,
-            674.06
-          ],
-          [
-            "art",
-            682.12,
-            726.12
-          ],
-          [
-            "art",
-            734.18,
-            778.18
-          ],
-          [
-            "art",
-            786.25,
-            830.25
-          ],
-          [
-            "art",
-            838.31,
-            882.31
+            882.31,
+            true
           ]
         ]
       ],
@@ -32303,13 +31935,11 @@ export const questions = [
               [
                 0,
                 "TABLE 1. AVERAGE CHANGE IN pH IN CONTROL AND TREATMENT GROUPS OVER A 40-MINUTE"
-              ]
-            ]
-          ],
-          [
-            "text",
-            "",
-            [
+              ],
+              [
+                0,
+                " "
+              ],
               [
                 0,
                 "PERIOD"
@@ -32319,52 +31949,8 @@ export const questions = [
           [
             "art",
             333.55,
-            411.88
-          ],
-          [
-            "art",
-            419.94,
-            463.94
-          ],
-          [
-            "art",
-            473.87,
-            517.87
-          ],
-          [
-            "art",
-            525.93,
-            569.93
-          ],
-          [
-            "art",
-            577.99,
-            621.99
-          ],
-          [
-            "art",
-            630.06,
-            674.06
-          ],
-          [
-            "art",
-            682.12,
-            726.12
-          ],
-          [
-            "art",
-            734.18,
-            778.18
-          ],
-          [
-            "art",
-            786.25,
-            830.25
-          ],
-          [
-            "art",
-            838.31,
-            882.31
+            882.31,
+            true
           ]
         ]
       ],
@@ -32445,37 +32031,20 @@ export const questions = [
           [
             "art",
             0.75,
-            213
+            213,
+            true
           ],
           [
             "art",
             254,
-            278
+            278,
+            true
           ],
           [
             "art",
             318,
-            942
-          ],
-          [
-            "art",
-            949.05,
-            1308.15
-          ],
-          [
-            "art",
-            1321,
-            1362
-          ],
-          [
-            "art",
-            1387,
-            1578
-          ],
-          [
-            "art",
-            1604,
-            1693
+            1693,
+            true
           ]
         ]
       ]
@@ -33013,13 +32582,11 @@ export const questions = [
               [
                 0,
                 "TABLE 1. AVERAGE CHANGE IN pH IN CONTROL AND TREATMENT GROUPS OVER A 40-MINUTE"
-              ]
-            ]
-          ],
-          [
-            "text",
-            "",
-            [
+              ],
+              [
+                0,
+                " "
+              ],
               [
                 0,
                 "PERIOD"
@@ -33029,52 +32596,8 @@ export const questions = [
           [
             "art",
             333.55,
-            411.88
-          ],
-          [
-            "art",
-            419.94,
-            463.94
-          ],
-          [
-            "art",
-            473.87,
-            517.87
-          ],
-          [
-            "art",
-            525.93,
-            569.93
-          ],
-          [
-            "art",
-            577.99,
-            621.99
-          ],
-          [
-            "art",
-            630.06,
-            674.06
-          ],
-          [
-            "art",
-            682.12,
-            726.12
-          ],
-          [
-            "art",
-            734.18,
-            778.18
-          ],
-          [
-            "art",
-            786.25,
-            830.25
-          ],
-          [
-            "art",
-            838.31,
-            882.31
+            882.31,
+            true
           ]
         ]
       ],
@@ -33815,13 +33338,11 @@ export const questions = [
               [
                 0,
                 "TABLE 1. AVERAGE CHANGE IN pH IN CONTROL AND TREATMENT GROUPS OVER A 40-MINUTE"
-              ]
-            ]
-          ],
-          [
-            "text",
-            "",
-            [
+              ],
+              [
+                0,
+                " "
+              ],
               [
                 0,
                 "PERIOD"
@@ -33831,52 +33352,8 @@ export const questions = [
           [
             "art",
             333.55,
-            411.88
-          ],
-          [
-            "art",
-            419.94,
-            463.94
-          ],
-          [
-            "art",
-            473.87,
-            517.87
-          ],
-          [
-            "art",
-            525.93,
-            569.93
-          ],
-          [
-            "art",
-            577.99,
-            621.99
-          ],
-          [
-            "art",
-            630.06,
-            674.06
-          ],
-          [
-            "art",
-            682.12,
-            726.12
-          ],
-          [
-            "art",
-            734.18,
-            778.18
-          ],
-          [
-            "art",
-            786.25,
-            830.25
-          ],
-          [
-            "art",
-            838.31,
-            882.31
+            882.31,
+            true
           ]
         ]
       ],
@@ -34340,22 +33817,8 @@ export const questions = [
           [
             "art",
             173,
-            244
-          ],
-          [
-            "art",
-            269,
-            461
-          ],
-          [
-            "art",
-            476,
-            529
-          ],
-          [
-            "art",
-            543,
-            574
+            574,
+            true
           ],
           [
             "text",
@@ -34834,7 +34297,8 @@ export const questions = [
           [
             "art",
             0.75,
-            649
+            649,
+            true
           ],
           [
             "text",
@@ -34892,24 +34356,12 @@ export const questions = [
               ],
               [
                 0,
-                " Based on Figure 1, which of the following best explains the difference in "
-              ]
-            ]
-          ],
-          [
-            "text",
-            "",
-            [
+                " Based on Figure 1, which of the following best explains the difference in ATP production between these"
+              ],
               [
                 0,
-                "ATP production between these"
-              ]
-            ]
-          ],
-          [
-            "text",
-            "",
-            [
+                " "
+              ],
               [
                 0,
                 "two molecules?"
@@ -35213,12 +34665,8 @@ export const questions = [
           [
             "art",
             0.73,
-            118
-          ],
-          [
-            "art",
-            143,
-            489
+            489,
+            true
           ],
           [
             "text",
@@ -35672,17 +35120,7 @@ export const questions = [
             [
               [
                 0,
-                " Which of the following best predicts the effect of disrupting the proton gradient in "
-              ]
-            ]
-          ],
-          [
-            "text",
-            "",
-            [
-              [
-                0,
-                "BAT?"
+                " Which of the following best predicts the effect of disrupting the proton gradient in BAT?"
               ]
             ]
           ],
@@ -36082,7 +35520,8 @@ export const questions = [
           [
             "art",
             264,
-            689.09
+            689.09,
+            true
           ],
           [
             "text",
@@ -36097,7 +35536,8 @@ export const questions = [
           [
             "art",
             740,
-            1057
+            1057,
+            true
           ],
           [
             "text",
@@ -36128,12 +35568,8 @@ export const questions = [
           [
             "art",
             1163,
-            1259
-          ],
-          [
-            "art",
-            1276,
-            1372
+            1372,
+            true
           ],
           [
             "text",
@@ -36667,12 +36103,8 @@ export const questions = [
           [
             "art",
             0.75,
-            353
-          ],
-          [
-            "art",
-            366,
-            435
+            435,
+            true
           ],
           [
             "text",
@@ -37543,7 +36975,8 @@ export const questions = [
           [
             "art",
             215,
-            748.6
+            748.6,
+            true
           ],
           [
             "text",
@@ -37551,17 +36984,7 @@ export const questions = [
             [
               [
                 0,
-                " Which of the following statements about the rate of "
-              ]
-            ]
-          ],
-          [
-            "text",
-            "",
-            [
-              [
-                0,
-                "CO"
+                " Which of the following statements about the rate of CO"
               ],
               [
                 64,
@@ -37570,13 +36993,11 @@ export const questions = [
               [
                 0,
                 " fixation in the two types of plants is supported by"
-              ]
-            ]
-          ],
-          [
-            "text",
-            "",
-            [
+              ],
+              [
+                0,
+                " "
+              ],
               [
                 0,
                 "the data shown in the figures?"
@@ -38292,37 +37713,8 @@ export const questions = [
           [
             "art",
             256.47,
-            300.47
-          ],
-          [
-            "art",
-            308.52,
-            352.52
-          ],
-          [
-            "art",
-            360.59,
-            404.59
-          ],
-          [
-            "art",
-            412.66,
-            456.66
-          ],
-          [
-            "art",
-            464.71,
-            508.71
-          ],
-          [
-            "art",
-            516.79,
-            560.79
-          ],
-          [
-            "art",
-            568.86,
-            612.86
+            612.86,
+            true
           ],
           [
             "text",
@@ -38701,12 +38093,8 @@ export const questions = [
           [
             "art",
             275.07,
-            319.07
-          ],
-          [
-            "art",
-            327.14,
-            371.14
+            371.14,
+            false
           ],
           [
             "text",
@@ -38888,7 +38276,8 @@ export const questions = [
           [
             "art",
             128,
-            371
+            371,
+            true
           ],
           [
             "text",
@@ -38898,7 +38287,8 @@ export const questions = [
           [
             "art",
             555,
-            801
+            801,
+            true
           ],
           [
             "text",
@@ -38908,7 +38298,8 @@ export const questions = [
           [
             "art",
             1024,
-            1244
+            1244,
+            true
           ],
           [
             "text",
@@ -38918,12 +38309,8 @@ export const questions = [
           [
             "art",
             1416,
-            1441
-          ],
-          [
-            "art",
-            1455,
-            1677
+            1677,
+            true
           ]
         ]
       ]
@@ -39776,7 +39163,8 @@ export const questions = [
           [
             "art",
             0.75,
-            510
+            510,
+            true
           ],
           [
             "text",
@@ -40317,27 +39705,8 @@ export const questions = [
           [
             "art",
             215.57,
-            294.91
-          ],
-          [
-            "art",
-            302.96,
-            346.96
-          ],
-          [
-            "art",
-            355.03,
-            399.03
-          ],
-          [
-            "art",
-            407.1,
-            451.1
-          ],
-          [
-            "art",
-            459.15,
-            503.15
+            503.15,
+            true
           ],
           [
             "text",
@@ -41966,7 +41335,8 @@ export const questions = [
           [
             "art",
             268.64,
-            1689
+            1689,
+            true
           ]
         ]
       ]
@@ -43013,7 +42383,8 @@ export const questions = [
           [
             "art",
             51.94,
-            95.94
+            95.94,
+            false
           ],
           [
             "text",
@@ -44634,27 +44005,8 @@ export const questions = [
           [
             "art",
             0.75,
-            65
-          ],
-          [
-            "art",
-            78,
-            463
-          ],
-          [
-            "art",
-            477,
-            507
-          ],
-          [
-            "art",
-            521,
-            575
-          ],
-          [
-            "art",
-            589,
-            618
+            618,
+            true
           ],
           [
             "text",

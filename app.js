@@ -371,13 +371,13 @@ function questionPages(question) {
     const layout = question.layout?.[index];
     if (!layout) return `<img src="bank/${image}.png" alt="${label}">`;
     const [width, height, art, spans, flow] = layout;
-    const sourceRegion = (top, bottom) => `<svg class="question-page" viewBox="0 ${top} ${width} ${bottom - top}" aria-label="${label}" xml:space="preserve">
-      ${art ? `<image class="question-figure" href="bank/${art}.png" width="${width}" height="${height}"/>` : ''}
-      ${spans.filter(([, y]) => y >= top && y <= bottom).map(([x,y,size,length,flags,text]) => `<text x="${x}" y="${y}" font-size="${size}" ${length > 0 ? `textLength="${length}" lengthAdjust="spacingAndGlyphs"` : ''} ${flags & 16 ? 'font-weight="700"' : ''} ${flags & 2 ? 'font-style="italic"' : ''}>${escape(text)}</text>`).join('')}
+    const sourceRegion = (top, bottom, keepSource = false) => `<svg class="question-page" viewBox="0 ${top} ${width} ${bottom - top}" aria-label="${label}" xml:space="preserve">
+      ${art || keepSource ? `<image class="question-figure" href="bank/${keepSource ? image : art}.png" width="${width}" height="${height}"/>` : ''}
+      ${(keepSource ? [] : spans.filter(([, y]) => y >= top && y <= bottom)).map(([x,y,size,length,flags,text]) => `<text x="${x}" y="${y}" font-size="${size}" ${length > 0 ? `textLength="${length}" lengthAdjust="spacingAndGlyphs"` : ''} ${flags & 16 ? 'font-weight="700"' : ''} ${flags & 2 ? 'font-style="italic"' : ''}>${escape(text)}</text>`).join('')}
     </svg>`;
     if (!flow) return sourceRegion(0, height);
-    return `<div class="question-copy">${flow.map(([kind, lead, content]) => {
-      if (kind === 'art') return sourceRegion(lead, content);
+    return `<div class="question-copy">${flow.map(([kind, lead, content, keepSource]) => {
+      if (kind === 'art') return sourceRegion(lead, content, keepSource);
       const text = content.map(([flags, value]) => {
         const literal = escape(value);
         const styled = flags & 16 ? `<strong>${literal}</strong>` : flags & 2 ? `<em>${literal}</em>` : literal;
