@@ -290,3 +290,17 @@ body{background:radial-gradient(ellipse at 82% 0%,#232c22 0%,transparent 42%),va
 .frq-radar{margin-top:14px}
 .frq-radar summary{font-weight:650}
 .frq-radar[open] summary{margin-bottom:10px}
+
+.comeback-counter{display:flex;justify-content:space-between;gap:8px;padding:7px 11px;margin:0 0 12px;border:1px solid var(--line);border-radius:7px;background:#1c211c;font-size:13px;color:var(--quiet)}
+.comeback-counter.combo-earned,.result-comeback{color:var(--green)}
+.result-comeback{margin-top:8px;font-weight:650}
+.radar .recovered-axis{stroke:#c4dc9e;stroke-width:2;animation:recovered-axis 1.5s ease-out}
+.recovered-label{margin-left:5px;color:var(--green);font-size:11px}
+.coach[data-mood="combo"]{border-color:var(--green);box-shadow:0 0 22px #c4dc9e40;animation:coach-arrive .35s ease both,combo-glow 1.2s .2s ease both}
+.coach[data-mood="combo"] .cat-flex{animation:neko-flex 1.85s .16s ease both}
+.coach[data-mood="combo"] .cat-paw{animation:neko-tuck 1.85s .16s ease both}
+.coach[data-mood="combo"] .cat-body{animation:cat-hop .75s .12s ease 2}
+.coach[data-mood="combo"] .chad{animation:chad-bounce .65s .12s ease 2}
+@keyframes recovered-axis{0%{stroke-width:5}100%{stroke-width:2}}
+@keyframes combo-glow{0%,100%{box-shadow:0 0 22px #c4dc9e40}45%{box-shadow:0 0 37px #c4dc9e80}}
+@media(prefers-reduced-motion:reduce){.coach[data-mood="combo"],.coach[data-mood="combo"] .chad,.radar .recovered-axis{animation:none!important}}

@@ -30,6 +30,8 @@ const soundNotes = {
   missed: [349, 294],
   complete: [523, 659, 784],
   reply: [659],
+  redeem: [587, 784, 880],
+  combo: [523, 659, 784, 1047, 1319],
 };
 let muted = false;
 let audio;
@@ -284,7 +286,7 @@ function tally(answers) {
   }));
 }
 
-function radar(stats, unit = '') {
+function radar(stats, unit = '', recoveredTopics = new Set()) {
   const axes = Object.entries(topics);
   const coords = (index, scale) => {
     const angle = index * Math.PI * 2 / axes.length - Math.PI / 2;
@@ -309,7 +311,7 @@ function radar(stats, unit = '') {
         const [x,y] = coords(index,1);
         const [tx,ty] = coords(index,1.16);
         const anchor = index === 0 ? 'middle' : index < 3 ? 'start' : 'end';
-        return `<path d="M215,137 L${x},${y}" stroke="#41473e"/><text x="${tx}" y="${ty + 4}" text-anchor="${anchor}">${label}</text>`;
+        return `<path d="M215,137 L${x},${y}" class="${recoveredTopics.has(axes[index][0]) ? 'recovered-axis' : ''}" stroke="#41473e"/><text x="${tx}" y="${ty + 4}" text-anchor="${anchor}">${label}</text>`;
       }).join('')}
       ${allMeasured ? `<polygon class="data" points="${axes.map(([key], index) => coords(index,stats[key].score / 100).join(',')).join(' ')}"/>` : segments}
       ${axes.map(([key], index) => {
@@ -320,7 +322,7 @@ function radar(stats, unit = '') {
     </svg>
     <ul class="topic-list">${axes.map(([key, [label]]) => {
       const { correct, total, score } = stats[key];
-      return `<li><span>${label}</span><span class="${total ? 'tag' : 'quiet'}">${total ? `${score}% · ${correct}/${total}${unit}` : 'Unmeasured'}</span></li>`;
+      return `<li><span>${label}${recoveredTopics.has(key) ? ' <small class="recovered-label">Redeemed</small>' : ''}</span><span class="${total ? 'tag' : 'quiet'}">${total ? `${score}% · ${correct}/${total}${unit}` : 'Unmeasured'}</span></li>`;
     }).join('')}</ul>`;
 }
 
@@ -371,11 +373,13 @@ function quiz(moveFocus = true) {
   const answered = session.answers[session.index];
   const current = answered?.choice ?? choice;
   const last = session.index + 1 === session.ids.length;
+  const redeemed = session.mode === 'redemption' ? session.answers.filter(answer => answer.correct).length : 0;
 
   show(`<div class="narrow quiz-screen">
     <div class="between quiz-toolbar"><p class="kicker">${session.mode === 'redemption' ? 'Redemption set' : 'Practice set'}</p><button class="secondary" data-action="home">Save & exit</button></div>
     <h1>Question ${session.index + 1} <span>of ${session.ids.length}</span></h1>
     <progress max="${session.ids.length}" value="${session.answers.length}" aria-label="Questions answered"></progress>
+    ${session.mode === 'redemption' ? `<div class="comeback-counter ${redeemed >= 3 ? 'combo-earned' : ''}" aria-label="${redeemed} redeemed in this set"><strong>${redeemed >= 3 ? 'Comeback Combo earned' : 'Comeback Combo'}</strong><span>${redeemed} redeemed${redeemed < 3 && session.ids.length >= 3 ? ' / 3' : ''}</span></div>` : ''}
     <section class="panel quiz-card">
       <div class="between"><span class="metric quiet">GUIDE ITEM ${id}</span><button class="secondary" data-action="paper" aria-pressed="false">Original colors</button></div>
       <div class="prompt">${question.images.map((image, index) => `<img src="bank/${image}.png" alt="Guide item ${id}, ${image.startsWith('context') ? 'shared stimulus' : `question excerpt ${index + 1}`}">`).join('')}</div>
@@ -396,8 +400,10 @@ function check() {
   if (!choice || session.answers[session.index]) return;
   const id = session.ids[session.index];
   const correct = choice === questionById.get(id).answer;
-  playSound(correct ? 'correct' : 'missed');
   session.answers.push({ id, choice, correct });
+  const recovered = correct && session.mode === 'redemption';
+  const redeemed = recovered ? session.answers.filter(answer => answer.correct).length : 0;
+  playSound(recovered ? (redeemed === 3 ? 'combo' : 'redeem') : (correct ? 'correct' : 'missed'));
   const queue = new Set(saved.missed);
   if (correct && session.mode === 'redemption') queue.delete(id);
   if (!correct) queue.add(id);
@@ -409,6 +415,9 @@ function check() {
   if (!correct) {
     const messages = ['Take a breath and read the explanation. You can try this one again.', 'That one’s in your redemption queue. Keep going!', 'A tricky one. Use the explanation to spot what you missed.'];
     encourage(messages[session.index % messages.length], 'calm');
+  } else if (recovered) {
+    const label = topics[questionById.get(id).topic][0];
+    encourage(redeemed === 3 ? 'Comeback Combo! Three questions redeemed in this set.' : `${label}: question redeemed!`, redeemed === 3 ? 'combo' : 'celebrate');
   } else if (streak.length === 3 && streak.every(answer => answer.correct) && !session.answers.at(-4)?.correct) {
     encourage('Three right in a row! Keep it up.', 'celebrate');
   } else if (session.index === 0) {
@@ -438,6 +447,9 @@ function advance() {
 function results() {
   const { answers, mode } = saved.latest;
   const right = answers.filter(answer => answer.correct).length;
+  const recoveredTopics = new Set(mode === 'redemption'
+    ? answers.filter(answer => answer.correct).map(({ id }) => questionById.get(id).topic)
+    : []);
   const score = Math.round(100 * right / answers.length);
   const rating = score >= 90 ? 'Excellent' : score >= 75 ? 'Strong' : score >= 60 ? 'Developing' : 'Needs review';
   const gaps = focusGroups.map(([title, advice, ids]) => ({
@@ -445,13 +457,14 @@ function results() {
   })).filter(item => item.missed).sort((a,b) => b.missed - a.missed);
   show(`
     <div class="hero results-heading"><p class="kicker">${mode === 'redemption' ? 'Redemption' : 'Practice'} results</p><h1>${score}% · ${rating}</h1>
-    <p class="lead">${right} of ${answers.length} correct · ${answers.length - right} missed</p></div>
+    <p class="lead">${right} of ${answers.length} correct · ${answers.length - right} missed</p>
+    ${mode === 'redemption' && right ? `<p class="result-comeback">${right >= 3 ? 'Comeback Combo · ' : ''}${right} redeemed</p>` : ''}</div>
     <div class="grid">
       <section class="panel"><h2>What to focus on</h2>
         ${gaps.length ? `<ul class="focus-list">${gaps.map(({title,advice,missed}) => `<li><div class="between"><h3>${title}</h3><span class="tag">${missed} MISSED</span></div><p class="quiet">${advice}</p></li>`).join('')}</ul>` : '<p class="quiet">You answered every question in this set correctly.</p>'}
         <div class="actions" style="margin-top:18px"><button class="secondary" data-action="home">Dashboard</button>${saved.missed.length ? '<button class="primary" data-action="review">Review flagged questions →</button>' : ''}</div>
       </section>
-      <section class="panel"><h2>Topic radar</h2>${radar(tally(answers))}</section>
+      <section class="panel"><h2>Topic radar</h2>${radar(tally(answers), '', recoveredTopics)}</section>
     </div>`);
 }
 
