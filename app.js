@@ -395,9 +395,11 @@ function quiz(moveFocus = true) {
   if (!session) return dashboard();
   const id = session.ids[session.index];
   const question = questionById.get(id);
-  const answered = session.answers[session.index];
+  const record = session.answers[session.index];
+  const answered = record?.skipped ? undefined : record;
   const current = answered?.choice ?? choice;
   const last = session.index + 1 === session.ids.length;
+  const back = `<button class="secondary" data-action="previous" ${session.index === 0 ? 'disabled' : ''}>Back</button>`;
   const redeemed = session.mode === 'redemption' ? session.answers.filter(answer => answer.correct).length : 0;
 
   show(`<div class="narrow quiz-screen">
@@ -414,18 +416,19 @@ function quiz(moveFocus = true) {
         ${[...question.choices].map(letter => `<button class="answer ${answered && letter === question.answer ? 'correct' : ''} ${answered && letter === current && !answered.correct ? 'wrong' : ''}" data-choice="${letter}" aria-pressed="${letter === current}" ${answered ? 'disabled' : ''}>${letter}</button>`).join('')}
       </div>
       ${answered ? `<div class="feedback ${answered.correct ? '' : 'missed'}" role="status"><strong>${answered.correct ? 'Correct' : `Missed · Answer ${question.answer}`}</strong><p class="tag answer-topic">${topics[question.topic][2]}</p><p class="quiet">${escape(question.explanation)}</p></div>
-        <button class="primary" data-action="next">${last ? 'See results' : 'Next question'}</button>`
-        : `<div class="actions"><button class="primary" data-action="check" ${choice ? '' : 'disabled'}>Check answer</button><button class="secondary" data-action="hint">Ask for a hint</button><button class="secondary" data-action="skip">Skip question</button></div>`}
+        <div class="actions">${back}<button class="primary" data-action="next">${last ? 'See results' : 'Next question'}</button></div>`
+        : `<div class="actions">${back}<button class="primary" data-action="check" ${choice ? '' : 'disabled'}>Check answer</button><button class="secondary" data-action="hint">Ask for a hint</button><button class="secondary" data-action="skip">Skip question</button></div>`}
     </section>
   </div>`, moveFocus);
 }
 
 function check() {
   const session = saved.session;
-  if (!choice || session.answers[session.index]) return;
+  const existing = session.answers[session.index];
+  if (!choice || (existing && !existing.skipped)) return;
   const id = session.ids[session.index];
   const correct = choice === questionById.get(id).answer;
-  session.answers.push({ id, choice, correct });
+  session.answers[session.index] = { id, choice, correct };
   const recovered = correct && session.mode === 'redemption';
   const redeemed = recovered ? session.answers.filter(answer => answer.correct).length : 0;
   playSound(recovered ? (redeemed === 3 ? 'combo' : 'redeem') : (correct ? 'correct' : 'missed'));
@@ -436,18 +439,27 @@ function check() {
   persist();
   quiz(false);
   app.querySelector('[data-action="next"]').focus();
-  const streak = session.answers.slice(-3);
+  const streak = session.answers.slice(Math.max(0, session.index - 2), session.index + 1);
   if (!correct) {
     const messages = ['Take a breath and read the explanation. You can try this one again.', 'That one’s in your redemption queue. Keep going!', 'A tricky one. Use the explanation to spot what you missed.'];
     encourage(messages[session.index % messages.length], 'calm');
   } else if (recovered) {
     const label = topics[questionById.get(id).topic][0];
     encourage(redeemed === 3 ? 'Comeback Combo! Three questions redeemed in this set.' : `${label}: question redeemed!`, redeemed === 3 ? 'combo' : 'celebrate');
-  } else if (streak.length === 3 && streak.every(answer => answer.correct) && !session.answers.at(-4)?.correct) {
+  } else if (streak.length === 3 && streak.every(answer => answer.correct) && !session.answers[session.index - 3]?.correct) {
     encourage('Three right in a row! Keep it up.', 'celebrate');
   } else if (session.index === 0) {
     encourage('First one down. Nice start!');
   }
+}
+
+function goBack() {
+  const session = saved.session;
+  if (!session || session.index === 0) return;
+  session.index--;
+  choice = null;
+  persist();
+  quiz();
 }
 
 function advance(skip = false) {
@@ -533,6 +545,7 @@ app.addEventListener('click', event => {
     case 'resume': choice = null; quiz(); break;
     case 'results': results(); break;
     case 'check': check(); break;
+    case 'previous': goBack(); break;
     case 'next': advance(); break;
     case 'skip': advance(true); break;
     case 'paper': control.setAttribute('aria-pressed', app.querySelector('.prompt').classList.toggle('light')); break;
@@ -608,7 +621,7 @@ function buddyContext() {
   const question = questionById.get(id);
   const transcript = question.transcript.replace(/[^\S\n]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
   const text = transcript.length > 1820 ? transcript.slice(0, 860) + '\n…\n' + transcript.slice(-950) : transcript;
-  const status = answer
+  const status = answer && !answer.skipped
     ? `Student chose ${answer.choice}. Correct choice: ${question.answer}. Explanation: ${question.explanation.slice(0, 435)}`
     : 'Unanswered. Give a conceptual hint without selecting an option or revealing the answer.';
   return `Current MCQ (guide item ${id}):\n${text}\n${status}`;
