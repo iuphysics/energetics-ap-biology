@@ -574,10 +574,18 @@ function buddyContext() {
   if (!session || !app.querySelector('.quiz-screen')) return '';
   const id = session.ids[session.index];
   const answer = session.answers[session.index];
-  if (!answer) return 'The student is in an active Unit 3 quiz. Provide hints without revealing an answer.';
   const question = questionById.get(id);
-  return `Checked question, ${topics[question.topic][2]}. ${question.transcript.replace(/\s+/g, ' ').slice(0, 1750)}
-Student chose ${answer.choice}. Correct choice: ${question.answer}. Explanation: ${question.explanation.slice(0, 450)}`;
+  const transcript = question.transcript.replace(/[^\S\n]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
+  const text = transcript.length > 1820 ? transcript.slice(0, 860) + '\n…\n' + transcript.slice(-950) : transcript;
+  const status = answer
+    ? `Student chose ${answer.choice}. Correct choice: ${question.answer}. Explanation: ${question.explanation.slice(0, 435)}`
+    : 'Unanswered. Give a conceptual hint without selecting an option or revealing the answer.';
+  return `Current MCQ (guide item ${id}):\n${text}\n${status}`;
+}
+
+function currentBuddyQuestionId() {
+  if (!saved.session || !app.querySelector('.quiz-screen')) return undefined;
+  return saved.session.ids[saved.session.index];
 }
 
 let buddyPosition;
@@ -684,6 +692,7 @@ buddyForm.addEventListener('submit', async event => {
         avatar: currentAvatar,
         messages: conversation.slice(-13),
         context: buddyContext(),
+        questionId: currentBuddyQuestionId(),
       }),
     });
     if (!response.headers.get('Content-Type')?.includes('application/json')) {

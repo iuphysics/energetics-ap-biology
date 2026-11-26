@@ -1,6 +1,8 @@
 """Loopback-only Energetics server and Study Buddy API."""
 import argparse
+import base64
 import getpass
+from functools import lru_cache
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
 import os
@@ -23,6 +25,30 @@ INSTRUCTIONS = (
     "offer conceptual hints. After an answer is checked, you can explain it directly."
 )
 PUBLIC_FILES = {"/", "/index.html", "/app.js", "/bank.js", "/style.css", "/chad.png", "/focus-music-loop.m4a"}
+
+
+@lru_cache(maxsize=1)
+def question_bank():
+    source = (ROOT / "bank.js").read_text(encoding="utf-8").strip()
+    questions = json.loads(source.removeprefix("export const questions = ").removesuffix(";"))
+    return {question["id"]: question for question in questions}
+
+
+def diagram_parts(question):
+    transcript = question["transcript"]
+    # Attach page excerpts only when layout, a visual stimulus, or diagram choices matter.
+    if not re.search(r"\b(graph|diagram|figure|table|shown|illustrat\w*|model below)\b", transcript, re.I) and not any(
+        image.startswith("context-") for image in question["images"]
+    ):
+        return []
+    return [
+        {
+            "type": "input_image",
+            "image_url": "data:image/png;base64," + base64.b64encode((ROOT / "bank" / (name + ".png")).read_bytes()).decode("ascii"),
+            "detail": "high",
+        }
+        for name in question["images"]
+    ]
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -88,6 +114,12 @@ class Handler(SimpleHTTPRequestHandler):
                 for index, turn in enumerate(turns)
             ) or turns[-1]["role"] != "user":
                 raise ValueError
+            question_id = body.get("questionId")
+            question = None
+            if question_id is not None:
+                if type(question_id) is not int:
+                    raise ValueError
+                question = question_bank()[question_id]
             context = body.get("context", "")
             if not isinstance(context, str) or len(context) > 2500:
                 raise ValueError
@@ -100,6 +132,10 @@ class Handler(SimpleHTTPRequestHandler):
         messages = [{"role": turn["role"], "content": turn["content"]} for turn in turns]
         if context:
             messages[-1]["content"] = f"Quiz context (reference only):\n{context}\n\nStudent question:\n{messages[-1]['content']}"
+        if question is not None:
+            images = diagram_parts(question)
+            if images:
+                messages[-1]["content"] = [{"type": "input_text", "text": messages[-1]["content"]}, *images]
         request = Request(
             "https://api.openai.com/v1/responses",
             data=json.dumps({
