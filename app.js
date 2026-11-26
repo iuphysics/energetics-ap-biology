@@ -937,7 +937,7 @@ let frqSet = [];
 let grading;
 let activeStroke;
 function blankFrqDraft(question) {
-  return { responses: question.tasks.map(() => ''), strokes: [], xLabel: '', yLabel: '', feedback: '', score: null, selfMarks: [] };
+  return { responses: question.tasks.map(() => ''), strokes: [], xLabel: '', yLabel: '', feedback: '', score: null, selfMarks: [], submitted: null };
 }
 const frqDrafts = frqs.map(blankFrqDraft);
 const plot = { left: 54, right: 389, top: 18, bottom: 208 };
@@ -1035,12 +1035,52 @@ function graphMarkup(graph, draft) {
   </section>`;
 }
 
-function paintMarks() {
-  const group = app.querySelector('#frq-marks');
-  if (!group) return;
-  group.innerHTML = frqDrafts[frqIndex].strokes.map(stroke => {
+function graphMarks(strokes) {
+  return strokes.map(stroke => {
     if (stroke.length === 1) return `<circle cx="${stroke[0][0]}" cy="${stroke[0][1]}" r="3.5"/>`;
     return `<polyline points="${stroke.map(point => point.join(',')).join(' ')}"/>`;
+  }).join('');
+}
+
+function paintMarks() {
+  const group = app.querySelector('#frq-marks');
+  if (group) group.innerHTML = graphMarks(frqDrafts[frqIndex].strokes);
+}
+
+function frqSubmission(draft) {
+  return {
+    responses: draft.responses.map(response => response.trim()),
+    strokes: draft.strokes.map(stroke => [...stroke]),
+    xLabel: draft.xLabel.trim(),
+    yLabel: draft.yLabel.trim(),
+  };
+}
+
+function responseForComparison(question, submission, index) {
+  if (question.graph && index === 0) {
+    const { strokes, xLabel, yLabel } = submission;
+    return `<div class="comparison-graph">
+      ${strokes.length ? `<svg viewBox="0 0 416 236" role="img" aria-label="Your plotted graph">
+        <path class="comparison-axis" d="M${plot.left} ${plot.top}V${plot.bottom}H${plot.right}"/>
+        <g class="comparison-marks">${graphMarks(strokes)}</g></svg>` : '<p>No points drawn</p>'}
+      <p>X: ${escape(xLabel || 'Unlabeled')}<br>Y: ${escape(yLabel || 'Unlabeled')}</p>
+    </div>`;
+  }
+  return `<p class="comparison-response">${escape(submission.responses[index] || 'No response')}</p>`;
+}
+
+function rubricComparison(question, submission, marks = null) {
+  return question.tasks.map((task, index) => {
+    const letter = letters[index];
+    const criteria = question.rubric.map((point, id) => ({ point, id }))
+      .filter(({ point }) => new RegExp(`^${letter}\\d*:`).test(point));
+    return `<section class="comparison-part"><h4>${letter}. ${escape(task)}</h4>
+      <div class="comparison-columns">
+        <div><strong>Your response</strong><div data-compare-part="${index}">${responseForComparison(question, submission, index)}</div></div>
+        <div><strong>Rubric</strong><ul class="comparison-criteria">${criteria.map(({ point, id }) => `<li>${
+          marks === null ? escape(point) : `<label><input type="checkbox" name="point" value="${id}" ${marks.includes(id) ? 'checked' : ''}><span>${escape(point)}</span></label>`
+        }</li>`).join('')}</ul></div>
+      </div></section>`;
   }).join('');
 }
 
@@ -1062,11 +1102,13 @@ function renderFrq() {
       ${localGrading
         ? `<div class="actions"><button class="primary" data-action="grade-frq">Grade response</button><button class="secondary" data-action="hint">Ask for a hint</button><span class="quiet">Practice feedback · ${question.rubric.length} points</span></div>`
         : `<div class="frq-grading-note"><p>AI grading runs in <a href="http://127.0.0.1:8736/">local Energetics</a> on the computer running the app. You can score this response with the practice rubric here.</p>
-          <details><summary>Open rubric</summary><form id="frq-self-grade">
-            ${question.rubric.map((point, index) => `<label><input type="checkbox" name="point" value="${index}" ${draft.selfMarks.includes(index) ? 'checked' : ''}> <span>${escape(point)}</span></label>`).join('')}
+          <details id="frq-public-rubric"><summary>Compare with rubric</summary><form id="frq-self-grade">
+            ${rubricComparison(question, frqSubmission(draft), draft.selfMarks)}
             <button class="primary">Save rubric score</button>
           </form></details></div>`}
       <div class="frq-feedback" id="frq-feedback" role="status">${escape(draft.feedback)}</div>
+      ${localGrading ? `<details id="frq-comparison" ${draft.submitted ? 'open' : 'hidden'}><summary>Compare with rubric</summary>
+        <div id="frq-comparison-content">${draft.submitted ? rubricComparison(question, draft.submitted) : ''}</div></details>` : ''}
     </section><details class="panel frq-radar"><summary>Topic accuracy</summary>
     <div id="frq-radar-content">${frqRadar(currentFrqScores(), frqSet.length)}</div></details></div>`);
   paintMarks();
@@ -1113,8 +1155,9 @@ async function gradeFrq(button) {
     feedback.textContent = 'Write a response or mark the graph first.';
     return;
   }
+  const submitted = frqSubmission(draft);
   const answer = question.tasks.map((_, index) => {
-    const response = question.graph && index === 0 ? graphResponse(question.graph, draft) : draft.responses[index].trim();
+    const response = question.graph && index === 0 ? graphResponse(question.graph, submitted) : submitted.responses[index];
     return `${letters[index]}. ${response || '(blank)'}`;
   }).join('\n');
   const controller = new AbortController();
@@ -1140,6 +1183,11 @@ async function gradeFrq(button) {
     if (controller.signal.aborted) return;
     draft.feedback = payload.answer;
     feedback.textContent = draft.feedback;
+    draft.submitted = submitted;
+    const comparison = app.querySelector('#frq-comparison');
+    app.querySelector('#frq-comparison-content').innerHTML = rubricComparison(question, submitted);
+    comparison.hidden = false;
+    comparison.open = true;
     const scoreLine = draft.feedback.split('\n', 1)[0].replace(/[*#`]/g, '');
     const match = scoreLine.match(/^\s*Score\s*:\s*(\d+)\s*\/\s*(\d+)/i);
     if (match && Number(match[2]) === question.rubric.length && Number(match[1]) <= question.rubric.length) {
@@ -1188,6 +1236,14 @@ app.addEventListener('input', event => {
 app.addEventListener('change', event => {
   if (event.target.id === 'frq-select') changeFrq(Number(event.target.value));
 });
+
+app.addEventListener('toggle', event => {
+  if (event.target.id !== 'frq-public-rubric' || !event.target.open) return;
+  const submission = frqSubmission(frqDrafts[frqIndex]);
+  for (const cell of event.target.querySelectorAll('[data-compare-part]')) {
+    cell.innerHTML = responseForComparison(frqs[frqIndex], submission, Number(cell.dataset.comparePart));
+  }
+}, true);
 
 app.addEventListener('submit', event => {
   if (event.target.id === 'frq-self-grade') {

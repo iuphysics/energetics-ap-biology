@@ -365,3 +365,17 @@ body{background:radial-gradient(ellipse at 82% 0%,#232c22 0%,transparent 42%),va
 #frq-self-grade label{display:flex;align-items:start;gap:8px;color:var(--ink)}
 #frq-self-grade input{flex:none;margin-top:4px}
 #frq-self-grade button{justify-self:start}
+
+#frq-comparison{margin-top:14px}
+.comparison-part{padding:10px 0;border-top:1px solid var(--line)}
+.comparison-part h4{margin:0 0 8px;font-size:14px;color:var(--ink)}
+.comparison-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.comparison-columns>div{min-width:0;padding:9px 11px;background:var(--bg);border:1px solid var(--line);border-radius:6px;overflow-wrap:anywhere}
+.comparison-columns strong{color:var(--ink);font-size:13px}
+.comparison-response{white-space:pre-wrap}
+.comparison-criteria{list-style:none;padding:0;margin:7px 0 0;display:grid;gap:6px}
+.comparison-graph svg{display:block;width:100%;max-width:245px}
+.comparison-axis{fill:none;stroke:var(--quiet);stroke-width:2}
+.comparison-marks circle{fill:var(--green)}
+.comparison-marks polyline{fill:none;stroke:var(--green);stroke-width:3}
+@media(max-width:560px){.comparison-columns{grid-template-columns:minmax(0,1fr)}}
