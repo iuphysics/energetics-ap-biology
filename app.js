@@ -1,11 +1,11 @@
 import { questions } from './bank.js';
 
 const topics = {
-  enzymes: ['Enzymes', 'Enzymes'],
-  conditions: ['Enzyme conditions', 'Conditions'],
-  energy: ['Cellular energy', 'Energy'],
-  photo: ['Photosynthesis', 'Photosynthesis'],
-  respiration: ['Cellular respiration', 'Respiration'],
+  enzymes: ['Enzymes', 'Enzymes', '3.1 Enzymes'],
+  conditions: ['Enzyme conditions', 'Conditions', '3.2 Environmental Impacts on Enzyme Function'],
+  energy: ['Cellular energy', 'Energy', '3.3 Cellular Energy'],
+  photo: ['Photosynthesis', 'Photosynthesis', '3.4 Photosynthesis'],
+  respiration: ['Cellular respiration', 'Respiration', '3.5 Cellular Respiration'],
 };
 
 const focusGroups = [
@@ -247,7 +247,7 @@ function quiz(moveFocus = true) {
     <div class="between"><p class="kicker">${session.mode === 'redemption' ? 'Redemption set' : 'Practice set'}</p><button class="secondary" data-action="home">Save & exit</button></div>
     <h1>Question ${session.index + 1}</h1>
     <progress max="${session.ids.length}" value="${session.answers.length}" aria-label="Questions answered"></progress>
-    <div class="between"><span class="quiet">${topics[question.topic][0]}</span><span class="metric">${session.index + 1} / ${session.ids.length}</span></div>
+    <div class="between"><span class="quiet">AP Biology Unit 3</span><span class="metric">${session.index + 1} / ${session.ids.length}</span></div>
     <section class="panel" style="margin-top:14px">
       <div class="between"><span class="metric quiet">GUIDE ITEM ${id}</span><button class="secondary" data-action="paper" aria-pressed="false">Original colors</button></div>
       <div class="prompt">${question.images.map((image, index) => `<img src="bank/${image}.png" alt="Guide item ${id}, ${image.startsWith('context') ? 'shared stimulus' : `question excerpt ${index + 1}`}">`).join('')}</div>
@@ -255,7 +255,7 @@ function quiz(moveFocus = true) {
       <div class="answers" style="--choices:${question.choices.length}" aria-label="Answer choices">
         ${[...question.choices].map(letter => `<button class="answer ${answered && letter === question.answer ? 'correct' : ''} ${answered && letter === current && !answered.correct ? 'wrong' : ''}" data-choice="${letter}" aria-pressed="${letter === current}" ${answered ? 'disabled' : ''}>${letter}</button>`).join('')}
       </div>
-      ${answered ? `<div class="feedback ${answered.correct ? '' : 'missed'}" role="status"><strong>${answered.correct ? 'Correct' : `Missed · Answer ${question.answer}`}</strong><p class="quiet">${escape(question.explanation)}</p></div>
+      ${answered ? `<div class="feedback ${answered.correct ? '' : 'missed'}" role="status"><strong>${answered.correct ? 'Correct' : `Missed · Answer ${question.answer}`}</strong><p class="tag answer-topic">${topics[question.topic][2]}</p><p class="quiet">${escape(question.explanation)}</p></div>
         <button class="primary" data-action="next">${last ? 'See results →' : 'Next question →'}</button>`
         : `<button class="primary" data-action="check" ${choice ? '' : 'disabled'}>Check answer</button>`}
     </section>
