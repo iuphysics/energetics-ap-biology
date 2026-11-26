@@ -731,6 +731,102 @@ const frqs = [
     tasks: ['Identify the type of inhibition most consistent with these results.', 'Explain why increasing substrate concentration changes the strength of the inhibitor’s effect.', 'Describe a control the researchers should include when the inhibitor is dissolved in a solvent.'],
     rubric: ['A: Award one point for competitive inhibition.', 'B: Award one point for explaining that substrate and inhibitor compete for the active site, so abundant substrate increases the likelihood of substrate binding.', 'C: Award one point for an enzyme and substrate condition with the same solvent concentration but no inhibitor, holding other conditions constant.'],
   },
+  {
+    topic: 'enzymes', title: 'Activation energy in a reaction model',
+    stimulus: 'An uncatalyzed reaction has reactants at 45 kJ/mol, a transition state at 105 kJ/mol, and products at 25 kJ/mol. With an enzyme, the transition state is at 75 kJ/mol.',
+    tasks: ['Calculate both forward activation energies.', 'Compare ΔG with and without the enzyme.', 'Explain why product appears faster in the catalyzed reaction.'],
+    rubric: ['A: One point for 60 kJ/mol uncatalyzed and 30 kJ/mol catalyzed.', 'B: One point for ΔG = −20 kJ/mol in both cases because the endpoint energies are unchanged.', 'C: One point for explaining that the lower barrier increases the fraction of reactants reaching the transition state per unit time.'],
+  },
+  {
+    topic: 'enzymes', title: 'Testing enzyme saturation',
+    stimulus: 'At a fixed enzyme concentration, doubling a low substrate concentration nearly doubles initial reaction rate. Doubling a high substrate concentration has little effect.',
+    tasks: ['Explain the difference between the two observations.', 'Predict the effect of doubling enzyme concentration at saturating substrate.', 'Identify a measurement that could be used to estimate initial rate.'],
+    rubric: ['A: One point for explaining that additional substrate increases binding at low concentration but most active sites are occupied at high concentration.', 'B: One point for a higher maximum rate because more active sites are available. Accept approximately double under otherwise identical conditions.', 'C: One point for measuring change in product or substrate concentration per unit time near the start.'],
+  },
+  {
+    topic: 'enzymes', title: 'An enzyme altered by mutation',
+    stimulus: 'An enzyme normally binds a negatively charged substrate. A mutation replaces a positively charged amino acid in its binding pocket with a negatively charged amino acid.',
+    tasks: ['Predict the effect on substrate binding.', 'Explain the molecular basis of your prediction.', 'Describe how researchers could compare reaction rates between the mutant and standard enzymes.'],
+    rubric: ['A: One point for weaker substrate binding.', 'B: One point for loss of attractive opposite-charge interactions or increased repulsion between like charges.', 'C: One point for measuring initial product formation or substrate loss with equal enzyme and substrate concentrations under matched conditions.'],
+  },
+  {
+    topic: 'conditions', title: 'pH and digestive enzymes',
+    stimulus: 'Equal samples of two digestive enzymes are tested across pH 2–9. Enzyme X has highest activity near pH 2. Enzyme Y has highest activity near pH 8.',
+    tasks: ['Predict which enzyme performs better at pH 2 and at pH 8.', 'Explain how changing pH can alter enzyme activity.', 'Identify a variable to hold constant and explain why.'],
+    rubric: ['A: One point for X at pH 2 and Y at pH 8.', 'B: One point for connecting protonation changes to altered side-chain interactions, substrate binding, or active-site shape.', 'C: One point for identifying a valid constant such as temperature or substrate concentration and explaining that it could independently affect rate.'],
+  },
+  {
+    topic: 'conditions', title: 'Distinguishing cold from heat damage',
+    stimulus: 'Three enzyme samples are kept at 4°C, 25°C, or 80°C for ten minutes. All three are then brought to 25°C before substrate is added. The sample previously held at 80°C shows little activity.',
+    tasks: ['Explain why all samples are tested at 25°C.', 'Predict activity for the previously chilled sample relative to the control.', 'Explain the persistent activity loss after heating.'],
+    rubric: ['A: One point for holding assay temperature constant to isolate the effect of prior treatment.', 'B: One point for activity near the 25°C control if chilling did not alter structure.', 'C: One point for heat-induced denaturation that persists after cooling and disrupts active-site function.'],
+  },
+  {
+    topic: 'conditions', title: 'Graphing pH and enzyme activity',
+    stimulus: 'Researchers exposed equal enzyme samples to buffers at different pH values and measured product formation per minute at the same temperature.',
+    graph: { x: [2,3,4,5,6,7], y: [0,2,4,6,8,10] },
+    data: [['pH', '2', '3', '4', '5', '6', '7'], ['Rate (µmol/min)', '1', '5', '9', '7', '3', '1']],
+    tasks: ['Plot the data and label each axis. Include units where applicable.', 'Identify the best tested pH and support your answer with data.', 'Explain how a shift away from this pH can affect the enzyme.'],
+    rubric: ['A1: One point for pH on x and rate (µmol/min) on y.', 'A2: One point for all six plotted values within ±0.15 pH and ±0.4 µmol/min.', 'B: One point for pH 4 with the highest measured rate of 9 µmol/min.', 'C: One point for a pH shift changing protonation or protein interactions and reducing catalytic activity.'],
+  },
+  {
+    topic: 'energy', title: 'Maintaining cellular order',
+    stimulus: 'A growing cell uses energy to assemble many small molecules into ordered macromolecules and releases heat to its surroundings.',
+    tasks: ['Explain how the cell obtains energy for assembly.', 'Explain why increased order inside the cell is consistent with the second law of thermodynamics.', 'Predict the effect of interrupted energy input on biosynthesis.'],
+    rubric: ['A: One point for citing coupling to ATP hydrolysis or another valid cellular energy source.', 'B: One point for explaining that entropy of the cell plus surroundings can increase as energy is dissipated as heat.', 'C: One point for predicting reduced biosynthesis as usable energy becomes limiting.'],
+  },
+  {
+    topic: 'energy', title: 'Conserved glycolysis',
+    stimulus: 'Researchers compare three distantly related organisms. All three use a sequence of homologous enzymes to convert glucose to pyruvate. One organism lives without oxygen.',
+    tasks: ['Explain how the observation supports common ancestry.', 'Predict whether glucose-to-pyruvate conversion can proceed without oxygen.', 'Identify a result that would strengthen the ancestry claim.'],
+    rubric: ['A: One point for explaining that widespread homologous pathways can be inherited from a common ancestor.', 'B: One point for predicting yes because glycolysis does not directly use oxygen. Accept noting that NAD⁺ must be regenerated.', 'C: One point for additional shared sequence, structural, or pathway evidence consistent with common ancestry.'],
+  },
+  {
+    topic: 'energy', title: 'ATP demand during exercise',
+    stimulus: 'During a short sprint, a muscle cell hydrolyzes ATP much faster than it does at rest. Its ATP concentration falls only slightly at first.',
+    tasks: ['Explain why ATP hydrolysis increases.', 'Explain how ATP concentration can remain nearly steady despite rapid use.', 'Predict what happens if ATP regeneration stays below ATP use.'],
+    rubric: ['A: One point for connecting ATP hydrolysis to muscle contraction or cross-bridge cycling.', 'B: One point for explaining that concurrent ATP regeneration approximately offsets use.', 'C: One point for predicting that ATP concentration will decline when consumption exceeds regeneration.'],
+  },
+  {
+    topic: 'photo', title: 'Tracing oxygen in photosynthesis',
+    stimulus: 'Two groups of plants receive identical light. Group 1 receives water containing oxygen-18. Group 2 receives carbon dioxide containing oxygen-18 but ordinary water. Researchers collect newly released oxygen gas.',
+    tasks: ['Predict which group releases oxygen gas enriched in oxygen-18 initially.', 'Explain which photosynthetic process produces that gas.', 'Describe a control for measuring natural background enrichment.'],
+    rubric: ['A: One point for group 1.', 'B: One point for water oxidation at photosystem II during the light reactions.', 'C: One point for an otherwise matched group supplied with unlabeled water and carbon dioxide.'],
+  },
+  {
+    topic: 'photo', title: 'Blocking photosystem II',
+    stimulus: 'A treatment disrupts transfer of electrons from photosystem II to the next carrier. Chloroplasts remain exposed to bright light and have water and carbon dioxide available.',
+    tasks: ['Predict the effect on linear electron flow.', 'Predict the effect on NADPH production.', 'Explain how the change can affect carbon fixation.'],
+    rubric: ['A: One point for decreased linear electron flow.', 'B: One point for decreased NADPH formation because fewer electrons reach the reduction of NADP⁺.', 'C: One point for explaining that lower NADPH limits reduction of Calvin cycle intermediates and slows sustained carbon fixation.'],
+  },
+  {
+    topic: 'photo', title: 'Graphing carbon fixation over time',
+    stimulus: 'Algae receive a pulse of labeled carbon dioxide at time zero. Researchers measure the amount of labeled carbon in sugars.',
+    graph: { x: [0,2,4,6,8,10], y: [0,2,4,6,8,10] },
+    data: [['Time (min)', '0', '2', '4', '6', '8', '10'], ['Labeled carbon in sugars (µmol)', '0', '2', '5', '7', '8', '8']],
+    tasks: ['Plot the data with axis labels and units.', 'Identify an interval in which the measured amount does not increase.', 'Explain how labeled carbon dioxide becomes part of sugar molecules.'],
+    rubric: ['A1: One point for correctly labeled time (min) and labeled carbon in sugars (µmol).', 'A2: One point for plotting all six points within ±0.3 minutes and ±0.4 µmol.', 'B: One point for 8–10 minutes.', 'C: One point for carbon fixation in the Calvin cycle followed by conversion into carbohydrate precursors or sugars.'],
+  },
+  {
+    topic: 'respiration', title: 'Fermentation and NAD⁺',
+    stimulus: 'Yeast cells are supplied with glucose but no oxygen. A treatment blocks the step that regenerates NAD⁺ during alcoholic fermentation.',
+    tasks: ['Predict how blocking fermentation affects the NAD⁺ supply.', 'Explain why this can slow glycolysis.', 'Identify how yeast make ATP under these conditions.'],
+    rubric: ['A: One point for predicting less available NAD⁺.', 'B: One point for explaining that NAD⁺ is required as an electron acceptor during glycolysis.', 'C: One point for substrate-level phosphorylation during glycolysis.'],
+  },
+  {
+    topic: 'respiration', title: 'Using a seed respirometer',
+    stimulus: 'Equal masses of germinating and dry seeds are placed in sealed chambers. Each chamber contains a material that absorbs carbon dioxide. Researchers monitor decreases in gas volume.',
+    tasks: ['Explain why the chambers contain a carbon dioxide absorber.', 'Predict which group has greater oxygen consumption and justify your prediction.', 'Describe a control that detects shifts in gas volume unrelated to seeds.'],
+    rubric: ['A: One point for explaining that removing carbon dioxide lets net gas-volume decrease reflect oxygen uptake.', 'B: One point for predicting higher oxygen use in germinating seeds due to greater metabolic demand.', 'C: One point for an otherwise identical chamber with nonrespiring material of similar displaced volume, such as glass beads.'],
+  },
+  {
+    topic: 'respiration', title: 'Graphing oxygen consumption',
+    stimulus: 'A sealed respirometer containing actively germinating seeds was held at constant temperature. Carbon dioxide was absorbed throughout the trial. Students determined cumulative oxygen consumption at five times.',
+    graph: { x: [0,2,4,6,8], y: [0,1,2,3,4,5] },
+    data: [['Time (min)', '0', '2', '4', '6', '8'], ['Oxygen consumed (mL)', '0', '1', '2', '3', '4']],
+    tasks: ['Plot the data with axis labels and units.', 'Calculate the average oxygen consumption rate over the trial.', 'Explain why a carbon dioxide absorber is needed.'],
+    rubric: ['A1: One point for time (min) on x and cumulative oxygen consumed (mL) on y.', 'A2: One point for all five points within ±0.25 minutes and ±0.2 mL.', 'B: One point for (4−0)/(8−0) = 0.5 mL/min.', 'C: One point for explaining that produced carbon dioxide would otherwise offset gas volume lost as oxygen is consumed.'],
+  },
 ];
 
 let practiceMode;
@@ -749,7 +845,7 @@ function chooseMode() {
     <div class="grid mode-choices">
       <section class="panel"><h2>Multiple choice</h2><p class="quiet">Practice with 102 questions, check topic accuracy, and retry misses.</p>
       <button class="primary" data-action="enter-mcq">Open MCQ</button></section>
-      <section class="panel"><h2>Free response</h2><p class="quiet">Write explanations, draw on a graph, and get rubric feedback.</p>
+      <section class="panel"><h2>Free response</h2><p class="quiet">${frqs.length} questions with written responses, graphing, and GPT rubric feedback.</p>
       <button class="primary" data-action="enter-frq">Open FRQ</button></section>
     </div></div>`);
 }
