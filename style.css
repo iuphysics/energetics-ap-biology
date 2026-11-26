@@ -343,3 +343,18 @@ body{background:radial-gradient(ellipse at 82% 0%,#232c22 0%,transparent 42%),va
 .prompt.light .question-marker{color:#333}
 
 .question-copy,.frq-response{font-optical-sizing:auto}
+
+.question-copy .question-line{display:block}
+.question-copy .question-line.labeled{display:grid}
+.inline-answers{display:grid;gap:7px;margin:15px 0 5px}
+.inline-answer{display:block;width:100%;min-width:0;min-height:44px;padding:9px 10px;text-align:left;border:1px solid var(--line);border-radius:7px;background:#232923;color:var(--ink);font:inherit;line-height:inherit}
+.inline-answer .question-line{margin:0}
+.inline-answer .question-page{margin:0}
+.inline-answer[aria-pressed=true]{border-color:var(--green);background:#303b28}
+.inline-answer.correct{border-color:var(--green);background:#2c3826}
+.inline-answer.wrong{border-color:var(--red);background:#382829}
+.inline-answer:disabled{opacity:1}
+.prompt.light .inline-answer{background:#fff;color:#222;border-color:#bfc6ba}
+.prompt.light .inline-answer[aria-pressed=true],.prompt.light .inline-answer.correct{background:#e6f0db;border-color:#5b743d}
+.prompt.light .inline-answer.wrong{background:#f5e2df;border-color:#a25245}
+.quiz-card details{margin-bottom:16px}

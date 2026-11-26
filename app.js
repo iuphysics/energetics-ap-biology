@@ -365,29 +365,57 @@ function begin(ids, mode) {
   encourage(mode === 'redemption' ? 'Round two! Show these questions what you learned.' : 'You’ve got this. One question at a time.');
 }
 
-function questionPages(question) {
-  return question.images.map((image, index) => {
+function questionPages(question, current, checked) {
+  const parts = question.images.flatMap((image, index) => {
     const label = image.startsWith('context') ? 'Shared stimulus' : `Question excerpt ${index + 1}`;
-    const layout = question.layout?.[index];
-    if (!layout) return `<img src="bank/${image}.png" alt="${label}">`;
-    const [width, height, art, spans, flow] = layout;
+    const [width, height, art, spans, flow] = question.layout[index];
     const sourceRegion = (top, bottom, keepSource = false) => `<svg class="question-page" viewBox="0 ${top} ${width} ${bottom - top}" aria-label="${label}" xml:space="preserve">
       ${art || keepSource ? `<image class="question-figure" href="bank/${keepSource ? image : art}.png" width="${width}" height="${height}"/>` : ''}
       ${(keepSource ? [] : spans.filter(([, y]) => y >= top && y <= bottom)).map(([x,y,size,length,flags,text]) => `<text x="${x}" y="${y}" font-size="${size}" ${length > 0 ? `textLength="${length}" lengthAdjust="spacingAndGlyphs"` : ''} ${flags & 16 ? 'font-weight="700"' : ''} ${flags & 2 ? 'font-style="italic"' : ''}>${escape(text)}</text>`).join('')}
     </svg>`;
-    if (!flow) return sourceRegion(0, height);
-    return `<div class="question-copy">${flow.map(([kind, lead, content, keepSource]) => {
-      if (kind === 'art') return sourceRegion(lead, content, keepSource);
+    function regions(top, bottom, keepSource) {
+      const choices = spans.filter(([, y, , , , text]) => y >= top && y <= bottom && /^\([A-E]\)$/.test(text.trim()))
+        .sort((left, right) => left[1] - right[1]);
+      if (!choices.length) return [{ html: sourceRegion(top, bottom, keepSource) }];
+      const bounds = choices.map(([, y, size]) => Math.max(top, y - size * 1.15));
+      return [
+        ...(bounds[0] > top ? [{ html: sourceRegion(top, bounds[0], keepSource) }] : []),
+        ...choices.map(([, , , , , text], position) => ({
+          letter: text.trim()[1],
+          html: sourceRegion(bounds[position], bounds[position + 1] ?? bottom, keepSource),
+        })),
+      ];
+    }
+    if (!flow) return regions(0, height, false);
+    return flow.flatMap(([kind, lead, content, keepSource]) => {
+      if (kind === 'art') return regions(lead, content, keepSource);
       const text = content.map(([flags, value]) => {
         const literal = escape(value);
         const styled = flags & 16 ? `<strong>${literal}</strong>` : flags & 2 ? `<em>${literal}</em>` : literal;
         return flags & 32 ? `<sup>${styled}</sup>` : flags & 64 ? `<sub>${styled}</sub>` : styled;
       }).join('');
-      return lead
-        ? `<p class="question-line labeled"><span class="question-marker">${lead}</span><span>${text}</span></p>`
-        : `<p class="question-line">${text}</p>`;
-    }).join('')}</div>`;
-  }).join('');
+      return {
+        letter: /^\([A-E]\)$/.test(lead) ? lead[1] : undefined,
+        text: content.map(([, value]) => value).join('').trim(),
+        html: lead
+          ? `<span class="question-line labeled"><span class="question-marker">${lead}</span><span>${text}</span></span>`
+          : `<span class="question-line">${text}</span>`,
+      };
+    });
+  });
+
+  const intro = [];
+  const options = [];
+  for (const part of parts) {
+    if (part.letter) options.push({ letter: part.letter, parts: [part] });
+    else (options.at(-1)?.parts ?? intro).push(part);
+  }
+  return `<div class="question-copy">${intro.map(part => part.html).join('')}
+    <div class="inline-answers" role="group" aria-label="Answer choices">${options.map(({ letter, parts: optionParts }) => {
+      const hasText = optionParts[0].text;
+      const state = checked && letter === question.answer ? 'correct' : checked && letter === current ? 'wrong' : '';
+      return `<button type="button" class="inline-answer ${state}" data-choice="${letter}" aria-pressed="${letter === current}" ${hasText ? '' : `aria-label="Answer ${letter}"`} ${checked ? 'disabled' : ''}>${optionParts.map(part => part.html).join('')}</button>`;
+    }).join('')}</div></div>`;
 }
 
 function quiz(moveFocus = true) {
@@ -409,12 +437,8 @@ function quiz(moveFocus = true) {
     ${session.mode === 'redemption' ? `<div class="comeback-counter ${redeemed >= 3 ? 'combo-earned' : ''}" aria-label="${redeemed} redeemed in this set"><strong>${redeemed >= 3 ? 'Comeback Combo earned' : 'Comeback Combo'}</strong><span>${redeemed} redeemed${redeemed < 3 && session.ids.length >= 3 ? ' / 3' : ''}</span></div>` : ''}
     <section class="panel quiz-card">
       <div class="between"><span class="metric quiet">GUIDE ITEM ${id}</span><button class="secondary" data-action="paper" aria-pressed="false">Original colors</button></div>
-      <div class="prompt">${questionPages(question)}</div>
+      <div class="prompt">${questionPages(question, current, Boolean(answered))}</div>
       <details><summary>Question transcript</summary><p class="transcript quiet">${escape(question.transcript.replace(/[^\S\n]+/g, " ").replace(/ *\n */g, "\n").replace(/\n{3,}/g, "\n\n"))}</p><p class="quiet">Figures and tables appear in the guide images above.</p></details>
-      <div class="answer-heading">Select an answer</div>
-      <div class="answers" style="--choices:${question.choices.length}" aria-label="Answer choices">
-        ${[...question.choices].map(letter => `<button class="answer ${answered && letter === question.answer ? 'correct' : ''} ${answered && letter === current && !answered.correct ? 'wrong' : ''}" data-choice="${letter}" aria-pressed="${letter === current}" ${answered ? 'disabled' : ''}>${letter}</button>`).join('')}
-      </div>
       ${answered ? `<div class="feedback ${answered.correct ? '' : 'missed'}" role="status"><strong>${answered.correct ? 'Correct' : `Missed · Answer ${question.answer}`}</strong><p class="tag answer-topic">${topics[question.topic][2]}</p><p class="quiet">${escape(question.explanation)}</p></div>
         <div class="actions">${back}<button class="primary" data-action="next">${last ? 'See results' : 'Next question'}</button></div>`
         : `<div class="actions">${back}<button class="primary" data-action="check" ${choice ? '' : 'disabled'}>Check answer</button><button class="secondary" data-action="hint">Ask for a hint</button><button class="secondary" data-action="skip">Skip question</button></div>`}
