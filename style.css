@@ -393,5 +393,3 @@ body{background:radial-gradient(ellipse at 82% 0%,#232c22 0%,transparent 42%),va
 .grade-point.earned{color:var(--green)}
 .grade-improvement,.grade-prose{padding:12px 15px}
 .grade-improvement h4{margin:0}
-.grading-code-label{display:grid;gap:4px;max-width:370px;margin-top:10px;font-size:13px;color:var(--quiet)}
-.grading-code-label input{padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit}

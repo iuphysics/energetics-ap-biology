@@ -1,14 +1,5 @@
 const route = '/grade';
 const endpoint = 'https://api.openai.com/v1/responses';
-const encoder = new TextEncoder();
-
-async function matchesCode(provided, expected) {
-  const digest = async value => new Uint8Array(await crypto.subtle.digest('SHA-256', encoder.encode(value)));
-  const [left, right] = await Promise.all([digest(provided), digest(expected)]);
-  let difference = 0;
-  for (let i = 0; i < left.length; i++) difference |= left[i] ^ right[i];
-  return difference === 0;
-}
 
 export default {
   async fetch(request, env) {
@@ -25,16 +16,12 @@ export default {
     if (request.method === 'OPTIONS') {
       return new Response(null, {
         status: 204,
-        headers: { ...headers, 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Allow-Headers': 'Content-Type, Authorization' },
+        headers: { ...headers, 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Allow-Headers': 'Content-Type' },
       });
     }
     if (request.method !== 'POST') return reply({ error: 'Use POST.' }, 405);
-    if (!env.OPENAI_API_KEY || !env.ENERGETICS_ACCESS_CODE) {
+    if (!env.OPENAI_API_KEY) {
       return reply({ error: 'The shared grader has not been configured.' }, 503);
-    }
-    const provided = request.headers.get('Authorization')?.match(/^Bearer (.+)$/)?.[1];
-    if (!provided || provided.length > 128 || !await matchesCode(provided, env.ENERGETICS_ACCESS_CODE)) {
-      return reply({ error: 'Enter the shared grading access code.' }, 401);
     }
     if (!await env.takeGradeSlot()) return reply({ error: 'Too many grading requests. Try again in a minute.' }, 429);
     if (request.headers.get('Content-Type')?.split(';')[0].trim() !== 'application/json') {

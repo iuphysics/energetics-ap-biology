@@ -11,7 +11,6 @@ let quota = { count: 0, expires: 0 };
 
 const env = {
   OPENAI_API_KEY: process.env.OPENAI_API_KEY,
-  ENERGETICS_ACCESS_CODE: process.env.ENERGETICS_ACCESS_CODE,
   PAGES_ORIGIN: new URL(allowedOrigin).origin,
   takeGradeSlot() {
     const now = Date.now();
