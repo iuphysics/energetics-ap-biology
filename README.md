@@ -39,3 +39,7 @@ The bank uses 102 items with explicit answer keys in the supplied *AP Biology Un
 ## Study music
 
 Click the chibi avatar to start the bundled focus loop, or click again to switch it to reading. The bundled excerpt starts at 16:07 in [iCanStudy’s Study With Me video](https://www.youtube.com/watch?v=74cOUSKXMz0&t=967s). The selected Neko or Chad avatar plays the same music. The header Sound control mutes both music and sound effects.
+
+## Free-response practice
+
+Choose **FRQ** on the home screen for five original Unit 3 questions. Graph questions accept drawing, tapping, and typed coordinates. **Grade response** sends only the current question, the rubric, and your response, including sampled graph coordinates, to the configured GPT model. Separate submissions carry no chat history. Moving to another FRQ also clears the Ask Neko conversation. Drafts and feedback stay available while the page is open. Scores are practice feedback.
