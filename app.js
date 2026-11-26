@@ -92,127 +92,31 @@ const studio = document.querySelector('.study-scene');
 const studioToggle = document.querySelector('#studio-toggle');
 const studioLabel = document.querySelector('#studio-label');
 const studioStatus = document.querySelector('#studio-status');
-const studioFile = document.querySelector('#studio-file');
-const customTrack = new Audio();
-customTrack.loop = true;
-customTrack.volume = 0.28;
-const bundledTrack = './focus-music-loop.m4a';
-let trackUrl = bundledTrack;
-customTrack.src = bundledTrack;
+const focusTrack = new Audio('./focus-music-loop.m4a');
+focusTrack.loop = true;
+focusTrack.volume = 0.28;
 let playing = false;
-let musicTimer;
-let musicGain;
-let phraseIndex = 0;
-let nextNote;
-const melody = [
-  [69,2],[72,1],[76,3],[74,2],[72,2],[69,4],[67,2],[71,1],[74,3],[72,2],[71,2],[67,4],
-  [65,2],[69,1],[72,3],[76,2],[74,2],[72,4],[71,2],[74,1],[77,3],[76,2],[71,2],[69,5],
-];
-
-function scheduleViolin() {
-  if (nextNote < audio.currentTime) nextNote = audio.currentTime + .03;
-  while (nextNote < audio.currentTime + .32) {
-    const [pitch, beats] = melody[phraseIndex];
-    const time = nextNote;
-    const duration = beats * .34;
-    const frequency = 440 * 2 ** ((pitch - 69) / 12);
-    const note = audio.createOscillator();
-    const envelope = audio.createGain();
-    const vibrato = audio.createOscillator();
-    const depth = audio.createGain();
-    note.setPeriodicWave(audio.createPeriodicWave(
-      new Float32Array(8), new Float32Array([0,1,.36,.45,.19,.09,.10,.045]),
-    ));
-    note.frequency.value = frequency;
-    vibrato.frequency.value = 5.2;
-    depth.gain.setValueAtTime(0, time);
-    depth.gain.linearRampToValueAtTime(frequency * .009, time + .2);
-    vibrato.connect(depth).connect(note.frequency);
-    envelope.gain.setValueAtTime(0, time);
-    envelope.gain.linearRampToValueAtTime(.22, time + .09);
-    envelope.gain.linearRampToValueAtTime(.16, time + duration * .67);
-    envelope.gain.linearRampToValueAtTime(0, time + duration + .09);
-    note.connect(envelope).connect(musicGain);
-    note.start(time);
-    vibrato.start(time);
-    note.stop(time + duration + .1);
-    vibrato.stop(time + duration + .1);
-    nextNote += duration;
-    phraseIndex = (phraseIndex + 1) % melody.length;
-  }
-}
 
 function syncStudio() {
   studio.dataset.playing = playing;
   studioToggle.setAttribute('aria-pressed', String(playing));
-  studioLabel.textContent = playing ? 'Read instead' : 'Play violin';
-  customTrack.muted = muted;
+  studioLabel.textContent = playing ? 'Read instead' : 'Play focus music';
+  focusTrack.muted = muted;
   studioStatus.textContent = playing && muted ? 'Music muted' : '';
-  if (!playing || muted || trackUrl) {
-    clearInterval(musicTimer);
-    musicTimer = undefined;
-    musicGain?.disconnect();
-    musicGain = undefined;
-  }
   if (!playing || muted) {
-    customTrack.pause();
+    focusTrack.pause();
     return;
   }
-  if (trackUrl) {
-    customTrack.play().catch(() => {
-      if (playing && !muted && trackUrl === bundledTrack) {
-        trackUrl = undefined;
-        syncStudio();
-        return;
-      }
-      if (playing && !muted && customTrack.paused) studioStatus.textContent = 'Could not play this audio file.';
-    });
-    return;
-  }
-  if (musicTimer) return;
-  prepareSound();
-  if (!audio) {
-    studioStatus.textContent = 'Audio is unavailable in this browser.';
-    return;
-  }
-  musicGain = audio.createGain();
-  musicGain.gain.value = .58;
-  musicGain.connect(soundOutput);
-  nextNote = audio.currentTime + .06;
-  scheduleViolin();
-  musicTimer = setInterval(scheduleViolin, 120);
+  focusTrack.play().catch(() => {
+    if (!playing || muted || !focusTrack.paused) return;
+    playing = false;
+    syncStudio();
+    studioStatus.textContent = 'Focus music could not load.';
+  });
 }
 
 studioToggle.addEventListener('click', () => {
   playing = !playing;
-  syncStudio();
-});
-
-studioFile.addEventListener('change', () => {
-  if (!studioFile.files.length) return;
-  customTrack.pause();
-  if (trackUrl?.startsWith('blob:')) URL.revokeObjectURL(trackUrl);
-  trackUrl = URL.createObjectURL(studioFile.files[0]);
-  customTrack.src = trackUrl;
-  playing = true;
-  syncStudio();
-});
-
-document.querySelector('#studio-focus').addEventListener('click', () => {
-  customTrack.pause();
-  if (trackUrl?.startsWith('blob:')) URL.revokeObjectURL(trackUrl);
-  trackUrl = bundledTrack;
-  customTrack.src = bundledTrack;
-  studioFile.value = '';
-  syncStudio();
-});
-
-document.querySelector('#studio-default').addEventListener('click', () => {
-  customTrack.pause();
-  customTrack.removeAttribute('src');
-  if (trackUrl?.startsWith('blob:')) URL.revokeObjectURL(trackUrl);
-  trackUrl = undefined;
-  studioFile.value = '';
   syncStudio();
 });
 

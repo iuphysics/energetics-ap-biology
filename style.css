@@ -237,7 +237,6 @@ body{background:radial-gradient(ellipse at 82% 0%,#232c22 0%,transparent 42%),va
 .studio-options summary{color:var(--quiet);font-size:11px;cursor:pointer;text-align:right}
 .studio-options{margin:3px 5px 0 0}
 .studio-menu{position:absolute;right:0;bottom:100%;display:grid;gap:8px;width:225px;padding:12px;border:1px solid var(--line);border-radius:8px;background:#232923;box-shadow:0 8px 20px #0006;font-size:12px}
-.studio-menu input{width:100%;font-size:11px}
 .studio-menu a{color:var(--green)}
 .studio-status{color:var(--quiet);font-size:11px;text-align:right;max-width:120px}
 .studio-status:empty{display:none}
