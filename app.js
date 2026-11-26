@@ -390,7 +390,7 @@ function quiz(moveFocus = true) {
       </div>
       ${answered ? `<div class="feedback ${answered.correct ? '' : 'missed'}" role="status"><strong>${answered.correct ? 'Correct' : `Missed · Answer ${question.answer}`}</strong><p class="tag answer-topic">${topics[question.topic][2]}</p><p class="quiet">${escape(question.explanation)}</p></div>
         <button class="primary" data-action="next">${last ? 'See results' : 'Next question'}</button>`
-        : `<button class="primary" data-action="check" ${choice ? '' : 'disabled'}>Check answer</button>`}
+        : `<div class="actions"><button class="primary" data-action="check" ${choice ? '' : 'disabled'}>Check answer</button><button class="secondary" data-action="hint">Ask for a hint</button></div>`}
     </section>
   </div>`, moveFocus);
 }
@@ -603,11 +603,8 @@ function positionBuddy(left, top) {
   buddy.style.top = `${buddyPosition.top}px`;
 }
 
-buddyTab.addEventListener('click', () => {
-  if (buddy.open) {
-    buddy.close();
-    return;
-  }
+function openBuddy() {
+  if (buddy.open) return;
   hideCoach();
   buddy.show();
   const tab = buddyTab.getBoundingClientRect();
@@ -615,6 +612,11 @@ buddyTab.addEventListener('click', () => {
   positionBuddy(position.left, position.top);
   buddyTab.setAttribute('aria-expanded', 'true');
   buddyInput.focus({ preventScroll: true });
+}
+
+buddyTab.addEventListener('click', () => {
+  if (buddy.open) buddy.close();
+  else openBuddy();
 });
 
 buddyGrip.addEventListener('pointerdown', event => {
@@ -668,10 +670,13 @@ function clearBuddyChat() {
   renderConversation();
 }
 
-buddyForm.addEventListener('submit', async event => {
+buddyForm.addEventListener('submit', event => {
   event.preventDefault();
+  sendBuddyQuestion(buddyInput.value.trim(), true);
+});
+
+async function sendBuddyQuestion(question, fromComposer = false) {
   const currentAvatar = avatar;
-  const question = buddyInput.value.trim();
   if (!question || pendingAvatars.has(currentAvatar)) return;
   prepareSound();
 
@@ -680,7 +685,7 @@ buddyForm.addEventListener('submit', async event => {
   pendingAvatars.set(currentAvatar, controller);
   chatStatus[currentAvatar] = '';
   conversation.push({ role: 'user', content: question });
-  buddyInput.value = '';
+  if (fromComposer) buddyInput.value = '';
   renderConversation();
 
   try {
@@ -708,14 +713,14 @@ buddyForm.addEventListener('submit', async event => {
     if (controller.signal.aborted) return;
     conversation.pop();
     chatStatus[currentAvatar] = error.message || 'Could not connect. Try again.';
-    if (avatar === currentAvatar && !buddyInput.value) buddyInput.value = question;
+    if (fromComposer && avatar === currentAvatar && !buddyInput.value) buddyInput.value = question;
   } finally {
     if (pendingAvatars.get(currentAvatar) === controller) {
       pendingAvatars.delete(currentAvatar);
       renderConversation();
     }
   }
-});
+}
 
 const frqs = [
   {
@@ -978,7 +983,7 @@ function renderFrq() {
       ${question.data ? `<div class="frq-table"><table><tbody>${question.data.map(row => `<tr><th scope="row">${row[0]}</th>${row.slice(1).map(value => `<td>${value}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : ''}
       ${question.tasks.map((task, index) => `<div class="frq-part"><h3>${letters[index]}. ${task}</h3>
       ${question.graph && index === 0 ? graphMarkup(question.graph, draft) : `<textarea class="frq-response" aria-label="Response to part ${letters[index]}" data-part="${index}" maxlength="700" rows="3">${escape(draft.responses[index])}</textarea>`}</div>`).join('')}
-      <div class="actions"><button class="primary" data-action="grade-frq">Grade response</button><span class="quiet">Practice feedback · ${question.rubric.length} points</span></div>
+      <div class="actions"><button class="primary" data-action="grade-frq">Grade response</button><button class="secondary" data-action="hint">Ask for a hint</button><span class="quiet">Practice feedback · ${question.rubric.length} points</span></div>
       <div class="frq-feedback" id="frq-feedback" role="status">${escape(draft.feedback)}</div>
     </section><details class="panel frq-radar"><summary>Topic accuracy</summary>
     <div id="frq-radar-content">${frqRadar(currentFrqScores(), frqSet.length)}</div></details></div>`);
@@ -1078,6 +1083,10 @@ app.addEventListener('click', event => {
     case 'frq-prev': changeFrq(frqSet[frqSet.indexOf(frqIndex) - 1]); break;
     case 'frq-next': changeFrq(frqSet[frqSet.indexOf(frqIndex) + 1]); break;
     case 'grade-frq': gradeFrq(button); break;
+    case 'hint':
+      openBuddy();
+      sendBuddyQuestion('Give me one short hint for the current question without revealing the answer or writing the response for me.');
+      break;
     case 'clear-graph':
       frqDrafts[frqIndex].strokes = [];
       paintMarks();
